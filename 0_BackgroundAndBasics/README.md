@@ -1,7 +1,7 @@
 # Convolution background and basics</br>
 
 ## What are Channels and Kernels (according to EVA)?
-Channels are feature bags where each channel provides a distinct information on a particular feature. Kernels are filters used to extract any particular feature.
+Channels are feature bags where each channel can be thought of as a container that provides a distinct information on a particular feature. Kernels are filters which are able to identify and extract a particular feature.
 
 Colored digital images are mostly represented using three channels RGB and kernels(Mostly 3*3) can be applied on the images to extract any particular information(edges..).
 
