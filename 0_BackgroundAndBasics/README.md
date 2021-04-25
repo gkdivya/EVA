@@ -1,4 +1,4 @@
-# Convolution background And Basics</br>
+# Convolution background and basics</br>
 
 ## What are Channels and Kernels (according to EVA)?
 Channels are feature bags where each channel provides a distinct information on a particular feature. Kernels are filters used to extract any particular feature.
