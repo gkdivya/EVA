@@ -124,6 +124,7 @@ Without Max-pooling, **99 times** 3x3 convolution needs to be performed on 199x1
 |		99		|	1X1	    |
 				
 ### How are kernels initialized? </br>
+Kernels are initialized by random values.
 
 ### What happens during the training of a DNN?</br>
 				
