@@ -1,7 +1,7 @@
 # Convolution background and basics</br>
 
 ## What are Channels and Kernels (according to EVA)?
-Channels are feature bags where each channel can be thought of as a container that provides a distinct information on a particular feature. Kernels are filters which are able to identify and extract a particular feature.
+Channels are feature bags where each channel can be thought of as a container that provides a distinct information on a particular feature. Kernels are filters/feature extractors which are able to identify and extract a particular feature. 
 
 Colored digital images are mostly represented using three channels RGB and kernels(Mostly 3*3) can be applied on the images to extract any particular information(edges..).
 
@@ -124,9 +124,18 @@ Without Max-pooling, **99 times** 3x3 convolution needs to be performed on 199x1
 |		99		|	1X1	    |
 				
 ### How are kernels initialized? </br>
-Kernels are initialized by random values.
+Kernels are initialized randomly, there are variety of methods including simple ones like zero initialization , random initialization and Gaussian. However, its always recommended to use some more advanced techniques like He initialization, Xavier initialization/Glorot initialization so that the weights in the network dont start too small or too large leading to vanishing or exploding of gradients.
+
+
+Kernels can also be initialised from the weights of another network. This is popularly called transfer learning and is used successfully for better and faster convergence of many problems.
 
 ### What happens during the training of a DNN?</br>
+
+A deep neural network (DNN) is an artificial neural network (ANN) with multiple hidden layers between the input and output layers. The inspiration behind the creation of Deep Neural Networks is the human brain. 
+
+Training a DNN is the procedure of adjusting the weight/values of the kernel.
+Given an input, all the layers nodes effectively constitute a transformation of this input to a predicted output. The measure of variation between this predicted output and the actual output is defined as loss. The value of this loss is then passed backwards through these filters (kernels) and used to adjust the values in the filters to effectively minimize the difference between predicted and actual output. This way the value (weights) of the filters are adjusted during training and system is said to have converged when the loss is minimized.
+
 				
 				
 				
