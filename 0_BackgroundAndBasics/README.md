@@ -1,9 +1,17 @@
 # Convolution background and basics</br>
 
 ## What are Channels and Kernels (according to EVA)?
-Channels are feature bags where each channel can be thought of as a container that provides a distinct information on a particular feature. Kernels are filters/feature extractors which are able to identify and extract a particular feature. 
+Channels are feature bags where each channel can be thought of as a container that provides a distinct information on a particular feature.
 
-Colored digital images are mostly represented using three channels RGB and kernels(Mostly 3*3) can be applied on the images to extract any particular information(edges..).
+Lets say you have been to a animal sanctuary and would like to capture the sounds of an animal seperately, we capture and store the sound of a lion seperately, sound of elephant seperately and so on. Storing the sound of every animal in seperate file (container) is nothing but a channel. Now, the channel for sound of a lion can be further divided into seperate channels based on the frequency, decibles and so on. This can help capture the nuances of the sound in every animal
+
+![image](https://user-images.githubusercontent.com/42609155/116164047-a5efb000-a716-11eb-9990-10d6c815f5c6.png)
+
+
+
+Kernels are filters/feature extractors which are able to identify and extract a particular feature. 
+
+Colored digital images are mostly represented using three channels RGB and kernels(Mostly 3*3) can be applied on the images to extract any particular information(edges..). Also, we should be aware that only colors don't represent the channels. There are other features like edges and gradients, texture and pattern, part of objects which contributes to  particular channel.
 
 ## Why should we (nearly) always use 3x3 kernels?
 This question can be answered in two parts. One part is to answer why we are not using even kernels (2x2, 4x4) and the second part is why we are not using bigger kernels (5x5, 7x7, 9x9..). 
