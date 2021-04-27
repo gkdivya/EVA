@@ -10,7 +10,7 @@ Lets say you have been to a animal sanctuary and would like to capture the sound
 
 <b> Kernels </b> also called as Feature Extractors or Filters or 3x3 matrix are used to identify and extract a particular feature or similar kind of information. 
 
-_Colored digital images are mostly represented using three channels RGB and kernels(Mostly 3*3) can be applied on the images to extract any particular information(edges..). Also, we should be aware that only colors don't represent the channels. There are other features like edges and gradients, texture and pattern, part of objects which contributes to  particular channel._
+_Colored digital images are mostly represented using three channels RGB and kernels(Mostly 3*3) can be applied on the images to extract any particular information. Also, we should be aware that only colors don't represent the channels. There are other features like edges and gradients, texture and pattern, part of objects which contributes to  particular channel._
 
 ## Why should we (nearly) always use 3x3 kernels?
 This question can be answered in two parts. One part is to answer why we are not using even kernels (2x2, 4x4) and the second part is why we are not using bigger kernels (5x5, 7x7, 9x9..). 
