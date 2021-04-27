@@ -17,7 +17,8 @@ This question can be answered in two parts. One part is to answer why we are not
 
 First, with even kernels the problem is its difficult to find axis of symmetry. Without centre point, it is difficult to depict information in a symmetric way. 
 
-Second, 3x3 is the smallest unit which can be used to compute any kernel size output. If we need 5x5 kernel output, we can convolve with 3x3 twice and if we need 7x7 output, we can convolve using 3x3 thrice and so on. And GPUs have accelerated 3x3 operation, so it is much faster to perform the convolution using 3x3 kernel.
+Second, using a higher size kernel increases the computation cost with more number of parameters and also the amount of information or features extracted are considerably lesser (as the dimension of next layer reduces greatly). Using a lower size kernel like 1x1 does not account of features from the neighbouring pixels, 1x1 is used only in cases of reducing the dimensions. 
+3x3 is the smallest unit which can be used to compute any kernel size output and seems to be a best fit. If we need 5x5 kernel output, we can convolve with 3x3 twice (3x3 + 3x3 = 18 parameter) and if we need 7x7 output, we can convolve using 3x3 thrice (3*3 + 3*3 + 3*3 = 27 parameters) and so on. And GPUs have accelerated 3x3 operation, so it is much faster to perform the convolution using 3x3 kernel.
 
 ## How many times do we need to perform 3x3 convolution operation to reach 1x1 from 199x199 (show calculations) 
 
@@ -132,7 +133,6 @@ Without Max-pooling, **99 times** 3x3 convolution needs to be performed on 199x1
 				
 ### How are kernels initialized? </br>
 Kernels are initialized randomly, there are variety of methods including simple ones like zero initialization , random initialization and Gaussian. However, its always recommended to use some more advanced techniques like He initialization, Xavier initialization/Glorot initialization so that the weights in the network dont start too small or too large leading to vanishing or exploding of gradients.
-
 
 Kernels can also be initialised from the weights of another network. This is popularly called transfer learning and is used successfully for better and faster convergence of many problems.
 
