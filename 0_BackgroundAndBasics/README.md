@@ -24,7 +24,7 @@ Second, using a higher size kernel increases the computation cost with more numb
 
 Each time, when a 3x3 convolution is performed, we end up with 2 pixels lesser output channel. When we perform 3x3 on 5x5 image, we get a 3x3 image.
 
-![5-3Convolution](assets/5-3ConvolutionSmall.gif)
+<img src="https://user-images.githubusercontent.com/42609155/116169925-654a6380-a723-11eb-861d-2c4ba7525243.png" width="500">
 
 Without Max-pooling, **99 times** 3x3 convolution needs to be performed on 199x199 to reach 1x1 image!
 
