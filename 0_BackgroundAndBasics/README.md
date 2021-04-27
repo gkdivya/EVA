@@ -3,9 +3,9 @@
 ## What are Channels and Kernels (according to EVA)?
 Channels are feature bags where each channel can be thought of as a container that provides a distinct information on a particular feature.
 
-Lets say you have been to a animal sanctuary and would like to capture the sounds of an animal seperately, we capture and store the sound of a lion seperately, sound of elephant seperately and so on. Storing the sound of every animal in seperate file (container) is nothing but a channel. Now, the channel for sound of a lion can be further divided into seperate channels based on the frequency, decibles and so on. This can help capture the nuances of the sound in every animal
+Lets say you have been to a animal sanctuary and would like to capture the sounds of an animal seperately for some of your research work, you capture and store the sound of a lion seperately, sound of elephant seperately and so on. Storing the sound of every animal in seperate file (container) is nothing but a channel. Now, the channel for sound of a lion can be further divided into seperate channels based on the frequency, wavelength, speed etc. This can help capture the nuances of the sound in every animal.
 
-![image](https://user-images.githubusercontent.com/42609155/116164047-a5efb000-a716-11eb-9990-10d6c815f5c6.png)
+![image](https://user-images.githubusercontent.com/42609155/116164047-a5efb000-a716-11eb-9990-10d6c815f5c6.png =100x20)
 
 
 
