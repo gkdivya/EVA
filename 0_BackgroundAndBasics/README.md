@@ -4,7 +4,9 @@
 
 <b> Channels </b> are feature bags where each channel can be thought of as a container that provides a distinct information on a particular feature.
 
-Lets say you have been to a animal sanctuary and would like to capture the sounds of an animal seperately for some of your research work, you capture and store the sound of a lion seperately, sound of elephant seperately and so on. Storing the sound of every animal in seperate file (container) is nothing but a channel. Now, the channel for sound of a lion can be further divided into seperate channels based on the frequency, wavelength, speed etc. More the number of channels, it helps better capture the nuances of the sound in every animal.
+Lets say you have been to a animal sanctuary and would like to capture the sounds of an animal seperately for some of your research work, you capture and store the sound of a lion seperately, sound of elephant seperately and so on. Storing the sound of every animal in seperate file (container) is nothing but a channel. Now, the channel for sound of a lion can be further divided into seperate channels based on the frequency, wavelength, speed etc. So the channel of lion sound is in itself going to be collection of multiple channels in between. More the number of channels, it helps better capture the nuances of the sound in every animal. 
+
+In case of image processing, it would be AI or the network which would decide the number of channels required.
 
 <img src="https://user-images.githubusercontent.com/42609155/116164047-a5efb000-a716-11eb-9990-10d6c815f5c6.png" width="500">
 
@@ -15,11 +17,6 @@ _Colored digital images are mostly represented using three channels RGB and kern
 SS: Can we think about this image for Channles and Kernels? 
 
 ![image](https://user-images.githubusercontent.com/40986697/116351884-fd267b00-a811-11eb-9f4b-9ba55cc20faa.png)
-
-
-
-
-
 
 ## Why should we (nearly) always use 3x3 kernels?
 This question can be answered in two parts. One part is to answer why we are not using even kernels (2x2, 4x4) and the second part is why we are not using bigger kernels (5x5, 7x7, 9x9..). 
