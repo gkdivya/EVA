@@ -21,6 +21,9 @@ Second, using a higher size kernel increases the computation cost with more numb
 
 3x3 is the smallest unit which can be used to compute any kernel size output and seems to be a best fit. If we need 5x5 kernel output, we can convolve with 3x3 twice (3x3 + 3x3 = 18 parameter) and if we need 7x7 output, we can convolve using 3x3 thrice (3*3 + 3*3 + 3*3 = 27 parameters) and so on. And GPUs have accelerated 3x3 operation, so it is much faster to perform the convolution using 3x3 kernel.
 
+
+SS: Kernels are hyperparameters and choosing the right one depends on business use case and domain. Mostly small kernels are used for detecting high-frequency features and large kernels for low-frequency features. Mostly 3×3 kernels are used for edge detection, color contrast, etc. If we need to detect full obejct in an image ,we can go for large Kernels such as 11X11.
+
 ## How many times do we need to perform 3x3 convolution operation to reach 1x1 from 199x199 (show calculations) 
 
 Each time, when a 3x3 convolution is performed, we end up with 2 pixels lesser output channel. When we perform 3x3 on 5x5 image, we get a 3x3 image.
@@ -137,12 +140,19 @@ Kernels are initialized randomly, there are variety of methods including simple 
 
 Kernels can also be initialised from the weights of another network. This is popularly called transfer learning and is used successfully for better and faster convergence of many problems.
 
+SS:
+
+Kernels (a) Filter(a) Feature Extractors are used to extract the features from an image and store the data in neurons.Initializing the Kernel's weights in the begining of a tranining process is a random choice. Kernel weights can be anywhere between 0 and 1 or -1 and 1 depending on the activation function chosen acorss the NN layers. If we assign 0 as initial weights,then neurons across all the layers learn the same features during the training process.
+
 ### What happens during the training of a DNN?</br>
 
 A deep neural network (DNN) is an artificial neural network (ANN) with multiple hidden layers between the input and output layers. The inspiration behind the creation of Deep Neural Networks is the human brain. 
 
 Training a DNN is the procedure of adjusting the weight/values of the kernel.
 Given an input, all the layers nodes effectively constitute a transformation of this input to a predicted output. The measure of variation between this predicted output and the actual output is defined as loss. The value of this loss is then passed backwards through these filters (kernels) and used to adjust the values in the filters to effectively minimize the difference between predicted and actual output. This way the value (weights) of the filters are adjusted during training and system is said to have converged when the loss is minimized.
+
+
+SS: There are actually 3 blocks of NN layers in DNN. 1st set of NN layers will learn Edge and Gradient of the imgages. 2nd set of NN layers will learn Texture and Patterns. 3rd set of NN layers will learn parts of the object.Final block will generate the original image for classification. During this entire process ,the neurons act as a memory store and its weights are fine tuned to reduce the data loss using Backpropagation algorithm.
 
 				
 				
