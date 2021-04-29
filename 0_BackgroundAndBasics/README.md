@@ -14,9 +14,7 @@ In case of image processing, it would be AI or the network which would decide th
 
 _Colored digital images are mostly represented using three channels RGB and kernels(Mostly 3*3) can be applied on the images to extract any particular information. Also, we should be aware that only colors don't represent the channels. There are other features like edges and gradients, texture and pattern, part of objects which contributes to  particular channel._
 
-SS: Can we think about this image for Channles and Kernels? 
 
-![image](https://user-images.githubusercontent.com/40986697/116351884-fd267b00-a811-11eb-9f4b-9ba55cc20faa.png)
 
 ## Why should we (nearly) always use 3x3 kernels?
 This question can be answered in two parts. One part is to answer why we are not using even kernels (2x2, 4x4) and the second part is why we are not using bigger kernels (5x5, 7x7, 9x9..). 
