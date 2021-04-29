@@ -10,7 +10,7 @@ In case of image processing, it would be AI or the network which would decide th
 
 <img src="https://user-images.githubusercontent.com/42609155/116164047-a5efb000-a716-11eb-9990-10d6c815f5c6.png" width="500">
 
-<b> Kernels </b> also called as Feature Extractors or Filters or 3x3 matrix are used to identify and extract a particular feature or similar kind of information. 
+<b> Kernels </b> also called as Feature Extractors or Filters or nxn matrix are used to identify and extract a particular feature or similar kind of information. 
 
 _Colored digital images are mostly represented using three channels RGB and kernels(Mostly 3*3) can be applied on the images to extract any particular information. Also, we should be aware that only colors don't represent the channels. There are other features like edges and gradients, texture and pattern, part of objects which contributes to  particular channel._
 
