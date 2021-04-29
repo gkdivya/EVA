@@ -154,7 +154,7 @@ Training a DNN is the procedure of adjusting the weight/values of the kernel.
 Given an input, all the layers nodes effectively constitute a transformation of this input to a predicted output. The measure of variation between this predicted output and the actual output is defined as loss. The value of this loss is then passed backwards through these filters (kernels) and used to adjust the values in the filters to effectively minimize the difference between predicted and actual output. This way the value (weights) of the filters are adjusted during training and system is said to have converged when the loss is minimized.
 
 
-SS: There are actually 3 blocks of NN layers in DNN. 1st set of NN layers will learn Edge and Gradient of the imgages. 2nd set of NN layers will learn Texture and Patterns. 3rd set of NN layers will learn parts of the object.Final block will generate the original image for classification. During this entire process ,the neurons act as a memory store and its weights are fine tuned to reduce the data loss using Backpropagation algorithm.
+
 
 				
 				
