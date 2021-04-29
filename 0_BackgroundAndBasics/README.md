@@ -26,8 +26,6 @@ Second, using a higher size kernel increases the computation cost with more numb
 3x3 is the smallest unit which can be used to compute any kernel size output and seems to be a best fit. If we need 5x5 kernel output, we can convolve with 3x3 twice (3x3 + 3x3 = 18 parameter) and if we need 7x7 output, we can convolve using 3x3 thrice (3*3 + 3*3 + 3*3 = 27 parameters) and so on. And GPUs have accelerated 3x3 operation, so it is much faster to perform the convolution using 3x3 kernel.
 
 
-SS: Kernels are hyperparameters and choosing the right one depends on business use case and domain. Mostly small kernels are used for detecting high-frequency features and large kernels for low-frequency features. Mostly 3×3 kernels are used for edge detection, color contrast, etc. If we need to detect full obejct in an image ,we can go for large Kernels such as 11X11.
-
 ## How many times do we need to perform 3x3 convolution operation to reach 1x1 from 199x199 (show calculations) 
 
 Each time, when a 3x3 convolution is performed, we end up with 2 pixels lesser output channel. When we perform 3x3 on 5x5 image, we get a 3x3 image.
