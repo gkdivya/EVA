@@ -149,8 +149,10 @@ Kernels can also be initialised from the weights of another network. This is pop
 
 A deep neural network (DNN) is an artificial neural network (ANN) with multiple hidden layers between the input and output layers. The inspiration behind the creation of Deep Neural Networks is the human brain. 
 
-Training a DNN is the procedure of adjusting the weight/values of the kernel.
-Given an input, all the layers nodes effectively constitute a transformation of this input to a predicted output. The measure of variation between this predicted output and the actual output is defined as loss. The value of this loss is then passed backwards through these filters (kernels) and used to adjust the values in the filters to effectively minimize the difference between predicted and actual output. This way the value (weights) of the filters are adjusted during training and system is said to have converged when the loss is minimized.
+Training a DNN is the procedure of adjusting the weight/values of the kernels.
+Given an input, all the layers nodes effectively constitute a transformation of this input to a predicted output. The measure of variation between this predicted output and the actual output is defined as **loss**. The value of this loss is then passed backwards through these filters (kernels) and used to adjust the values in the filters to effectively minimize the difference between predicted and actual output in the process called **back-propagation**. This way the value (weights) of the filters are adjusted during training and system is said to have converged when the loss is minimized.
+
+<img src="https://www.researchgate.net/profile/Abderrahmane-Nassim/publication/325421229/figure/fig2/AS:649412548259842@1531843425752/Gradient-back-propagation-learning-algorithm.png" width=500>
 
 
 
