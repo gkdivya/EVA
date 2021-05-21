@@ -62,90 +62,120 @@ x represents the actual value and y the predicted value.
 ## Training Log
 
       Epoch 1 : 
-      Train set: Average loss: 1.2838
-      Test set: Average loss: 1.333, MNist Accuracy:94.14, Sum_Accuracy:11.45
+      Train set: Average loss: 1.3315
+      Test set: Average loss: 1.342, MNist Accuracy:94.0, Sum_Accuracy:11.36
 
       Epoch 2 : 
-      Train set: Average loss: 1.1986
-      Test set: Average loss: 1.218, MNist Accuracy:97.0, Sum_Accuracy:16.58
+      Train set: Average loss: 1.1960
+      Test set: Average loss: 1.235, MNist Accuracy:96.24, Sum_Accuracy:14.6
 
       Epoch 3 : 
-      Train set: Average loss: 1.1528
-      Test set: Average loss: 1.152, MNist Accuracy:97.95, Sum_Accuracy:21.85
+      Train set: Average loss: 1.1768
+      Test set: Average loss: 1.156, MNist Accuracy:97.82, Sum_Accuracy:21.1
 
       Epoch 4 : 
-      Train set: Average loss: 1.0859
-      Test set: Average loss: 1.091, MNist Accuracy:98.64, Sum_Accuracy:35.26
+      Train set: Average loss: 1.1079
+      Test set: Average loss: 1.112, MNist Accuracy:98.32, Sum_Accuracy:29.84
 
       Epoch 5 : 
-      Train set: Average loss: 1.0228
-      Test set: Average loss: 1.038, MNist Accuracy:98.08, Sum_Accuracy:41.63
+      Train set: Average loss: 1.0855
+      Test set: Average loss: 1.055, MNist Accuracy:98.48, Sum_Accuracy:41.94
 
       Epoch 6 : 
-      Train set: Average loss: 0.9620
-      Test set: Average loss: 0.945, MNist Accuracy:98.82, Sum_Accuracy:55.11
+      Train set: Average loss: 0.9753
+      Test set: Average loss: 0.980, MNist Accuracy:99.02, Sum_Accuracy:50.18
 
       Epoch 7 : 
-      Train set: Average loss: 0.8494
-      Test set: Average loss: 0.854, MNist Accuracy:98.78, Sum_Accuracy:67.57
+      Train set: Average loss: 0.9036
+      Test set: Average loss: 0.905, MNist Accuracy:98.76, Sum_Accuracy:59.54
 
       Epoch 8 : 
-      Train set: Average loss: 0.7657
-      Test set: Average loss: 0.750, MNist Accuracy:98.98, Sum_Accuracy:79.26
+      Train set: Average loss: 0.8030
+      Test set: Average loss: 0.821, MNist Accuracy:99.04, Sum_Accuracy:70.76
 
       Epoch 9 : 
-      Train set: Average loss: 0.6502
-      Test set: Average loss: 0.650, MNist Accuracy:99.03, Sum_Accuracy:86.69
+      Train set: Average loss: 0.7155
+      Test set: Average loss: 0.734, MNist Accuracy:98.92, Sum_Accuracy:78.32
 
       Epoch 10 : 
-      Train set: Average loss: 0.5678
-      Test set: Average loss: 0.550, MNist Accuracy:99.07, Sum_Accuracy:91.18
+      Train set: Average loss: 0.6378
+      Test set: Average loss: 0.648, MNist Accuracy:99.12, Sum_Accuracy:87.92
 
       Epoch 11 : 
-      Train set: Average loss: 0.4143
-      Test set: Average loss: 0.452, MNist Accuracy:99.13, Sum_Accuracy:95.11
+      Train set: Average loss: 0.5266
+      Test set: Average loss: 0.560, MNist Accuracy:99.04, Sum_Accuracy:91.62
 
       Epoch 12 : 
-      Train set: Average loss: 0.3541
-      Test set: Average loss: 0.369, MNist Accuracy:98.98, Sum_Accuracy:97.21
+      Train set: Average loss: 0.4535
+      Test set: Average loss: 0.476, MNist Accuracy:99.22, Sum_Accuracy:95.22
 
       Epoch 13 : 
-      Train set: Average loss: 0.2980
-      Test set: Average loss: 0.295, MNist Accuracy:99.25, Sum_Accuracy:98.03
+      Train set: Average loss: 0.4048
+      Test set: Average loss: 0.396, MNist Accuracy:99.22, Sum_Accuracy:97.14
 
       Epoch 14 : 
-      Train set: Average loss: 0.2284
-      Test set: Average loss: 0.239, MNist Accuracy:99.19, Sum_Accuracy:98.75
+      Train set: Average loss: 0.3035
+      Test set: Average loss: 0.327, MNist Accuracy:99.26, Sum_Accuracy:97.96
 
       Epoch 15 : 
-      Train set: Average loss: 0.1867
-      Test set: Average loss: 0.198, MNist Accuracy:99.31, Sum_Accuracy:98.77
+      Train set: Average loss: 0.2906
+      Test set: Average loss: 0.269, MNist Accuracy:99.34, Sum_Accuracy:98.92
 
       Epoch 16 : 
-      Train set: Average loss: 0.1342
-      Test set: Average loss: 0.165, MNist Accuracy:99.35, Sum_Accuracy:98.94
+      Train set: Average loss: 0.2261
+      Test set: Average loss: 0.226, MNist Accuracy:99.34, Sum_Accuracy:98.84
 
       Epoch 17 : 
-      Train set: Average loss: 0.1457
-      Test set: Average loss: 0.144, MNist Accuracy:99.18, Sum_Accuracy:98.99
+      Train set: Average loss: 0.1648
+      Test set: Average loss: 0.184, MNist Accuracy:99.42, Sum_Accuracy:99.1
 
       Epoch 18 : 
-      Train set: Average loss: 0.1146
-      Test set: Average loss: 0.123, MNist Accuracy:99.15, Sum_Accuracy:99.03
+      Train set: Average loss: 0.1486
+      Test set: Average loss: 0.162, MNist Accuracy:99.2, Sum_Accuracy:99.08
 
       Epoch 19 : 
-      Train set: Average loss: 0.0786
-      Test set: Average loss: 0.108, MNist Accuracy:99.35, Sum_Accuracy:99.19
+      Train set: Average loss: 0.1223
+      Test set: Average loss: 0.134, MNist Accuracy:99.38, Sum_Accuracy:99.22
 
       Epoch 20 : 
-      Train set: Average loss: 0.0823
-      Test set: Average loss: 0.097, MNist Accuracy:99.26, Sum_Accuracy:99.02
+      Train set: Average loss: 0.0993
+      Test set: Average loss: 0.120, MNist Accuracy:99.32, Sum_Accuracy:99.1
+
+      Epoch 21 : 
+      Train set: Average loss: 0.0927
+      Test set: Average loss: 0.114, MNist Accuracy:99.18, Sum_Accuracy:99.02
+
+      Epoch 22 : 
+      Train set: Average loss: 0.0717
+      Test set: Average loss: 0.094, MNist Accuracy:99.36, Sum_Accuracy:99.12
+
+      Epoch 23 : 
+      Train set: Average loss: 0.0772
+      Test set: Average loss: 0.084, MNist Accuracy:99.26, Sum_Accuracy:99.36
+
+      Epoch 24 : 
+      Train set: Average loss: 0.0525
+      Test set: Average loss: 0.075, MNist Accuracy:99.46, Sum_Accuracy:99.32
+
+      Epoch 25 : 
+      Train set: Average loss: 0.0493
+      Test set: Average loss: 0.070, MNist Accuracy:99.32, Sum_Accuracy:99.24
 
 
-<p align="center"><img src="https://user-images.githubusercontent.com/42609155/119068731-6610a580-ba02-11eb-955e-b47dbea188e9.png" width="500"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/42609155/119095568-10eb8880-ba30-11eb-910d-f766d3a1d237.png" width="500"></p>
 
+## Test Loss
+
+      Test set: Average loss: 0.073, MNist Accuracy:99.3, Sum_Accuracy:99.26
+      
 ## Inference
 
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/42609155/119095810-60ca4f80-ba30-11eb-974f-e123a9e02fb3.png" width="200">
+    <img src="https://user-images.githubusercontent.com/42609155/119095818-645dd680-ba30-11eb-980d-8fe1618ff0be.png" width="200">
+    <img src="https://user-images.githubusercontent.com/42609155/119095826-66279a00-ba30-11eb-8720-495a8134885b.png" width="200">
+    <img src="https://user-images.githubusercontent.com/42609155/119095834-6889f400-ba30-11eb-8c4d-e3aec3723442.png" width="200">
+</p>
 
 
 ## References
