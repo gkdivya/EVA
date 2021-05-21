@@ -33,6 +33,21 @@ A random integer, sum of MNIST label and the random integer along with MNIST Ima
 * One hot encoded random number is concatenated with the MNIST image features, are further passed to fully connected layers to predict the sum
 * MNIST features are flatten and passed to a softmax function directly to predict the MNIST number
 
+      Net(
+        (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (pool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+        (conv3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv4): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (pool2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+        (conv5): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1))
+        (conv6): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1))
+        (conv7): Conv2d(1024, 10, kernel_size=(3, 3), stride=(1, 1))
+        (fc1): Linear(in_features=20, out_features=128, bias=True)
+        (fc2): Linear(in_features=128, out_features=30, bias=True)
+        (fc3): Linear(in_features=30, out_features=19, bias=True)
+      )
+
 ## Number of parameters
 Model has 6,384,925 trainable parameters.
 
@@ -51,6 +66,12 @@ x represents the actual value and y the predicted value.
 
 
 ## Inference
+
+
+
+## References
+
+https://discuss.pytorch.org/t/concatenate-layer-output-with-additional-input-data/20462
 
 
 
