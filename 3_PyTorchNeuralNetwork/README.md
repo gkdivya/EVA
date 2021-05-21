@@ -69,7 +69,10 @@ x represents the actual value and y the predicted value.
 
 ## References
 
-https://discuss.pytorch.org/t/concatenate-layer-output-with-additional-input-data/20462
+[How to build custom Datasets for Images in Pytorch](https://youtu.be/ZoZHd0Zm3RY)<br>
+[concatenate-layer-output-with-additional-input-data](https://discuss.pytorch.org/t/concatenate-layer-output-with-additional-input-data/20462)<br>
+[Is one-hot-encoding required for target label](https://stackoverflow.com/questions/62456558/is-one-hot-encoding-required-for-using-pytorchs-cross-entropy-loss-function)<br>
+[How to build a multimodal deep learning](https://www.drivendata.co/blog/hateful-memes-benchmark/)
 
 
 
