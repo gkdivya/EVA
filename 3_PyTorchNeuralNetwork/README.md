@@ -1,3 +1,4 @@
+
 ### Problem Statement:
 
 Write a neural network that can take 2 inputs:
@@ -174,9 +175,8 @@ x represents the actual value and y the predicted value.
     <img src="https://user-images.githubusercontent.com/42609155/119095810-60ca4f80-ba30-11eb-974f-e123a9e02fb3.png" width="200">
     <img src="https://user-images.githubusercontent.com/42609155/119095818-645dd680-ba30-11eb-980d-8fe1618ff0be.png" width="200">
     <img src="https://user-images.githubusercontent.com/42609155/119095826-66279a00-ba30-11eb-8720-495a8134885b.png" width="200">
-    <img src="https://user-images.githubusercontent.com/42609155/119095834-6889f400-ba30-11eb-8c4d-e3aec3723442.png" width="200">
+    <img src="https://user-images.githubusercontent.com/42609155/119100042-2adb9a00-ba35-11eb-96a9-b3ef330a6954.png" width="200">
 </p>
-
 
 ## References
 
