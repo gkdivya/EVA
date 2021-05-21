@@ -61,7 +61,88 @@ x represents the actual value and y the predicted value.
 
 ## Training Log
 
+      Epoch 1 : 
+      Train set: Average loss: 1.2838
+      Test set: Average loss: 1.333, MNist Accuracy:94.14, Sum_Accuracy:11.45
 
+      Epoch 2 : 
+      Train set: Average loss: 1.1986
+      Test set: Average loss: 1.218, MNist Accuracy:97.0, Sum_Accuracy:16.58
+
+      Epoch 3 : 
+      Train set: Average loss: 1.1528
+      Test set: Average loss: 1.152, MNist Accuracy:97.95, Sum_Accuracy:21.85
+
+      Epoch 4 : 
+      Train set: Average loss: 1.0859
+      Test set: Average loss: 1.091, MNist Accuracy:98.64, Sum_Accuracy:35.26
+
+      Epoch 5 : 
+      Train set: Average loss: 1.0228
+      Test set: Average loss: 1.038, MNist Accuracy:98.08, Sum_Accuracy:41.63
+
+      Epoch 6 : 
+      Train set: Average loss: 0.9620
+      Test set: Average loss: 0.945, MNist Accuracy:98.82, Sum_Accuracy:55.11
+
+      Epoch 7 : 
+      Train set: Average loss: 0.8494
+      Test set: Average loss: 0.854, MNist Accuracy:98.78, Sum_Accuracy:67.57
+
+      Epoch 8 : 
+      Train set: Average loss: 0.7657
+      Test set: Average loss: 0.750, MNist Accuracy:98.98, Sum_Accuracy:79.26
+
+      Epoch 9 : 
+      Train set: Average loss: 0.6502
+      Test set: Average loss: 0.650, MNist Accuracy:99.03, Sum_Accuracy:86.69
+
+      Epoch 10 : 
+      Train set: Average loss: 0.5678
+      Test set: Average loss: 0.550, MNist Accuracy:99.07, Sum_Accuracy:91.18
+
+      Epoch 11 : 
+      Train set: Average loss: 0.4143
+      Test set: Average loss: 0.452, MNist Accuracy:99.13, Sum_Accuracy:95.11
+
+      Epoch 12 : 
+      Train set: Average loss: 0.3541
+      Test set: Average loss: 0.369, MNist Accuracy:98.98, Sum_Accuracy:97.21
+
+      Epoch 13 : 
+      Train set: Average loss: 0.2980
+      Test set: Average loss: 0.295, MNist Accuracy:99.25, Sum_Accuracy:98.03
+
+      Epoch 14 : 
+      Train set: Average loss: 0.2284
+      Test set: Average loss: 0.239, MNist Accuracy:99.19, Sum_Accuracy:98.75
+
+      Epoch 15 : 
+      Train set: Average loss: 0.1867
+      Test set: Average loss: 0.198, MNist Accuracy:99.31, Sum_Accuracy:98.77
+
+      Epoch 16 : 
+      Train set: Average loss: 0.1342
+      Test set: Average loss: 0.165, MNist Accuracy:99.35, Sum_Accuracy:98.94
+
+      Epoch 17 : 
+      Train set: Average loss: 0.1457
+      Test set: Average loss: 0.144, MNist Accuracy:99.18, Sum_Accuracy:98.99
+
+      Epoch 18 : 
+      Train set: Average loss: 0.1146
+      Test set: Average loss: 0.123, MNist Accuracy:99.15, Sum_Accuracy:99.03
+
+      Epoch 19 : 
+      Train set: Average loss: 0.0786
+      Test set: Average loss: 0.108, MNist Accuracy:99.35, Sum_Accuracy:99.19
+
+      Epoch 20 : 
+      Train set: Average loss: 0.0823
+      Test set: Average loss: 0.097, MNist Accuracy:99.26, Sum_Accuracy:99.02
+
+
+<p align="center"><img src="https://user-images.githubusercontent.com/42609155/119068731-6610a580-ba02-11eb-955e-b47dbea188e9.png" width="500"></p>
 
 ## Inference
 
