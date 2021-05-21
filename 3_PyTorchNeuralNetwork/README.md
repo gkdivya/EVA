@@ -1,6 +1,5 @@
 ### Problem Statement:
 
-
 Write a neural network that can take 2 inputs:
 * an image from MNIST dataset and
 * a random number between 0 and 9
@@ -9,8 +8,7 @@ and gives two outputs:
 * the "number" that was represented by the MNIST image, and
 * the "sum" of this number with the random number that was generated and sent as the input to the network
 
-![assign](https://user-images.githubusercontent.com/42609155/118740404-6aee2180-b869-11eb-9a42-d72efbc4f132.png)
-
+<p align="center"><img src="https://user-images.githubusercontent.com/42609155/118740404-6aee2180-b869-11eb-9a42-d72efbc4f132.png" width="600"></p>
 
 Network can be written with fully connected layers and convolution layers. 
 
@@ -27,7 +25,8 @@ Custom dataset is created using MNIST dataset and generates data in below format
 A random integer, sum of MNIST label and the random integer along with MNIST Image and its label. 
 
 ## Model
-![MNIST_RandomNumberAddition](https://github.com/gkdivya/EVA/blob/7b9feda284e2b2eb7342e1652f7efb5e95206e09/3_PyTorchNeuralNetwork/assets/MNIST_RandomAddition.png)
+
+<p align="center"><img src="https://github.com/gkdivya/EVA/blob/7b9feda284e2b2eb7342e1652f7efb5e95206e09/3_PyTorchNeuralNetwork/assets/MNIST_RandomAddition.png" width="800"></p>
 
 * Using convolution blocks, MNIST image features are extracted 
 * One hot encoded random number is concatenated with the MNIST image features, are further passed to fully connected layers to predict the sum
