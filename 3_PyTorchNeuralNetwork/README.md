@@ -43,8 +43,7 @@ A random integer, sum of MNIST label and the random integer along with MNIST Ima
         (conv6): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1))
         (conv7): Conv2d(1024, 10, kernel_size=(3, 3), stride=(1, 1))
         (fc1): Linear(in_features=20, out_features=128, bias=True)
-        (fc2): Linear(in_features=128, out_features=30, bias=True)
-        (fc3): Linear(in_features=30, out_features=19, bias=True)
+        (fc2): Linear(in_features=128, out_features=19, bias=True)
       )
 
 ## Number of parameters
