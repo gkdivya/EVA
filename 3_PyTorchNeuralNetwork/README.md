@@ -52,7 +52,9 @@ Model has 6,384,925 trainable parameters.
 
 
 ## Loss Function
-Because both the MNIST classification and the sum(0-18) are multi class classification problem, we have used Negative Log-Likelihood Loss Function.
+Because both the MNIST classification and the sum(0-18) are multi class classification problem, we have used Negative Log-Likelihood Loss Function for each of the outputs and averaged the loss:
+
+ Loss = (Mnist NLL Loss + Addition NLL Loss)/2
 
 In NLL, the model is punished for making the correct prediction with smaller probabilities and encouraged for making the prediction with higher probabilities. The logarithm does the punishment. NLL does not only care about the prediction being correct but also about the model being certain about the prediction with a high score. 
 
