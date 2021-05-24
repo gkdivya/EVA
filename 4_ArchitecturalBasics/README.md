@@ -5,6 +5,7 @@ Modified the code given in [MNIST BASE CODE](https://colab.research.google.com/d
 99.4% validation accuracy with less than 20k Parameters and in less than 20 Epochs
 
 Below important concepts were used/considered while designing the network:
+
 Normalization:
 
 Convolution Block:
