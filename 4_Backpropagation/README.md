@@ -73,7 +73,7 @@ Next, we continue back propogation through the hidden layers i.e we need to find
     δE_total/δa_h1 = δ(E1+E2)/δa_h1 
                    = (a_o1 - t1) * a_o1 * (1 - a_o1 ) * w5 + (a_o2 - t2) * a_o2 * (1 - a_o2 ) * w7
                    
-    δE_total/δa_h2 = δ(E1+E2)/δa_h1 
+    δE_total/δa_h2 = δ(E1+E2)/δa_h2 
                    = (a_o1 - t1) * a_o1 * (1 - a_o1 ) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2 ) * w8
                    
 Calculate the partial derivative of E_total with respect to w1, w2, w3 and w4 using chain rule   
