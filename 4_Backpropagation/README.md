@@ -2,9 +2,7 @@
 
 Backpropagation is a common method for training a neural network. The goal of backpropagation is to optimize the weights so that the neural network can learn how to correctly map arbitrary inputs to outputs. We will see how it works with a concrete example with calculations using excel sheet to understand backpropagation correctly. Here, we’re going to use a neural network with two inputs, two hidden neurons, two output neurons and we are ignoring the bias.
 
-
-![Capture](https://user-images.githubusercontent.com/32029699/119680995-4db7e500-be5f-11eb-9155-0776e889dc24.PNG)
-
+<img src="https://user-images.githubusercontent.com/32029699/119680995-4db7e500-be5f-11eb-9155-0776e889dc24.PNG" width="600">
 
 Here are the initial weights, for us to work with:
 
@@ -102,13 +100,20 @@ Once we have gradients for all the weights with respect to the total error, we s
 We repeat this entire process for forward and backward pass until we get minimum error.
 
 
-## Error Graph for differnt Learning rates
+## Error Graph for different Learning rates
 
-Error graph when we change the learning rate from [0.1, 0.2, 0.5, 0.8, 1.0, 2.0] 
+Link to Excel Sheet - https://github.com/gkdivya/EVA/blob/main/4_Backpropagation/FeedForwardNeuralNetwork.xlsx
 
-![Graph](https://user-images.githubusercontent.com/32029699/119680321-b2bf0b00-be5e-11eb-83e2-cc59742e352a.PNG)
+Below is the error graph when we change the learning rates 0.1, 0.2, 0.5, 0.8, 1.0, 2.0
+
+<img src="https://user-images.githubusercontent.com/32029699/119680321-b2bf0b00-be5e-11eb-83e2-cc59742e352a.PNG" width="600">
+
     
-## Collaborators
+### Collaborators
 
+- Divya Kamat (divya.r.kamat@gmail.com)
+- Divya G K (gkdivya@gmail.com)
+- Sarang (jaya.sarangan@gmail.com)
+- Garvit Garg (garvit.gargs@gmail.com)
 
 
