@@ -73,7 +73,7 @@ Next, we continue back propogation through the hidden layers i.e we need to find
     δE_total/δa_h1 = δ(E1+E2)/δa_h1 
                    = (a_o1 - t1) * a_o1 * (1 - a_o1 ) * w5 + (a_o2 - t2) * a_o2 * (1 - a_o2 ) * w7
                    
-    δE_total/δa_h2 = δ(E1+E2)/δa_h1 
+    δE_total/δa_h2 = δ(E1+E2)/δa_h2 
                    = (a_o1 - t1) * a_o1 * (1 - a_o1 ) * w6 + (a_o2 - t2) * a_o2 * (1 - a_o2 ) * w8
                    
 Calculate the partial derivative of E_total with respect to w1, w2, w3 and w4 using chain rule   
@@ -88,6 +88,18 @@ Calculate the partial derivative of E_total with respect to w1, w2, w3 and w4 us
 
 
 Once we have gradients for all the weights with respect to the total error, we subtract this value from the current weight by multiplying with a learning rate
+
+        w1 = w1 - learning_rate * δE_total/δw1
+        w2 = w2 - learning_rate * δE_total/δw2
+        w3 = w3 - learning_rate * δE_total/δw3
+        w4 = w4 - learning_rate * δE_total/δw4
+        w5 = w5 - learning_rate * δE_total/δw5
+        w8 = w6 - learning_rate * δE_total/δw6
+        w7 = w7 - learning_rate * δE_total/δw7
+        w8 = w8 - learning_rate * δE_total/δw8
+
+We repeat this entire process for forward and backward pass until we get minimum error.
+
 
 ## Error Graph for differnt Learning rates
 
