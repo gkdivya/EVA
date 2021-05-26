@@ -108,5 +108,7 @@ Error graph when we change the learning rate from [0.1, 0.2, 0.5, 0.8, 1.0, 2.0]
 
 ![Graph](https://user-images.githubusercontent.com/32029699/119680321-b2bf0b00-be5e-11eb-83e2-cc59742e352a.PNG)
     
+## Collaborators
+
 
 
