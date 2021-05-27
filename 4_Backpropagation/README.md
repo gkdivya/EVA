@@ -114,7 +114,7 @@ We can observe that with small learning rate the loss is going to drop very slow
 
 - Divya Kamat (divya.r.kamat@gmail.com)
 - Divya G K (gkdivya@gmail.com)
-- Sarang (jaya.sarangan@gmail.com)
 - Garvit Garg (garvit.gargs@gmail.com)
+- Sarang (jaya.sarangan@gmail.com)
 
 
