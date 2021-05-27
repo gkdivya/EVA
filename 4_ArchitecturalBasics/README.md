@@ -68,5 +68,5 @@ Colab Link: https://colab.research.google.com/github/gkdivya/EVA/blob/main/4_Arc
 ## Collaborators
 - Divya Kamat (divya.r.kamat@gmail.com)
 - Divya G K (gkdivya@gmail.com)
-- Sarang (jaya.sarangan@gmail.com)
 - Garvit Garg (garvit.gargs@gmail.com)
+- Sarang (jaya.sarangan@gmail.com)
