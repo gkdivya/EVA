@@ -13,9 +13,9 @@ Below important concepts were used/considered while designing the network:
 - Dropout
 - Batch Size
 
-Following approach was followed in building the network:
-- Firstly, we reduced the number of parameters using Convolution Blocks with less number of output channels (removed 64, 128, 256 and 512) for every layer, Transition Block (max pooling followed by 1x1) with Receptive Field Concept.
-- Kernel size of 3x3 is used 
+Intuition behind the step by step approach we followed to reduce the number of parameters and to improve accuracy with less params:
+- At first, we reduced the number of parameters using Convolution Blocks with less number of output channels (removed 64, 128, 256 and 512 for every layer) and removed bias
+- Transition Block (max pooling followed by 1x1) with Receptive Field Concept.
 - Added a GAP layer to convert 2d to 1d
 - We used Batch Normalization after every layer
 - Use Augmentation techniques like image rotation
@@ -23,7 +23,7 @@ Following approach was followed in building the network:
 - Lastly, use Learning Rate to tune the model
 
 <b>Important Notes considered<b>:
-We have ensured not to use Batch normalization, Activation function, Max pooling, dropout just before the last layer
+We have ensured not to use Batch normalization, Activation function, Max pooling, dropout just before the last layer. And to use always kernel size of 3 * 3
 
 
 ## Experiments
@@ -33,13 +33,13 @@ Epochs = 19
 
 |Experiment| #Parameters | Batch Normalization | Transition & GAP Layer | Augmentation | Dropout | Learning Rate| Validation Accuracy | 
 |-------|---|---|---|---|---|---|---|
-|[Baseline Code](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Architecture_Basics_exp1.ipynb) |18k|Yes|No|No|No|0.01|99%|
+|[MNIST_With Less Params](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp1_WithLessParams.ipynb) |5490|No|No|No|No|0.01|98%|
 
 
 ## Final Best Model
 
-GitHub Notebook Link: https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb <br>
-Colab Link: https://colab.research.google.com/github/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb#scrollTo=ZnerqwVwNxYa
+[GitHub Notebook Link](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb) <br>
+[Colab Link](https://colab.research.google.com/github/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb#scrollTo=ZnerqwVwNxYa)
 
 - Model has 17K parametes
 - Added batch norm after every layer except last layer
