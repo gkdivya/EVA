@@ -28,9 +28,12 @@ We have ensured not to use Batch normalization, Activation function, Max pooling
 
 ## Experiments
 
-|Experiment| #Parameters | Batch Normalization | Transition & GAP Layer | Augmentation | Dropout | Learning Rate| Batch Size|
+Batch Size = 128 <br>
+Epochs = 19
+
+|Experiment| #Parameters | Batch Normalization | Transition & GAP Layer | Augmentation | Dropout | Learning Rate| Validation Accuracy | 
 |-------|---|---|---|---|---|---|---|
-|[Baseline Code](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Architecture_Basics_exp1.ipynb) |18k|Yes|No|No|No|0.01|128|
+|[Baseline Code](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Architecture_Basics_exp1.ipynb) |18k|Yes|No|No|No|0.01|99%|
 
 
 ## Final Best Model
