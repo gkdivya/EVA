@@ -50,7 +50,7 @@ Epochs = 19
 - Added batch norm after every layer except last layer
 - Added Transition layer (Max pool followed by 1x1) to reduce the number of channels after every block
 - Add GAP layer
-- Also added a FC layer after GAP
+- Also added a FC layer after GAP i.e used 1x1 after GAP (Note: 1x1 is fully connected layer when applied on 1d data)
 - Used Augmentation like image rotation
 - Added Drop out of 0.1 after every layer except last layer
 - The model was trained with a learning rate of 0.015 and momentum of 0.9 
