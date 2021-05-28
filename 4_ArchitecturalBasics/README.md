@@ -169,12 +169,6 @@ Epochs = 19
 
 Achieved a test accuracy of 99.4% at 18th and 19th epoch
 
-    epoch=18 Loss=0.039867233484983444 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.62it/s]
-      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0201, Accuracy: 9940/10000 (99.40%)
-
-    epoch=19 Loss=0.08172362297773361 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.81it/s]
-    Test set: Average loss: 0.0201, Accuracy: 9940/10000 (99.40%)
-
 ![accuracy_plot](https://user-images.githubusercontent.com/42609155/119974537-68f73180-bfd2-11eb-98d3-89db764d5959.png)
 
 
