@@ -45,6 +45,7 @@ Epochs = 19
 [GitHub Notebook Link](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb) <br>
 [Colab Link](https://colab.research.google.com/github/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb)
 
+
 - Model has 10K (10,040) parametes
 - Added batch norm after every layer except last layer
 - Added Transition layer (Max pool followed by 1x1) to reduce the number of channels after every block
@@ -55,6 +56,8 @@ Epochs = 19
 - The model was trained with a learning rate of 0.015 and momentum of 0.9 
 - Network was trained for 19 epochs with batch size of 128
 - Achieved a test accuracy of 99.4% at 18th and 19th epoch
+
+### Model Architecture
 
       Net(
         (conv1): Sequential(
@@ -103,7 +106,7 @@ Epochs = 19
       )
 
 
-## Training Log
+### Training Log
 
     epoch=1 Loss=0.5491642355918884 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.96it/s]
       0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.3586, Accuracy: 9277/10000 (92.77%)
@@ -162,7 +165,7 @@ Epochs = 19
     epoch=19 Loss=0.08172362297773361 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.81it/s]
     Test set: Average loss: 0.0201, Accuracy: 9940/10000 (99.40%)
 
-## Validation Accuracy
+### Validation Accuracy
 
 Achieved a test accuracy of 99.4% at 18th and 19th epoch
 
