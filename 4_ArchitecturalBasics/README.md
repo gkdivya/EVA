@@ -35,24 +35,27 @@ Epochs = 19
 |-------|---|---|---|---|---|---|---|
 |[MNIST_With Less Params](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp1_WithLessParams.ipynb) |5490|No|No|No|No|0.01|98%|
 |[MNIST_With Transition Block & GAP](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp2_WithTransitionBlock.ipynb) |5490|Yes|No|No|No|0.01|98%|
-|[MNIST_With Batch Normalization](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp1_WithLessParams.ipynb) |5490|Yes|Yes|No|No|0.01|98%|
+|[MNIST_With Batch Normalization](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp3_WithBatchNormalization.ipynb) |5810|Yes|Yes|No|No|0.02| 99.11%|
+|[MNIST_With Batch Normalization](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp3_WithBatchNormalization.ipynb) |5810|Yes|Yes|No|No|0.02| 99.11%|
+|[MNIST_With GAP&FC_LRScheduler](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp6_WithLRScheduler.ipynb)|5184|Yes|Yes|0.1|Yes|0.02| 99.41% at 18th Epoch|
+
 
 
 ## Final Best Model
 
 [GitHub Notebook Link](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb) <br>
-[Colab Link](https://colab.research.google.com/github/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb#scrollTo=ZnerqwVwNxYa)
+[Colab Link](https://colab.research.google.com/github/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb)
 
-- Model has 17K parametes
+- Model has 13K parametes
 - Added batch norm after every layer except last layer
 - Added Transition layer (Max pool followed by 1x1) to reduce the number of channels after every block
 - Add GAP layer
 - Also added a FC layer after GAP
 - Used Augmentation like image rotation
 - Added Drop out of 0.1 after every layer except last layer
-- The model was trained with a learning rate of 0.015 amd momentum of 0.9 
+- The model was trained with a learning rate of 0.015 and momentum of 0.9 
 - Network was trained for 19 epochs with batch size of 128
-- Achieved a test accuracy of 99.42% at 19th epoch
+- Achieved a test accuracy of 99.4% from 14th through 19th epoch
 
 
 ## Training Log
@@ -61,7 +64,7 @@ Epochs = 19
 ## Validation Accuracy
 
 
-![accuracy_plot](https://user-images.githubusercontent.com/42609155/119747046-7c5dac00-beaf-11eb-988c-2c683bb6ba0a.png)
+![accuracy_plot](https://user-images.githubusercontent.com/42609155/119974537-68f73180-bfd2-11eb-98d3-89db764d5959.png)
 
 
 ## Reference Links
