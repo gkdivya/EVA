@@ -45,7 +45,7 @@ Epochs = 19
 [GitHub Notebook Link](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb) <br>
 [Colab Link](https://colab.research.google.com/github/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb)
 
-- Model has 13K parametes
+- Model has 10K (10,040) parametes
 - Added batch norm after every layer except last layer
 - Added Transition layer (Max pool followed by 1x1) to reduce the number of channels after every block
 - Add GAP layer
@@ -54,14 +54,123 @@ Epochs = 19
 - Added Drop out of 0.1 after every layer except last layer
 - The model was trained with a learning rate of 0.015 and momentum of 0.9 
 - Network was trained for 19 epochs with batch size of 128
-- Achieved a test accuracy of 99.4% from 14th through 19th epoch
+- Achieved a test accuracy of 99.4% at 18th and 19th epoch
+
+      Net(
+        (conv1): Sequential(
+          (0): Conv2d(1, 8, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          (1): ReLU()
+          (2): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (3): Dropout2d(p=0.1, inplace=False)
+          (4): Conv2d(8, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          (5): ReLU()
+          (6): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (7): Dropout2d(p=0.1, inplace=False)
+          (8): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          (9): ReLU()
+          (10): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (11): Dropout2d(p=0.1, inplace=False)
+        )
+        (trans1): Sequential(
+          (0): Conv2d(16, 8, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): ReLU()
+          (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+        )
+        (conv2): Sequential(
+          (0): Conv2d(8, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          (1): ReLU()
+          (2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (3): Dropout2d(p=0.1, inplace=False)
+          (4): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          (5): ReLU()
+          (6): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (7): Dropout2d(p=0.1, inplace=False)
+          (8): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), bias=False)
+          (9): ReLU()
+          (10): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (11): Dropout2d(p=0.1, inplace=False)
+        )
+        (avg_pool): Sequential(
+          (0): AvgPool2d(kernel_size=5, stride=1, padding=0)
+        )
+        (conv_4): Sequential(
+          (0): Conv2d(16, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (1): ReLU()
+          (2): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (3): Dropout2d(p=0.1, inplace=False)
+          (4): Conv2d(16, 10, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        )
+      )
 
 
 ## Training Log
 
+    epoch=1 Loss=0.5491642355918884 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.96it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.3586, Accuracy: 9277/10000 (92.77%)
+
+    epoch=2 Loss=0.1878300905227661 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 29.13it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0970, Accuracy: 9723/10000 (97.23%)
+
+    epoch=3 Loss=0.13212096691131592 batch_id=00468: 100%|██████████| 469/469 [00:15<00:00, 29.46it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0549, Accuracy: 9827/10000 (98.27%)
+
+    epoch=4 Loss=0.07660138607025146 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.83it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0490, Accuracy: 9849/10000 (98.49%)
+
+    epoch=5 Loss=0.10429932922124863 batch_id=00468: 100%|██████████| 469/469 [00:15<00:00, 29.37it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0383, Accuracy: 9875/10000 (98.75%)
+
+    epoch=6 Loss=0.036357346922159195 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 29.06it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0321, Accuracy: 9896/10000 (98.96%)
+
+    epoch=7 Loss=0.08324731141328812 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.52it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0300, Accuracy: 9911/10000 (99.11%)
+
+    epoch=8 Loss=0.2502351701259613 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 29.04it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0279, Accuracy: 9917/10000 (99.17%)
+
+    epoch=9 Loss=0.06680113822221756 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 29.13it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0252, Accuracy: 9927/10000 (99.27%)
+
+    epoch=10 Loss=0.16524271667003632 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 29.05it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0272, Accuracy: 9923/10000 (99.23%)
+
+    epoch=11 Loss=0.06911925971508026 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 29.25it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0257, Accuracy: 9922/10000 (99.22%)
+
+    epoch=12 Loss=0.06363837420940399 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.79it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0234, Accuracy: 9933/10000 (99.33%)
+
+    epoch=13 Loss=0.054308656603097916 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.67it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0226, Accuracy: 9932/10000 (99.32%)
+
+    epoch=14 Loss=0.16232791543006897 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.68it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0215, Accuracy: 9933/10000 (99.33%)
+
+    epoch=15 Loss=0.12649112939834595 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 29.08it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0213, Accuracy: 9935/10000 (99.35%)
+
+    epoch=16 Loss=0.03541385754942894 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 29.27it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0203, Accuracy: 9941/10000 (99.41%)
+
+    epoch=17 Loss=0.06020794436335564 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.59it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0209, Accuracy: 9938/10000 (99.38%)
+
+    epoch=18 Loss=0.039867233484983444 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.62it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0201, Accuracy: 9940/10000 (99.40%)
+
+    epoch=19 Loss=0.08172362297773361 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.81it/s]
+    Test set: Average loss: 0.0201, Accuracy: 9940/10000 (99.40%)
 
 ## Validation Accuracy
 
+Achieved a test accuracy of 99.4% at 18th and 19th epoch
+
+    epoch=18 Loss=0.039867233484983444 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.62it/s]
+      0%|          | 0/469 [00:00<?, ?it/s]Test set: Average loss: 0.0201, Accuracy: 9940/10000 (99.40%)
+
+    epoch=19 Loss=0.08172362297773361 batch_id=00468: 100%|██████████| 469/469 [00:16<00:00, 28.81it/s]
+    Test set: Average loss: 0.0201, Accuracy: 9940/10000 (99.40%)
 
 ![accuracy_plot](https://user-images.githubusercontent.com/42609155/119974537-68f73180-bfd2-11eb-98d3-89db764d5959.png)
 
