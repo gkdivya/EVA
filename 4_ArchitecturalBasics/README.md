@@ -1,30 +1,27 @@
 
 # Architectural Basics
 
-Modified the code given in [MNIST Base Code](https://colab.research.google.com/drive/1uJZvJdi5VprOQHROtJIHy0mnY2afjNlx) to achieve 99.4% validation accuracy with less than 20k Parameters and in less than 20 Epochs.
+Modified the code given in [MNIST Base Code](https://colab.research.google.com/drive/1uJZvJdi5VprOQHROtJIHy0mnY2afjNlx) to achieve 99.4% validation accuracy with *10k Parameters* and in less than 20 Epochs.
 
 Below important concepts were used/considered while designing the network:
-- Convolution Block 
-- Receptive Field
-- Kernels
-- Transition Block
-- Batch Normalization
-- Image Augmenation
-- Dropout
-- Batch Size
+- All convolution Blocks were designed with 3 * 3 kernels, Batch Normalization and Dropout with ReLU activation. 
+- Receptive Field calculated for each blocks and it was the main intuition behind the number of layers added in the network. Convolutions are performed to achieve at least the receptive field equal to the image size.
+- Transition Block - Max pooling with 1 * 1 convolution is used to reduce the number of channels in turn to reduce the number of parameters used in the network
+- GAP, followed by Fully connected layer used just before prediction to give the network a little flexibility with the input image size.
+- And most important thing, we have ensured not to use Batch normalization, Activation function, Max pooling, dropout just before the last layer. 
 
 Intuition behind the step by step approach we followed to reduce the number of parameters and to improve accuracy with less params:
 - At first, we reduced the number of parameters using Convolution Blocks with less number of output channels (removed 64, 128, 256 and 512 for every layer) and removed bias
-- Transition Block (max pooling followed by 1x1) with Receptive Field Concept.
+- Added a Transition Block (max pooling followed by 1x1).
 - Added a GAP layer to convert 2d to 1d
-- We used Batch Normalization after every layer
-- Use Augmentation techniques like image rotation
+- Added a FC layer after GAP i.e used 1x1 after GAP (Note: 1x1 is fully connected layer when applied on 1d data)
+- We used Batch Normalization after every convolution layer except the last one
+- Used Augmentation technique like image rotation
 - Added Dropout after every layer, we added dropout after we tried out all possible options. Adding drop out, helped reduced the gap between training and test loss.
-- Lastly, use Learning Rate to tune the model
-
-<b>Important Notes considered<b>:
-We have ensured not to use Batch normalization, Activation function, Max pooling, dropout just before the last layer. And to use always kernel size of 3 * 3
-
+- We used OneStopLR Learning Rate to tune the model
+- Had to increase the number of channels to achieve 99.4 accuracy in 19 epochs
+- Network was trained for 19 epochs with batch size of 128
+- Achieved a test accuracy of 99.4% at 18th and 19th epoch
 
 ## Experiments
 
@@ -38,24 +35,10 @@ Epochs = 19
 |[MNIST_With Batch Normalization](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp3_WithBatchNormalization.ipynb) |5810|Yes|Yes|No|No|0.02| 99.11%|
 |[MNIST_With DropOut_LRScheduler](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp6_WithLRScheduler.ipynb)|5184|Yes|Yes|0.1|Yes|0.02| 99.41% at 18th Epoch|
 
-
-
 ## Final Best Model
 
 [GitHub Notebook Link](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb) <br>
 [Colab Link](https://colab.research.google.com/github/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb)
-
-
-- Model has 10K (10,040) parametes
-- Added batch norm after every layer except last layer
-- Added Transition layer (Max pool followed by 1x1) to reduce the number of channels after every block
-- Add GAP layer
-- Also added a FC layer after GAP i.e used 1x1 after GAP (Note: 1x1 is fully connected layer when applied on 1d data)
-- Used Augmentation like image rotation
-- Added Drop out of 0.1 after every layer except last layer
-- The model was trained with a learning rate of 0.015 and momentum of 0.9 
-- Network was trained for 19 epochs with batch size of 128
-- Achieved a test accuracy of 99.4% at 18th and 19th epoch
 
 ### Model Architecture
 
