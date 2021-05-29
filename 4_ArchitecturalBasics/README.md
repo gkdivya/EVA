@@ -18,7 +18,7 @@ Intuition behind the step by step approach we followed to reduce the number of p
 - We used Batch Normalization after every convolution layer except the last one
 - Used Augmentation technique like image rotation
 - Added Dropout after every layer, we added dropout after we tried out all possible options. Adding drop out, helped reduced the gap between training and test loss.
-- We used OneStopLR Learning Rate to tune the model
+- We used OneCycleLR Learning Rate to tune the model
 - Had to increase the number of channels to achieve 99.4 accuracy in 19 epochs
 - Network was trained for 19 epochs with batch size of 128
 - Achieved a test accuracy of 99.4% at 18th and 19th epoch
@@ -31,7 +31,7 @@ Epochs = 19
 |Experiment| #Parameters | Batch Normalization | Augmentation | Dropout | GAP & FC Layer | Learning Rate Scheduler | Validation Accuracy | 
 |-------|---|---|---|---|---|---|---|
 |[MNIST_With Less Params](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp1_WithLessParams.ipynb) |5490|No|No|No|No|0.01|98%|
-|[MNIST_With Transition Block & GAP](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp2_WithTransitionBlock.ipynb) |5490|Yes|No|No|No|0.01|98%|
+|[MNIST_With Transition Block & GAP](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp2_WithTransitionBlock.ipynb) |5690|Yes|No|No|No|0.01|98.82%|
 |[MNIST_With Batch Normalization](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp3_WithBatchNormalization.ipynb) |5810|Yes|Yes|No|No|0.02| 99.11%|
 |[MNIST_With DropOut_LRScheduler](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp6_WithLRScheduler.ipynb)|5184|Yes|Yes|0.1|Yes|0.02| 99.41% at 18th Epoch|
 
