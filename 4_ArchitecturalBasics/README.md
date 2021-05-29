@@ -3,13 +3,6 @@
 
 Modified the code given in [MNIST Base Code](https://colab.research.google.com/drive/1uJZvJdi5VprOQHROtJIHy0mnY2afjNlx) to achieve 99.4% validation accuracy with *10k Parameters* and in less than 20 Epochs.
 
-Below important concepts were used/considered while designing the network:
-- All convolution Blocks were designed with 3 * 3 kernels, Batch Normalization and Dropout with ReLU activation. 
-- Receptive Field calculated for each blocks and it was the main intuition behind the number of layers added in the network. Convolutions are performed to achieve at least the receptive field equal to the image size.
-- Transition Block - Max pooling with 1 * 1 convolution is used to reduce the number of channels in turn to reduce the number of parameters used in the network
-- GAP, followed by Fully connected layer used just before prediction to give the network a little flexibility with the input image size.
-- And most important thing, we have ensured not to use Batch normalization, Activation function, Max pooling, dropout just before the last layer. 
-
 Intuition behind the step by step approach we followed to reduce the number of parameters and to improve accuracy with less params:
 - At first, we reduced the number of parameters using Convolution Blocks with less number of output channels (removed 64, 128, 256 and 512 for every layer) and removed bias
 - Added a Transition Block (max pooling followed by 1x1).
@@ -40,6 +33,13 @@ Epochs = 19
 
 [GitHub Notebook Link](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb) <br>
 [Colab Link](https://colab.research.google.com/github/gkdivya/EVA/blob/main/4_ArchitecturalBasics/MNIST_Architecture_Basics.ipynb)
+
+Below important concepts were used/considered while designing the network:
+- All convolution Blocks were designed with 3 * 3 kernels, Batch Normalization and Dropout with ReLU activation. 
+- Receptive Field calculated for each blocks and it was the main intuition behind the number of layers added in the network. Convolutions are performed to achieve at least the receptive field equal to the image size.
+- Transition Block - Max pooling with 1 * 1 convolution is used to reduce the number of channels in turn to reduce the number of parameters used in the network
+- GAP, followed by Fully connected layer used just before prediction to give the network a little flexibility with the input image size.
+- And most important thing, we have ensured not to use Batch normalization, Activation function, Max pooling, dropout just before the last layer. 
 
 ### Model Architecture
 
