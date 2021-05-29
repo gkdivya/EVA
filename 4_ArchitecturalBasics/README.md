@@ -30,7 +30,7 @@ Epochs = 19
 
 |Experiment| #Parameters | Batch Normalization | Augmentation | Dropout | GAP & FC Layer | Learning Rate Scheduler | Validation Accuracy | 
 |-------|---|---|---|---|---|---|---|
-|[MNIST_With Less Params](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp1_WithLessParams.ipynb) |6,379,786|No|No|No|No|0.01|99%|
+|[MNIST_With Less Params](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp1_WithLessParams.ipynb) |5490|No|No|No|No|0.01|99%|
 |[MNIST_With Transition Block & GAP](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp2_WithTransitionBlock.ipynb) |5690|Yes|No|No|No|0.02|98.82%|
 |[MNIST_With Batch Normalization](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp3_WithBatchNormalization.ipynb) |5810|Yes|Yes|No|No|0.02| 99.11%|
 |[MNIST_With DropOut_LRScheduler](https://github.com/gkdivya/EVA/blob/main/4_ArchitecturalBasics/Experiments/MNIST_Exp6_WithLRScheduler.ipynb)|5184|Yes|Yes|0.1|Yes|0.02| 99.41% at 18th Epoch|
