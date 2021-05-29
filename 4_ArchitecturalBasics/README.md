@@ -43,7 +43,7 @@ Epochs = 19
 
 ### Model Architecture
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/17870236/120052775-98df1d00-c044-11eb-87b1-3a763a382a63.png)
 
 
       Net(
