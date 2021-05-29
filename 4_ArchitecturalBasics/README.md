@@ -43,7 +43,8 @@ Below important concepts were used/considered while designing the network:
 
 ### Model Architecture
 
-![image](https://user-images.githubusercontent.com/17870236/120052775-98df1d00-c044-11eb-87b1-3a763a382a63.png)
+![image](https://user-images.githubusercontent.com/17870236/120053162-56b6db00-c046-11eb-860f-16741c97f5a3.png)
+
 
 
       Net(
