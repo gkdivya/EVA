@@ -43,6 +43,9 @@ Epochs = 19
 
 ### Model Architecture
 
+![Uploading image.png…]()
+
+
       Net(
         (conv1): Sequential(
           (0): Conv2d(1, 8, kernel_size=(3, 3), stride=(1, 1), bias=False)
