@@ -5,3 +5,12 @@
 - Do this in exactly 3 or more steps
 - Each File must have "target, result, analysis" TEXT block (either at the start or the end)
 - You must convince why have you decided that your target should be what you have decided it to be, and your analysis MUST be correct. 
+
+
+## Steps:
+1. basic skeleton with sequential format(with GAP), 15 epoch, reduce the number of parameter
+2, with batch norm
+3. with drop out
+4. add fc layer
+5. augmentation
+6. lr scheduler
