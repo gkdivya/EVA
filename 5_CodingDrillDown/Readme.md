@@ -9,7 +9,8 @@
 ## Receptive Field calculation for our model
 
 Formula reference:</br>
-![image](https://user-images.githubusercontent.com/17870236/120272572-f6849b00-c2ca-11eb-8640-95df82874dd1.png)
+![image](https://user-images.githubusercontent.com/17870236/120272750-2e8bde00-c2cb-11eb-8379-62dd45efa786.png)
+
 
 
 | Operation   | nin | Ch_in | Ch_Out | padding | kernel | stride | nout | jin | jout | rin | rout | Act_Size | Params# |
