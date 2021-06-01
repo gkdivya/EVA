@@ -9,7 +9,7 @@
 ## Receptive Field calculation for our model
 
 Formula reference:</br>
-![image](https://user-images.githubusercontent.com/17870236/120272750-2e8bde00-c2cb-11eb-8379-62dd45efa786.png)
+![image](https://user-images.githubusercontent.com/17870236/120273760-8d9e2280-c2cc-11eb-809c-a21b4e8d93f6.png)
 
 
 
