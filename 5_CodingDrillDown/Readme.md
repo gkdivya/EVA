@@ -1,4 +1,6 @@
-## Finetune CNN Architecture on MNIST dataset
+# Finetune CNN Architecture on MNIST dataset
+
+## Objective:
 - Achieve 99.4% accuracy on test data (this must be consistently shown in last few epochs, and not a one-time achievement)
 - Less than or equal to 15 Epochs
 - Less than 10000 or 8000 Parameters 
@@ -6,7 +8,25 @@
 - Each File must have "target, result, analysis" TEXT block (either at the start or the end)
 - You must convince why have you decided that your target should be what you have decided it to be, and your analysis MUST be correct. 
 
-## Receptive Field calculation for our model
+## Step by Step process followed:
+- Modified MNIST model architecture to have **6k** params and trained for **15 epochs**
+- Achieved 99.4% accuracy on MNIST test data consistently in last few epochs  
+
+| Experiment                         | Parameters | Batch Normalization | Dropout | FC Layer | Image Augmentation | LR Scheduler | Validation Accuracy |
+| -----------------------------------| ---------- | ------------------- | ------- | -------- | ------------------ | ------------ | ------------------- |
+|[MNIST_Base Skeleton Model]()       |            | No                  | No      | No       | No                 | No           |                     |
+|[MNIST_With_Batch Normlaization]()  |            | Yes                 | No      | No       | No                 | No           |                     |
+|[MNIST_With Dropout]()              |            | Yes                 | Yes     | No       | No                 | No           |                     |
+|[MNIST_With FC Layer]()             |            | Yes                 | Yes     | Yes      | No                 | No           |                     |
+|[MNIST_With_Augmentation]()         |            | Yes                 | Yes     | Yes      | Yes                | No           |                     |
+|[MNIST_With_LR Scheduler]()         |            | Yes                 | Yes     | Yes      | Yes                | Yes          |                     |
+
+
+## Model:
+[Github Link]()
+[Collab Notebook Link]()
+
+## Receptive Field calculation for our final model
 
 Formula reference:</br>
 ![image](https://user-images.githubusercontent.com/17870236/120273908-c0481b00-c2cc-11eb-8b97-af4c8b9d5917.png)
@@ -23,10 +43,7 @@ Formula reference:</br>
 | Convolution | 8   | 16    | 16     | 0       | 3      | 1      | 6    | 2   | 2    | 60  | 124  | 1024     | 2304    |
 | Convolution | 6   | 16    | 16     | 1       | 3      | 1      | 6    | 2   | 2    | 124 | 252  | 576      | 2304    |
 
-## Steps:
-1. basic skeleton with sequential format(with GAP), 15 epoch, reduce the number of parameter
-2, with batch norm
-3. with drop out
-4. add fc layer
-5. augmentation
-6. lr scheduler
+## Loss:
+
+## Inference:
+
