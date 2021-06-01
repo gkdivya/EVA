@@ -6,6 +6,8 @@
 - Each File must have "target, result, analysis" TEXT block (either at the start or the end)
 - You must convince why have you decided that your target should be what you have decided it to be, and your analysis MUST be correct. 
 
+## Receptive Field calculation
+
 | Operation   | nin | Ch_in | Ch_Out | padding | kernel | stride | nout | jin | jout | rin | rout | Activation\_Size | Params# |
 | ----------- | --- | ----- | ------ | ------- | ------ | ------ | ---- | --- | ---- | --- | ---- | ---------------- | ------- |
 | Convolution | 28  | 1     | 8      | 0       | 3      | 1      | 26   | 1   | 1    | 1   | 3    | 784              | 72      |
