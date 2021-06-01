@@ -21,7 +21,7 @@ Formula reference:</br>
 | Convolution | 12  | 8     | 10     | 0       | 3      | 1      | 10   | 2   | 2    | 12  | 28   | 1152     | 720     |
 | Convolution | 10  | 10    | 16     | 0       | 3      | 1      | 8    | 2   | 2    | 28  | 60   | 1000     | 1440    |
 | Convolution | 8   | 16    | 16     | 0       | 3      | 1      | 6    | 2   | 2    | 60  | 124  | 1024     | 2304    |
-| Convolution | 6   | 16    | 16     | 0       | 3      | 1      | 4    | 2   | 2    | 124 | 252  | 576      | 2304    |
+| Convolution | 6   | 16    | 16     | 1       | 3      | 1      | 6    | 2   | 2    | 124 | 252  | 576      | 2304    |
 
 ## Steps:
 1. basic skeleton with sequential format(with GAP), 15 epoch, reduce the number of parameter
