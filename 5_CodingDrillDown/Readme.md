@@ -14,7 +14,7 @@
 
 | Experiment                         | Parameters | Batch Normalization | Dropout | FC Layer | Image Augmentation | LR Scheduler | Validation Accuracy |
 | -----------------------------------| ---------- | ------------------- | ------- | -------- | ------------------ | ------------ | ------------------- |
-|[MNIST_Base Skeleton Model]()       |            | No                  | No      | No       | No                 | No           |                     |
+|[MNIST_Base Skeleton Model]()       |  13,160    | No                  | No      | No       | No                 | No           |   98.55%            |
 |[MNIST_With_Batch Normlaization]()  |            | Yes                 | No      | No       | No                 | No           |                     |
 |[MNIST_With Dropout]()              |            | Yes                 | Yes     | No       | No                 | No           |                     |
 |[MNIST_With FC Layer]()             |            | Yes                 | Yes     | Yes      | No                 | No           |                     |
@@ -47,3 +47,4 @@ Formula reference:</br>
 
 ## Inference:
 
+,
