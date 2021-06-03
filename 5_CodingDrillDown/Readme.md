@@ -114,5 +114,8 @@ Formula reference:</br>
       Loss=0.08451732248067856 Batch_id=468 Accuracy=98.43: 100%|██████████| 469/469 [00:53<00:00,  8.72it/s]
       Test set: Average loss: 0.0168, Accuracy: 9950/10000 (99.50%)
 
+
+<p align="center"><img src="https://user-images.githubusercontent.com/42609155/120590215-d0d8cc80-c457-11eb-877e-2c904aa27f8f.png" width="800"></p>
+
 <b>Finally, by fine tuning the model in a step by step approach, the model was able to reach best test accuracy of 99.53% in 15 epochs with just 6720 (6K parameters)!!!
 
