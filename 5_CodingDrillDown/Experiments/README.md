@@ -6,7 +6,7 @@ Using the MNIST image dataset and CNN, follow a step by step approach to finetun
 
 [Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%200_BasicSetup.ipynb)
 
-### Target:
+#### Target:
 
 - Get the set-up right
 - Set Transforms
@@ -14,12 +14,12 @@ Using the MNIST image dataset and CNN, follow a step by step approach to finetun
 - Set Basic Working Code
 - Set Basic Training  & Test Loop
 
-### Results:
+#### Results:
 - Parameters: 6.3M
 - Best Training Accuracy: 99.93
 - Best Test Accuracy: 99.28
 
-### Analysis:
+#### Analysis:
 - Extremely Heavy Model for such a problem
 - Model is over-fitting because the training accuracy is 99.93, but we are changing our model in the next step
 
@@ -33,16 +33,16 @@ Using the MNIST image dataset and CNN, follow a step by step approach to finetun
 
 [Link to Notebook](https://github.com/divya-r-kamat/DeepVision/blob/main/CNN%20Optimization/MNIST_IncreaseCapacity_Step6.ipynb)
 
-### Target:
+#### Target:
 
 - Increase model capacity at the end (add layer after GAP)
 
-### Results:
+#### Results:
 - Parameters: 6,124
 - Best Training Accuracy: 99.07
 - Best Test Accuracy: 99.22
 
-### Analysis:
+#### Analysis:
 - The model parameters have increased
 - There is no overfitting rather slight underfitting, thats fine dropout is doing its work , because we are adding dropout at each layer the model is able to capture the training accuracy
 - However, we haven't reached 99.4 accuracy yet.
@@ -52,16 +52,16 @@ Using the MNIST image dataset and CNN, follow a step by step approach to finetun
 
 [Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%205_Augmentation.ipynb)
 
-### Target:
+#### Target:
 
 - Add various Image augmentation techniques, image rotation, randomaffine, colorjitter .
 
-### Results:
+#### Results:
 - Parameters: 6124
 - Best Training Accuracy: 97.61
 - Best Test Accuracy: 99.32%
 
-### Analysis:
+#### Analysis:
 - he model is under-fitting, that should be ok as we know we have made our train data harder. 
 - However, we haven't reached 99.4 accuracy yet.
 - The model seems to be stuck at 99.2% accuracy, seems like the model needs some additional capacity towards the end.
@@ -70,16 +70,16 @@ Using the MNIST image dataset and CNN, follow a step by step approach to finetun
 
 [Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%206_LRScheduler.ipynb)
 
-### Target:
+#### Target:
 
 - Add some capacity (additional FC layer after GAP) to the model and added LR Scheduler
 
-### Results:
+#### Results:
 - Parameters: 6720
 - Best Training Accuracy: 99.43
 - Best Test Accuracy: 99.53
 
-### Analysis:
+#### Analysis:
 
 - The model parameters have increased
 - The model is under-fitting. This is fine, as we know we have made our train data harder.  
