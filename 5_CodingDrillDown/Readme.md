@@ -24,7 +24,7 @@ Achieved 99.4% accuracy on MNIST test data consistently in last few epochs<br>
 ## Receptive Field calculation for our final model
 
 Formula reference:</br>
-<p align="center"><img src="https://user-images.githubusercontent.com/17870236/120273908-c0481b00-c2cc-11eb-8b97-af4c8b9d5917.png" width="600"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/17870236/120273908-c0481b00-c2cc-11eb-8b97-af4c8b9d5917.png"></p>
 
 
 | Operation   | nin | Ch_in | Ch_Out | padding | kernel | stride | nout | jin | jout | rin | rout | Act_Size | Params# |
