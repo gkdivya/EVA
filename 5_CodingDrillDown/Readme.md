@@ -12,60 +12,19 @@
 Modified MNIST model architecture to have 6k params and trained for 15 epochs<br>
 Achieved 99.4% accuracy on MNIST test data consistently in last few epochs<br>
 
-| Experiment                         | Parameters | Batch Normalization | Dropout | FC Layer | Image Augmentation | LR Scheduler | Validation Accuracy |
-| -----------------------------------| ---------- | ------------------- | ------- | -------- | ------------------ | ------------ | ------------------- |
-|[MNIST_Basic_Setup](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/MNIST_Step1_BasicSetup.ipynb)|  6.3M   | No                  | No      | No       | No                 | No           |   99.28%            |
-|[MNIST_Base Skeleton Model]()       |  13,160    | No                  | No      | No       | No                 | No           |   98.55%            |
-|[MNIST_With_Batch Normalization]()  |            | Yes                 | No      | No       | No                 | No           |                     |
-|[MNIST_With Dropout]()              |            | Yes                 | Yes     | No       | No                 | No           |                     |
-|[MNIST_With FC Layer]()             |            | Yes                 | Yes     | Yes      | No                 | No           |                     |
-|[MNIST_With_Augmentation]()         |            | Yes                 | Yes     | Yes      | Yes                | No           |                     |
-|[MNIST_With_LR Scheduler](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/MNIST_Step7_LRScheduler.ipynb)         |     6720       | Yes                 | Yes     | Yes      | Yes                | Yes          |         99.53%            |
+| Experiment                         | Parameters | Batch Normalization | Dropout | FC Layer | Image Augmentation | LR Scheduler | Train Accuracy | Test Accuracy |
+| -----------------------------------| ---------- | ------------------- | ------- | -------- | ------------------ | ------------ | ------------------- |------------------- |
+|[MNIST_Basic_Setup](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step1_BasicSetup.ipynb)|  6.3M   | No                  | No      | No       | No                 | No           |   99.28%            |
+|[MNIST_Base Skeleton Model]()       |  13,160    | No                  | No      | No       | No                 | No           |            |   98.55%            |
+|[MNIST_With_Batch Normalization]()  |            | Yes                 | No      | No       | No                 | No           |                     |            |
+|[MNIST_With Dropout]()              |            | Yes                 | Yes     | No       | No                 | No           |                     |            |
+|[MNIST_With FC Layer]()             |            | Yes                 | Yes     | Yes      | No                 | No           |                     |            |
+|[MNIST_With_Augmentation]()         |            | Yes                 | Yes     | Yes      | Yes                | No           |                     |            |
+|[MNIST_With_LR Scheduler](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step7_LRScheduler.ipynb)         |     6720       | Yes       | Yes     | Yes      | Yes                | Yes          |                 |        99.53%        |
 
 
 ## Step by Step process followed:
 
-
-## Step 1 : Basic Setup
-
-[Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/MNIST_Step1_BasicSetup.ipynb)
-
-### Target:
-
-- Get the set-up right
-- Set Transforms
-- Set Data Loader
-- Set Basic Working Code
-- Set Basic Training  & Test Loop
-
-### Results:
-- Parameters: 6.3M
-- Best Training Accuracy: 99.93
-- Best Test Accuracy: 99.28
-
-### Analysis:
-- Extremely Heavy Model for such a problem
-- Model is over-fitting because the training accuracy is 99.93, but we are changing our model in the next step
-
-
-## Step 7 : LR Scheduler
-
-[Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/MNIST_Step7_LRScheduler.ipynb)
-
-### Target:
-
-- Add some capacity to the model and added LR Scheduler
-
-### Results:
-- Parameters: 6720
-- Best Training Accuracy: 99.43
-- Best Test Accuracy: 99.53
-
-### Analysis:
-
-- The model parameters have increased
-- The model is under-fitting. This is fine, as we know we have made our train data harder.  
-- LR Scheduler helped getting to 99.4, Onecyclic LR is being used, this seemed to perform better than StepLR to achieve consistent accuracy in last few layers
 
 
 ## Receptive Field calculation for our final model
