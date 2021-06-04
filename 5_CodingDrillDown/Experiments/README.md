@@ -2,9 +2,7 @@
 
 Using the MNIST image dataset and CNN, follow a step by step approach to finetune the network to achieve 99.4% validation accuracy with less than _8k Parameters_ in 15 Epochs.
 
-## Step 0 : Basic Setup
-
-[Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%200_BasicSetup.ipynb)
+## Step 0 : [Basic Setup](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%200_BasicSetup.ipynb)
 
 #### Target:
 
@@ -15,17 +13,17 @@ Using the MNIST image dataset and CNN, follow a step by step approach to finetun
 - Set Basic Training  & Test Loop
 
 #### Results:
+
 - Parameters: 6.3M
 - Best Training Accuracy: 99.93
 - Best Test Accuracy: 99.28
 
 #### Analysis:
+
 - Extremely Heavy Model for such a problem
 - Model is over-fitting because the training accuracy is 99.93, but we are changing our model in the next step
 
-## Step 1 : Basic Skeleton
-
-[Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%201_BasicSkeleton.ipynb)
+## Step 1 : [Basic Skeleton](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%201_BasicSkeleton.ipynb)
 
 #### Target:
 
@@ -34,99 +32,98 @@ Using the MNIST image dataset and CNN, follow a step by step approach to finetun
 - Add GAP and remove the last BIG kernel.
 
 #### Results:
+
 - Parameters: 4572
 - Best Training Accuracy: 98.22
 - Best Test Accuracy: 98.43
 
 #### Analysis:
+
 - We have structured our model in a readable way
 - The model is lighter with less number of parameters 
 - The performace is reduced compared to previous models. Since we have reduced model capacity, this is expected, the model has capability to learn.   
 - Next, we will be tweaking this model further and increase the capacity to push it more towards the desired accuracy.
 
-## Step 2 : Add BatchNormalization
-
-
-[Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%202_Batch_Normalization.ipynb)
+## Step 2 : [Add BatchNormalization](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%202_Batch_Normalization.ipynb)
 
 #### Target:
 
 - Add Batch-norm to increase model efficiency
 
 #### Results:
+
 - Parameters: 5088
 - Best Training Accuracy: 99.03
 - Best Test Accuracy: 99.04
 
 #### Analysis:
+
 - There is slight increase in the number of parameters, as batch norm stores a specific mean and std deviation for each layer
 - Model overfitting problem is rectified to an extent. But, we have not reached the target test accuracy 99.40%.
 
-## Step 3 : Add Dropout
-
-
-[Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%203_Dropout.ipynb)
+## Step 3 : [Add Dropout](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%203_Dropout.ipynb)
 
 #### Target:
 
 -  Add Regularization Dropout to each layer except last layer
 
 #### Results:
+
 - Parameters: 5088	
 - Best Training Accuracy: 97.94
 - Best Test Accuracy: 98.64
 
 #### Analysis:
+
 - There is no overfitting at all. With dropout training will be harder, because we are droping the pixels randomly.
 - The performance has droppped, we can further improve it.
 - But with the current capacity,not possible to push it further.We can possibly increase the capacity of the model by adding a layer after GAP!
 
-## Step 4 : Increase Capacity (add Fully Connected Layer)
-
-[Link to Notebook](https://github.com/divya-r-kamat/DeepVision/blob/main/CNN%20Optimization/MNIST_IncreaseCapacity_Step6.ipynb)
+## Step 4 : [Increase Capacity (add Fully Connected Layer)](https://github.com/divya-r-kamat/DeepVision/blob/main/CNN%20Optimization/MNIST_IncreaseCapacity_Step6.ipynb)
 
 #### Target:
 
 - Increase model capacity at the end (add layer after GAP)
 
 #### Results:
+
 - Parameters: 6,124
 - Best Training Accuracy: 99.07
 - Best Test Accuracy: 99.22
 
 #### Analysis:
+
 - The model parameters have increased
 - There is no overfitting rather slight underfitting, thats fine dropout is doing its work , because we are adding dropout at each layer the model is able to capture the training accuracy
 - However, we haven't reached 99.4 accuracy yet.
 - Observing the missclassified images its good to try out some augmentation techniques as few images seems to be slightly rotated, and also image contrast needs to be considered
 
-## Step 5 : Image Augmentation
-
-[Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%205_Augmentation.ipynb)
+## Step 5 : [Image Augmentation](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%205_Augmentation.ipynb)
 
 #### Target:
 
 - Add various Image augmentation techniques, image rotation, randomaffine, colorjitter .
 
 #### Results:
+
 - Parameters: 6124
 - Best Training Accuracy: 97.61
 - Best Test Accuracy: 99.32%
 
 #### Analysis:
+
 - he model is under-fitting, that should be ok as we know we have made our train data harder. 
 - However, we haven't reached 99.4 accuracy yet.
 - The model seems to be stuck at 99.2% accuracy, seems like the model needs some additional capacity towards the end.
 
-## Step 6 : LR Scheduler
-
-[Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%206_LRScheduler.ipynb)
+## Step 6 : [LR Scheduler](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%206_LRScheduler.ipynb)
 
 #### Target:
 
 - Add some capacity (additional FC layer after GAP) to the model and added LR Scheduler
 
 #### Results:
+
 - Parameters: 6720
 - Best Training Accuracy: 99.43
 - Best Test Accuracy: 99.53
@@ -136,4 +133,3 @@ Using the MNIST image dataset and CNN, follow a step by step approach to finetun
 - The model parameters have increased
 - The model is under-fitting. This is fine, as we know we have made our train data harder.  
 - LR Scheduler and the additional capacity after GAP helped getting to the desired target 99.4, Onecyclic LR is being used, this seemed to perform better than StepLR to achieve consistent accuracy in last few layers
-
