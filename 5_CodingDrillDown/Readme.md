@@ -38,7 +38,7 @@ Formula reference:</br>
 <p align="center"><img src="https://user-images.githubusercontent.com/17870236/120273908-c0481b00-c2cc-11eb-8b97-af4c8b9d5917.png"></p>
 
 
-| Operation   | nin | Channels | Output-Channels | padding | kernel | stride | nout | jin | jout | rin | rout | Activation-Size | Params# |
+| Operation   | nin | in_ch | out_ch | padding | kernel | stride | nout | jin | jout | rin | rout | Act-Size | Params |
 | ----------- | --- | -------- | --------------- | ------- | ------ | ------ | ---- | --- | ---- | --- | ---- | --------------- | ------- |
 | Convolution | 28  | 1        | 8               | 0       | 3      | 1      | 26   | 1   | 1    | 1   | 3    | 784             | 72      |
 | Convolution | 26  | 8        | 16              | 0       | 3      | 1      | 24   | 1   | 1    | 3   | 5    | 5408            | 1152    |
