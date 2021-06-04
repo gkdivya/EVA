@@ -2,39 +2,6 @@
 
 Using the MNIST image dataset and CNN, follow a step by step approach to finetune the network to achieve 99.4% validation accuracy with less than _8k Parameters_ in 15 Epochs.
 
-### Important Concepts used:
-
-**Transition Block**:
-Max pooling followed by 1*1 to observe the accuracy
-
-**1*1 Convolution:** Its used in a convolutional neural network mainly to control the number of feature maps. It helps the network to go deeper without compromising on the extracted features with very less params.
-
-![image](https://user-images.githubusercontent.com/17870236/120821875-746acf80-c573-11eb-8ac6-df8ca4b341c1.png)
-
-**Batch Normalization**:
-Even though we normalize the input values with Image normalization transform, parameter values changes while training the network.
-Batch Normalization is a technique to normalize the values getting passed within the network. 
-Its normally applied to activations of a prior convolutional layer or on the inputs directly.
-[torch.nn.BatchNorm2d](https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm2d.html)
-It helps with faster and smoother training process.
-
-**Global Average Pooling**:
-Initially GAP was introduced as an alternative to a fully connected layer in CNN networks. GAP is basically used to collapse all important features to 1\*1*n. 
-
-Main intuition behind GAP is to give network the flexibility with the input image size since the output of the GAP is always consistent irrespective of the input image size.
-
-[nn.AvgPool2D](https://pytorch.org/docs/stable/generated/torch.nn.AvgPool2d.html) For example nn.AvgPool2d(kernel_size=3) can convert 3*3*n channels 1\*1*n
-
-**Intuition behind adding a Fully connected layer after GAP**: Earlier, CNN networks designed with Fully connected layers were expensive and without GAP, using a fully connected layer was restricting the input image size. GAP replaced by Fully connected layer made more sense in designing CNN networks.
-But in recent few papers, its found using a GAP followed by FC layer, network is able to learn more complex features.
-
-[GAP And FC - VGG-GAP-Model architecture](https://www.researchgate.net/figure/VGG-GAP-model-architecture-The-CNNs-in-the-model-included-five-max-pooling-layers-and_fig1_337277062)
-
-**Dropout**: Dropout is a regularization technique where randomly selected neurons are ignored during training process. So the dropped out neurons - weight updates are not applied in back propagation.
-
-![image](https://user-images.githubusercontent.com/17870236/120822804-69fd0580-c574-11eb-8424-db85179b66e4.png)
-
-
 ## Step 0 : [Basic Setup](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%200_BasicSetup.ipynb)
 
 #### Target:
@@ -64,6 +31,21 @@ But in recent few papers, its found using a GAP followed by FC layer, network is
 - Reduce the number of parameters as low as possible
 - Add GAP and remove the last BIG kernel.
 
+**Transition Block**:
+Max pooling followed by 1*1 to observe the accuracy
+
+**1*1 Convolution:** Its used in a convolutional neural network mainly to control the number of feature maps. It helps the network to go deeper without compromising on the extracted features with very less params.
+
+![image](https://user-images.githubusercontent.com/17870236/120821875-746acf80-c573-11eb-8ac6-df8ca4b341c1.png)
+
+**Global Average Pooling**:
+Initially GAP was introduced as an alternative to a fully connected layer in CNN networks. GAP is basically used to collapse all important features to 1\*1*n. 
+
+Main intuition behind GAP is to give network the flexibility with the input image size since the output of the GAP is always consistent irrespective of the input image size.
+
+[nn.AvgPool2D](https://pytorch.org/docs/stable/generated/torch.nn.AvgPool2d.html) For example nn.AvgPool2d(kernel_size=3) can convert 3*3*n channels 1\*1*n
+
+
 #### Results:
 
 - Parameters: 4572
@@ -83,6 +65,13 @@ But in recent few papers, its found using a GAP followed by FC layer, network is
 
 - Add Batch-norm to increase model efficiency
 
+**Batch Normalization**:
+Even though we normalize the input values with Image normalization transform, parameter values changes while training the network.
+Batch Normalization is a technique to normalize the values getting passed within the network. 
+Its normally applied to activations of a prior convolutional layer or on the inputs directly.
+[torch.nn.BatchNorm2d](https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm2d.html)
+It helps with faster and smoother training process.
+
 #### Results:
 
 - Parameters: 5088
@@ -99,6 +88,11 @@ But in recent few papers, its found using a GAP followed by FC layer, network is
 #### Target:
 
 -  Add Regularization Dropout to each layer except last layer
+
+**Dropout**: Dropout is a regularization technique where randomly selected neurons are ignored during training process. So the dropped out neurons - weight updates are not applied in back propagation.
+
+![image](https://user-images.githubusercontent.com/17870236/120822804-69fd0580-c574-11eb-8424-db85179b66e4.png)
+
 
 #### Results:
 
@@ -117,6 +111,11 @@ But in recent few papers, its found using a GAP followed by FC layer, network is
 #### Target:
 
 - Increase model capacity at the end (add layer after GAP)
+
+**Intuition behind adding a Fully connected layer after GAP**: Earlier, CNN networks designed with Fully connected layers were expensive and without GAP, using a fully connected layer was restricting the input image size. GAP replaced by Fully connected layer made more sense in designing CNN networks.
+But in recent few papers, its found using a GAP followed by FC layer, network is able to learn more complex features.
+
+[GAP And FC - VGG-GAP-Model architecture](https://www.researchgate.net/figure/VGG-GAP-model-architecture-The-CNNs-in-the-model-included-five-max-pooling-layers-and_fig1_337277062)
 
 #### Results:
 
