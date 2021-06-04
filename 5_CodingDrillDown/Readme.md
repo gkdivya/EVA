@@ -1,13 +1,19 @@
 # Finetune CNN Architecture on MNIST dataset
 
-Modified the base code in [MNIST Basic Code](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%200_BasicSetup.ipynb) to achieve **99.5%** validation accuracy with **6k Parameters** in 15 Epochs.
+Objective is to fine tune the base code in [MNIST Basic Code](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%200_BasicSetup.ipynb) to achieve **99.4%** validation accuracy with **less Parameters** in 15 Epochs. 
 
-# How we did:
-Inspired by set of AI motivational posts, we picked up all the right highlighted secrets in it to complete the mamoth task! 
+## How we did:
+
+Inspired by set of TSAI - motivational posts, we picked up all the right highlighted secrets in it to achieve the mammoth task! 
 ![image](https://user-images.githubusercontent.com/17870236/120790982-3bb9fe80-c551-11eb-9b42-2ee1b2ca05a3.png)
 
+1. **Skeleton** - Reduced the number of parameters using Convolution Blocks with less number of output channels (removed 64, 128, 256 and 512 for every layer) and removed bias
+2. **Max-Pooling** - Transition Block (max pooling followed by 1x1) after 5x5 receptive field added in network.
+3. **Batch-Normalization** - Added after every convolution layer except the last one to normalize the values being passed between convolution layers
+5. **Augmentation** - Image augmentation technique like image rotation, color are used
+6. **Regularization** - Adding drop out, helped reduced the gap between training and test loss.
+7. **Learning Rate** - Used OneCycleLR Learning Rate to tune the model
 
-Intuition behind the step by step process followed to achieve better accuracy with less params:
 
 | Experiment                                                                                                                        | Target                                                                                                                                                                                                          | Parameters | BestTrain Accuracy | Best Test Accuracy | Analysis                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
