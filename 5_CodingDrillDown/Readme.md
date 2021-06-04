@@ -26,10 +26,11 @@ Inspired by set of TSAI - motivational posts, we picked up all the right highlig
 | [MNIST\_With\_Augmentation](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%205_Augmentation.ipynb)                                           | •Add various Image augmentation techniques, image rotation, randomaffine, colorjitter .                                                                                                                         | 6124       | 97.61             | 99.32         | •The model is under-fitting, that should be ok as we know we have made our train data harder.<br>• However, we haven't reached 99.4 accuracy yet.<br>•The model seems to be stuck at 99.2% accuracy, seems like the model needs some additional capacity towards the end.                                                                                                                                                                                                   |
 | [MNIST\_With\_LR Scheduler](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%206_LRScheduler.ipynb) | • Add some capacity (additional FC layer after GAP) to the model and added LR Scheduler                                                                                                                         | 6720       | 99.43             | 99.53         | •The model parameters have increased<br>• The model is under-fitting. This is fine, as we know we have made our train data harder.<br>• LR Scheduler and the additional capacity after GAP helped getting to the desired target 99.4, Onecyclic LR is being used, this seemed to perform better than StepLR to achieve consistent accuracy in last few layers
 
-|
+# Final Model
 
-### Final Model
-<b>By fine tuning the model with the step by step approach, the model was able to reach best test accuracy of **99.53%** in **15 epochs** with just **6720 (6K parameters)**!!!
+By fine tuning the model with the step by step approach, the model was able to reach best test accuracy of **99.53%** in **15 epochs** with just **6720 (6K parameters)**!!!
+
+![image](https://user-images.githubusercontent.com/17870236/120796868-f7326100-c558-11eb-9b4d-04981128a25b.png)
 
 ## Receptive Field calculation:
 
