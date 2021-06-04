@@ -25,6 +25,25 @@ Using the MNIST image dataset and CNN, follow a step by step approach to finetun
 
 ## Step 1 : Basic Skeleton
 
+[Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%201_BasicSkeleton.ipynb)
+
+#### Target:
+
+- Get the basic skeleton interms of convolution and placement of transition blocks (max pooling, 1x1's)
+- Reduce the number of parameters as low as possible
+- Add GAP and remove the last BIG kernel.
+
+#### Results:
+- Parameters: 4572
+- Best Training Accuracy: 98.22
+- Best Test Accuracy: 98.43
+
+#### Analysis:
+- We have structured our model in a readable way
+- The model is lighter with less number of parameters 
+- The performace is reduced compared to previous models. Since we have reduced model capacity, this is expected, the model has capability to learn.   
+- Next, we will be tweaking this model further and increase the capacity to push it more towards the desired accuracy.
+
 ## Step 2 : Add BatchNormalization
 
 ## Step 3 : Add Dropout
