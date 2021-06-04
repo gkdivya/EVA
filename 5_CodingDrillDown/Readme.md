@@ -1,16 +1,13 @@
 # Finetune CNN Architecture on MNIST dataset
 
-## Objective:
-- Achieve 99.4% accuracy on test data (this must be consistently shown in last few epochs, and not a one-time achievement)
-- Less than or equal to 15 Epochs
-- Less than 10000 or 8000 Parameters 
-- Do this in exactly 3 or more steps
-- Each File must have "target, result, analysis" TEXT block (either at the start or the end)
-- You must convince why have you decided that your target should be what you have decided it to be, and your analysis MUST be correct. 
+Modified the base code in [MNIST Basic Code](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%200_BasicSetup.ipynb) to achieve **99.5%** validation accuracy with **6k Parameters** in 15 Epochs.
+
+# How we did:
+Inspired by set of AI motivational posts, we picked up all the right highlighted secrets in it to complete the mamoth task! 
+![image](https://user-images.githubusercontent.com/17870236/120790982-3bb9fe80-c551-11eb-9b42-2ee1b2ca05a3.png)
 
 
-Modified MNIST model architecture to have 6k params and trained for 15 epochs<br>
-Achieved 99.4% accuracy on MNIST test data consistently in last few epochs<br>
+Intuition behind the step by step process followed to achieve better accuracy with less params:
 
 | Experiment                                                                                                                        | Target                                                                                                                                                                                                          | Parameters | BestTrain Accuracy | Best Test Accuracy | Analysis                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
