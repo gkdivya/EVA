@@ -46,7 +46,40 @@ Using the MNIST image dataset and CNN, follow a step by step approach to finetun
 
 ## Step 2 : Add BatchNormalization
 
+
+[Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%202_Batch_Normalization.ipynb)
+
+#### Target:
+
+- Add Batch-norm to increase model efficiency
+
+#### Results:
+- Parameters: 5088
+- Best Training Accuracy: 99.03
+- Best Test Accuracy: 99.04
+
+#### Analysis:
+- There is slight increase in the number of parameters, as batch norm stores a specific mean and std deviation for each layer
+- Model overfitting problem is rectified to an extent. But, we have not reached the target test accuracy 99.40%.
+
 ## Step 3 : Add Dropout
+
+
+[Link to Notebook](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%203_Dropout.ipynb)
+
+#### Target:
+
+-  Add Regularization Dropout to each layer except last layer
+
+#### Results:
+- Parameters: 5088	
+- Best Training Accuracy: 97.94
+- Best Test Accuracy: 98.64
+
+#### Analysis:
+- There is no overfitting at all. With dropout training will be harder, because we are droping the pixels randomly.
+- The performance has droppped, we can further improve it.
+- But with the current capacity,not possible to push it further.We can possibly increase the capacity of the model by adding a layer after GAP!
 
 ## Step 4 : Increase Capacity (add Fully Connected Layer)
 
