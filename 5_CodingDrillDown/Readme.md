@@ -1,6 +1,6 @@
 # Finetune CNN Architecture on MNIST dataset
 
-Objective is to fine tune the base code in [MNIST Basic Code](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%200_BasicSetup.ipynb) to achieve **99.4%** validation accuracy with **less Parameters** in 15 Epochs. 
+Objective is to fine tune the base code in [MNIST Basic Code](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%200_BasicSetup.ipynb) to achieve **99.4%** validation accuracy with **less than 10k Parameters** in 15 Epochs. 
 
 ## How we did:
 
@@ -24,8 +24,14 @@ Inspired by set of TSAI - motivational posts, we picked up all the right highlig
 | [MNIST\_With Dropout](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%203_Dropout.ipynb)                                                 | <br>•  Add Regularization Dropout to each layer except last layer                                                                                                                                               | 5088       | 97.94             | 98.64         | •  There is no overfitting at all. With dropout training will be harder, because we are droping the pixels randomly.<br>•  The performance has droppped, we can further improve it.<br>•  But with the current capacity,not possible to push it further.We can possibly increase the capacity of the model by adding a layer after GAP!                                                                                                                                     |
 | [MNIST\_With\_FullyConnectedLayer](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%204_%20Fully%20Connected%20layer.ipynb)                                    | • Increase model capacity at the end (add layer after GAP)                                                                                                                                                      | 6124       | 99.07             | 99.22         | • The model parameters have increased<br>• There is no overfitting rather slight underfitting, thats fine dropout is doing its work , because we are adding dropout at each layer the model is able to capture the training accuracy<br>• However, we haven't reached 99.4 accuracy yet.<br>Observing the missclassified images its good to try out some augmentation techniques as few images seems to be slightly rotated, and also image contrast needs to be considered |
 | [MNIST\_With\_Augmentation](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%205_Augmentation.ipynb)                                           | •Add various Image augmentation techniques, image rotation, randomaffine, colorjitter .                                                                                                                         | 6124       | 97.61             | 99.32         | •The model is under-fitting, that should be ok as we know we have made our train data harder.<br>• However, we haven't reached 99.4 accuracy yet.<br>•The model seems to be stuck at 99.2% accuracy, seems like the model needs some additional capacity towards the end.                                                                                                                                                                                                   |
-| [MNIST\_With\_LR Scheduler](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%206_LRScheduler.ipynb) | • Add some capacity (additional FC layer after GAP) to the model and added LR Scheduler                                                                                                                         | 6720       | 99.43             | 99.53         | •The model parameters have increased<br>• The model is under-fitting. This is fine, as we know we have made our train data harder.<br>• LR Scheduler and the additional capacity after GAP helped getting to the desired target 99.4, Onecyclic LR is being used, this seemed to perform better than StepLR to achieve consistent accuracy in last few layers                                                                                                               |
-## Receptive Field calculation for our final model
+| [MNIST\_With\_LR Scheduler](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/MNIST_Step%206_LRScheduler.ipynb) | • Add some capacity (additional FC layer after GAP) to the model and added LR Scheduler                                                                                                                         | 6720       | 99.43             | 99.53         | •The model parameters have increased<br>• The model is under-fitting. This is fine, as we know we have made our train data harder.<br>• LR Scheduler and the additional capacity after GAP helped getting to the desired target 99.4, Onecyclic LR is being used, this seemed to perform better than StepLR to achieve consistent accuracy in last few layers
+
+|
+
+### Final Model
+<b>By fine tuning the model with the step by step approach, the model was able to reach best test accuracy of **99.53%** in **15 epochs** with just **6720 (6K parameters)**!!!
+
+## Receptive Field calculation:
 
 Formula reference:</br>
 <p align="center"><img src="https://user-images.githubusercontent.com/17870236/120273908-c0481b00-c2cc-11eb-8b97-af4c8b9d5917.png"></p>
@@ -43,7 +49,7 @@ Formula reference:</br>
 | Convolution | 6   | 18       | 16              | 1       | 1      | 1      | 8    | 2   | 2    | 124 | 248  | 648             | 288     |
 | Convolution | 8   | 16       | 10              | 1       | 1      | 1      | 10   | 2   | 2    | 248 | 496  | 1024            | 160     |
 
-## Training Log for final Model
+## Training Log:
 
       EPOCH: 1
       Loss=0.32070186734199524 Batch_id=468 Accuracy=66.93: 100%|██████████| 469/469 [00:53<00:00,  8.85it/s]
@@ -121,8 +127,6 @@ Formula reference:</br>
 
 
 <p align="center"><img src="https://user-images.githubusercontent.com/42609155/120590215-d0d8cc80-c457-11eb-877e-2c904aa27f8f.png" width="800"></p>
-
-<b>Finally, by fine tuning the model in a step by step approach, the model was able to reach best test accuracy of 99.53% in 15 epochs with just 6720 (6K parameters)!!!
 
 ## Collaborators
 - Divya Kamat (divya.r.kamat@gmail.com)
