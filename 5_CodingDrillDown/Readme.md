@@ -31,7 +31,7 @@ Inspired by set of TSAI - motivational posts, we picked up all the right highlig
 
 By fine tuning the model with the step by step approach, the model was able to reach best test accuracy of **99.53%** in **15 epochs** with just **6720 (6K parameters)**!!!
 
-![image](https://user-images.githubusercontent.com/17870236/120796868-f7326100-c558-11eb-9b4d-04981128a25b.png)
+![image](https://user-images.githubusercontent.com/17870236/120801028-46c75b80-c55e-11eb-9797-07532b18be0f.png)
 
 ## Receptive Field calculation:
 
