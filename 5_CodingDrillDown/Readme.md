@@ -5,7 +5,7 @@ Objective is to fine tune the base code in [MNIST Basic Code](https://github.com
 ## How we did:
 
 Inspired by set of TSAI - motivational posts, we picked up all the right highlighted secrets in it to achieve the mammoth task! 
-![image](https://user-images.githubusercontent.com/17870236/120790982-3bb9fe80-c551-11eb-9b42-2ee1b2ca05a3.png)
+![image1](https://user-images.githubusercontent.com/17870236/120790982-3bb9fe80-c551-11eb-9b42-2ee1b2ca05a3.png)
 
 1. **Skeleton** - Reduced the number of parameters using Convolution Blocks with less number of output channels (removed 64, 128, 256 and 512 for every layer) and removed bias
 2. **Max-Pooling** - Transition Block (max pooling followed by 1x1) after 5x5 receptive field added in network.
@@ -37,7 +37,7 @@ By fine tuning the model with the step by step approach, the [final model](https
 ## Receptive Field calculation:
 
 Formula reference:</br>
-<p align="center"><img src="https://user-images.githubusercontent.com/17870236/120273908-c0481b00-c2cc-11eb-8b97-af4c8b9d5917.png"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/17870236/120273908-c0481b00-c2cc-11eb-8b97-af4c8b9d5917.png" width=1000></p>
 
 | Operation   | nin | in\_ch | out\_ch | padding | kernel | stride | nout | jin | jout | rin | rout | Act-size | Params |
 | ----------- | --- | ------ | ------- | ------- | ------ | ------ | ---- | --- | ---- | --- | ---- | -------- | ------ |
