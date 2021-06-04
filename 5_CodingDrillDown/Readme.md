@@ -119,3 +119,8 @@ Formula reference:</br>
 
 <b>Finally, by fine tuning the model in a step by step approach, the model was able to reach best test accuracy of 99.53% in 15 epochs with just 6720 (6K parameters)!!!
 
+## Collaborators
+- Divya Kamat (divya.r.kamat@gmail.com)
+- Divya G K (gkdivya@gmail.com)
+- Garvit Garg (garvit.gargs@gmail.com)
+- Sarang (jaya.sarangan@gmail.com)
