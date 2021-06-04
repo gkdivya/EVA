@@ -12,10 +12,11 @@ Inspired by set of TSAI - motivational posts, we picked up all the right highlig
 3. **Batch-Normalization** - Added after every convolution layer except the last one to normalize the values being passed between convolution layers
 4. **Capacity** - With very less paramters ~4k parameters, even with all the right concepts in place model couldnt learn. Increased capacity a bit to increase the accuracy.
 5. **Global Average pooling** - GAP followed by fully connected layer (1x1 is applied on 1d data) used just before prediction to give the network a little flexibility with the input image size.
-6. **Augmentation** - Image augmentation technique like image rotation, color are used
+6. **Augmentation** - Image augmentation technique like image rotation, color jitter and affine transformation are used
 7. **Regularization** - Adding drop out, helped reduced the gap between training and test loss.
 8. **Learning Rate** - Used OneCycleLR Learning Rate to tune the model
 
+More details on these experiments can be found [here](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/Experiments/README.md).
 
 | Experiment                                                                                                                        | Target                                                                                                                                                                                                          | Parameters | BestTrain Accuracy | Best Test Accuracy | Analysis                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,7 +30,7 @@ Inspired by set of TSAI - motivational posts, we picked up all the right highlig
 
 # Final Model
 
-By fine tuning the model with the step by step approach, the model was able to reach best test accuracy of **99.53%** in **15 epochs** with just **6720 (6K parameters)**!!!
+By fine tuning the model with the step by step approach, the [final model](https://github.com/gkdivya/EVA/blob/main/5_CodingDrillDown/MNIST_BestModel.ipynb) was able to reach best test accuracy of **99.53%** in **15 epochs** with just **6720 (6K parameters)**!!!
 
 ![image](https://user-images.githubusercontent.com/17870236/120801028-46c75b80-c55e-11eb-9797-07532b18be0f.png)
 
