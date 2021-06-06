@@ -20,7 +20,6 @@ function to misclassify images - Divya Kamat
 
 
 
-
 1. You are making 3 versions of your 5th assignment's best model (or pick one from best assignments):
    1. Network with Group Normalization
    2. Network with Layer Normalization
