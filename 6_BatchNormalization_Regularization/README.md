@@ -1,3 +1,26 @@
+l1
+l2
+Group Normalization
+Layer Normlaization
+
+Network with Group Normalization
+Network with Group Normalization + L1 - Divya
+
+Network with Layer Normalization
+Network with Layer Normalization + L2 - Sarang
+
+Network with L1 + BN
+Network with L1 + L2 + BN - Garvit
+
+Excel sheet - All - Divya(Documentation)
+Structure and the functions - Divya Kamat
+Early stopping code - Divya Kamat
+Function to plot the loss of multiple models - Divya Kamat
+function to misclassify images - Divya Kamat
+
+
+
+
 1. You are making 3 versions of your 5th assignment's best model (or pick one from best assignments):
    1. Network with Group Normalization
    2. Network with Layer Normalization
