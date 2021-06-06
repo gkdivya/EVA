@@ -1,22 +1,22 @@
-l1
-l2
-Group Normalization
-Layer Normlaization
+l1</br>
+l2</br>
+Group Normalization</br>
+Layer Normlaization</br>
 
-Network with Group Normalization
-Network with Group Normalization + L1 - Divya
+Network with Group Normalization</br>
+Network with Group Normalization + L1 - Divya</br>
+</br>
+Network with Layer Normalization</br>
+Network with Layer Normalization + L2 - Sarang</br>
 
-Network with Layer Normalization
-Network with Layer Normalization + L2 - Sarang
+Network with L1 + BN</br>
+Network with L1 + L2 + BN - Garvit</br>
 
-Network with L1 + BN
-Network with L1 + L2 + BN - Garvit
-
-Excel sheet - All - Divya(Documentation)
-Structure and the functions - Divya Kamat
-Early stopping code - Divya Kamat
-Function to plot the loss of multiple models - Divya Kamat
-function to misclassify images - Divya Kamat
+Excel sheet - All - Divya(Documentation)</br>
+Structure and the functions - Divya Kamat</br>
+Early stopping code - Divya Kamat</br>
+Function to plot the loss of multiple models - Divya Kamat</br>
+function to misclassify images - Divya Kamat</br>
 
 
 
