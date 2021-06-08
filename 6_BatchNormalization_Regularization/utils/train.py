@@ -3,13 +3,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 from tqdm import tqdm
 
-def train(model, device, train_loader, optimizer, epoch,lambda_l1):
+def train(model, device, train_loader, optimizer, epoch,train_acc,train_loss,lambda_l1,scheduler):
 
   model.train()
   pbar = tqdm(train_loader)
-  
-  train_losses = []
-  train_acc = []
   
   correct = 0
   processed = 0
@@ -36,7 +33,7 @@ def train(model, device, train_loader, optimizer, epoch,lambda_l1):
         l1 = l1 + p.abs().sum()
       loss = loss + lambda_l1*l1
 
-    train_losses.append(loss)
+    train_loss.append(loss.data.cpu().numpy().item())
 
     # Backpropagation
     loss.backward()
