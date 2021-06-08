@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from tqdm import tqdm
 
-def train(model, device, train_loader, optimizer, epoch):
+def train(model, device, train_loader, optimizer, epoch,lambda_l1):
 
   model.train()
   pbar = tqdm(train_loader)
@@ -28,6 +28,14 @@ def train(model, device, train_loader, optimizer, epoch):
 
     # Calculate loss
     loss = F.nll_loss(y_pred, target)
+    
+    #L1 Regularization
+    if lambda_l1 > 0:
+      l1 = 0
+      for p in model.parameters():
+        l1 = l1 + p.abs().sum()
+      loss = loss + lambda_l1*l1
+
     train_losses.append(loss)
 
     # Backpropagation
