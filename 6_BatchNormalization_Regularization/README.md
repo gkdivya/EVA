@@ -14,7 +14,6 @@ Network with L1 + L2 + BN - Garvit</br>
 
 Excel sheet - All - Divya(Documentation)</br>
 Structure and the functions - Divya Kamat</br>
-Early stopping code - Divya Kamat</br>
 Function to plot the loss of multiple models - Divya Kamat</br>
 function to misclassify images - Divya Kamat</br>
 
