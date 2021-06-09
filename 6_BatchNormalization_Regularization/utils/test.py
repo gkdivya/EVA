@@ -1,11 +1,8 @@
 import torch
 import torch.nn.functional as F
 
-
-def test(model, device, test_loader):
+def test(model, device, test_loader,test_acc,test_losses):
     model.eval()
-    test_losses = []
-    test_acc = []
     test_loss = 0
     correct = 0
     with torch.no_grad():
