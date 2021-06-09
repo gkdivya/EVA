@@ -1,4 +1,29 @@
 import torch
+import torch.optim as optim
+import matplotlib.pyplot as plt
+from torch.optim.lr_scheduler import StepLR,OneCycleLR
+
+def experiments(train_loader, test_loader, norm_type, l1_factor, l2_factor, dropout, epochs):
+    
+    train_losses = []
+    test_losses = []
+    train_accuracy = []
+    test_accuracy = []
+    
+    use_cuda = torch.cuda.is_available()
+    device = torch.device("cuda" if use_cuda else "cpu")
+
+    model = Net(norm_type, dropout).to(device)
+    optimizer = optim.SGD(model.parameters(), lr=0.015, momentum=0.7)
+    scheduler = OneCycleLR(optimizer, max_lr=0.015,epochs=epochs,steps_per_epoch=len(train_loader))
+    epochs = epochs
+
+    for epoch in range(1, epochs + 1):
+        print(f'Epoch {epoch}:')
+        train(model, device, train_loader, optimizer, epoch, train_accuracy, train_losses, l1_factor,scheduler)
+        test(model, device, test_loader,test_accuracy,test_losses)
+
+    return train_accuracy,train_losses,test_accuracy,test_losses
 
 def wrong_predictions(test_loader,model,device):
   wrong_images=[]
