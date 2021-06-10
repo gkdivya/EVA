@@ -23,7 +23,7 @@ def experiments(train_loader, test_loader, norm_type, l1_factor, l2_factor, drop
     device = torch.device("cuda" if use_cuda else "cpu")
 
     model = m.Net(norm_type, dropout).to(device)
-    optimizer = optim.SGD(model.parameters(), lr=0.015, momentum=0.7)
+    optimizer = optim.SGD(model.parameters(), lr=0.015, momentum=0.7,weight_decay=l2_factor)
     scheduler = OneCycleLR(optimizer, max_lr=0.015,epochs=epochs,steps_per_epoch=len(train_loader))
     epochs = epochs
 
