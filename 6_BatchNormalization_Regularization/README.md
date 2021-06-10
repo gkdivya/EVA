@@ -25,6 +25,8 @@ Scheduler - OneCycleLR <br>
 |BatchNorm with L2 ||||||
 |BatchNorm with L1 and L2||||||
 
+The code for the experiments can be found here
+
 ## Observations
 
 ## Validation Accuracy and Loss  
@@ -38,11 +40,8 @@ Scheduler - OneCycleLR <br>
 ## Collaborators and the contribution details:
 
 - Divya Kamat (divya.r.kamat@gmail.com)</br>
-   Python files and creation of skeleton for the complete project </br>
+   Modularising the code and creation of skeleton for the complete project </br>
    Integration of all normalizations as experiment details </br>
-   Function for train and test files </br>
-   Function to plot the loss of multiple models </br> 
-   Function to misclassify images </br>
 
 - Divya G K (gkdivya@gmail.com)</br>
    Network with Group Normalization </br>
