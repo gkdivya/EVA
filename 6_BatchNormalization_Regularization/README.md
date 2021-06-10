@@ -18,9 +18,11 @@ Scheduler - OneCycleLR <br>
 |------------|-----------------|-------------|----------|----|---|---|
 |LayerNorm||||||
 |GroupNorm||||||
+|BatchNorm||||||
 |BatchNorm with L1 ||||||
 |LayerNorm with L1||||||
 |GroupNorm with L1||||||
+|BatchNorm with L2 ||||||
 |BatchNorm with L1 and L2||||||
 
 ## Observations
