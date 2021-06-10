@@ -10,16 +10,20 @@ Detailed insights captured [here](https://github.com/gkdivya/EVA/tree/main/6_Bat
 
 
 ## Model performance
-|Regularization|	Best Train Accuracy	| Best Test Accuracy |	Test Loss|
-|------------|-----------------|-------------|----------|
-|LayerNorm||||
-|GroupNorm||||
-|BatchNorm with L1 ||||
-|LayerNorm with L1||||
-|GroupNorm with L1||||
-|BatchNorm with L1 and L2||||
 
-## Inference
+Dropout   - 0.03 <br>
+Scheduler - OneCycleLR <br>
+
+|Regularization|	Best Train Accuracy	| Best Test Accuracy |	Best Test Loss| Batch Size| L1 Factor | L2 Factor|
+|------------|-----------------|-------------|----------|----|---|---|
+|LayerNorm||||||
+|GroupNorm||||||
+|BatchNorm with L1 ||||||
+|LayerNorm with L1||||||
+|GroupNorm with L1||||||
+|BatchNorm with L1 and L2||||||
+
+## Observations
 
 ## Validation Accuracy and Loss  
 
