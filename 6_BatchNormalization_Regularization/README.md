@@ -25,7 +25,7 @@ Scheduler - OneCycleLR <br>
 |BatchNorm with L2 ||||||
 |BatchNorm with L1 and L2||||||
 
-The code for the experiments can be found here
+The code for the experiments can be found [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments)
 
 ## Observations
 
