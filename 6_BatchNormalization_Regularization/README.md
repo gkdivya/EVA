@@ -1,11 +1,32 @@
+# Normalization and Regularization
 
-
+Objective is to implement normalization (Batch Normalization, Layer Normalization, Group Normalization) and regularization (L1 Loss and L2 Loss) techniques on MNIST dataset.
 
 ## Normalization  
 
 Detailed insights captured [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Normalization)
 
 ![image](https://user-images.githubusercontent.com/17870236/121403698-cc8d4180-c978-11eb-89ea-b2a305eff6eb.png)
+
+
+## Model performance
+|Regularization|	Best Train Accuracy	| Best Test Accuracy |	Test Loss|
+|------------|-----------------|-------------|----------|
+|LayerNorm||||
+|GroupNorm||||
+|BatchNorm with L1 ||||
+|LayerNorm with L1||||
+|GroupNorm with L1||||
+|BatchNorm with L1 and L2||||
+
+## Inference
+
+## Validation Accuracy and Loss  
+
+## Misclassified Images
+
+
+## References
 
 
 ## Collaborators and the contribution details:
