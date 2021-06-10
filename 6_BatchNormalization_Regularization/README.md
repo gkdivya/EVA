@@ -9,7 +9,7 @@ Detailed insights captured [here](https://github.com/gkdivya/EVA/tree/main/6_Bat
 ![image](https://user-images.githubusercontent.com/17870236/121403698-cc8d4180-c978-11eb-89ea-b2a305eff6eb.png)
 
 
-## Model performance
+## Experiments and Model performance
 
 Dropout   - 0.03 <br>
 Scheduler - OneCycleLR <br>
