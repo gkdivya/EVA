@@ -24,6 +24,15 @@ Scheduler - OneCycleLR <br>
 |LayerNorm with L2|98.94|99.56|0.0159|0|0.001
 |BatchNorm with L1 and L2|98.07|99.31|0.0233|0.001|0.001
 
+### Observations
+- When we apply LayerNorm, GroupNorm and BatchNorm techniques individually, without any regularization we observe that BatchNorm performs better than other two techniques.
+- Batch norm performed better with higher batch sizes, details can be found [here](https://github.com/gkdivya/EVA/blob/main/6_BatchNormalization_Regularization/Experiments/BatchNorm/README.md)
+- We found that GroupNorm was better than batch norm when we have smaller batch size, details can be found [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments/GroupNorm)
+- Layernorm performance was lower compared to other two techniques, however we could see some improvement when used with regularization.
+
+
+
+
 ### About Code
 
 The final code can be found [here](https://github.com/gkdivya/EVA/blob/main/6_BatchNormalization_Regularization/MNIST_Normalization_and_Regularization_v1.ipynb) and code for the experiments can be found [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments)
