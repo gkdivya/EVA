@@ -18,7 +18,7 @@ Scheduler - OneCycleLR <br>
 |------------|-----------------|-------------|----------|----|---|---|
 |LayerNorm||||||
 |GroupNorm||||||
-|BatchNorm||||||
+|BatchNorm|98.59|99.5|0.0024|64|0|0
 |BatchNorm with L1 ||||||
 |GroupNorm with L1||||||
 |BatchNorm with L2 ||||||
