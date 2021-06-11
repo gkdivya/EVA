@@ -16,9 +16,9 @@ Scheduler - OneCycleLR <br>
 
 |Regularization|	Best Train Accuracy	| Best Test Accuracy |	Best Test Loss| L1 Factor | L2 Factor|
 |------------|-----------------|-------------|----------|---|---|
-|LayerNorm|98.80|99.48|0.0174|0|0
-|GroupNorm|98.84|99.51|0.0156|0|0
-|BatchNorm|98.59|99.58|0.0151|0|0
+|[LayerNorm](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments/LayerNorm)|98.80|99.48|0.0174|0|0
+|[GroupNorm](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments/GroupNorm)|98.84|99.51|0.0156|0|0
+|[BatchNorm](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments/BatchNorm)|98.59|99.58|0.0151|0|0
 |BatchNorm with L1 |98.02|99.26|0.0217|0.001|0
 |GroupNorm with L1|98.12|99.37|0.0283|0.001|0
 |LayerNorm with L2|98.94|99.56|0.0159|0|0.001
