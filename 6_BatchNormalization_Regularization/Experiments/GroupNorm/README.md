@@ -1,7 +1,10 @@
 # Group Normalization
+Group Normalization divides the channels into groups and computes within each group the mean and variance for normalization. GN's computation is independent of batch sizes, and its accuracy is stable in a wide range of batch sizes. 
+
+![image](https://user-images.githubusercontent.com/17870236/121742312-4827f380-cb1d-11eb-992e-dc810ece94d3.png)
 
 
-## Experiments
+## Experiments on MNIST
 
 | Batch Size | L1    | Num of Groups | Train Accuracy | Test Accuracy |
 | ---------- | ----- | ------------- | -------------- | ------------- |
