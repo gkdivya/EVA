@@ -19,11 +19,11 @@ Scheduler - OneCycleLR <br>
 |LayerNorm||||||
 |GroupNorm||||||
 |BatchNorm|98.59|99.5|0.0024|64|0|0
-|BatchNorm with L1 ||||||
+|BatchNorm with L1 |98.35|99.47|0.2068|128|0.001|0
 |GroupNorm with L1||||||
-|BatchNorm with L2 ||||||
+|BatchNorm with L2 |98.73|99.61|0.0313|64|0|0.001
 |LayerNorm with L2||||||
-|BatchNorm with L1 and L2||||||
+|BatchNorm with L1 and L2|98.22|99.43|0.2148|128|0.001|0.002
 
 The code for the experiments can be found [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments)
 
