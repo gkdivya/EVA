@@ -6,7 +6,6 @@ Objective is to implement normalization (Batch Normalization, Layer Normalizatio
 
 Detailed insights captured [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Normalization)
 
-![image](https://user-images.githubusercontent.com/17870236/121403698-cc8d4180-c978-11eb-89ea-b2a305eff6eb.png)
 
 
 ## Experiments and Model performance
@@ -27,12 +26,17 @@ Scheduler - OneCycleLR <br>
 
 The code for the experiments can be found [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments)
 
-## Observations
 
 ## Validation Accuracy and Loss  
 
+![logs](https://user-images.githubusercontent.com/42609155/121720624-f2dde900-cb00-11eb-913b-24bc7614d6c4.png)
+
+
 ## Misclassified Images
 
+![missclassified images_1](https://user-images.githubusercontent.com/42609155/121721901-63d1d080-cb02-11eb-8610-6c0f0fe4c23c.png)
+
+![missclassified images_2](https://user-images.githubusercontent.com/42609155/121722837-74cf1180-cb03-11eb-8edc-0fcc995fc52e.png)
 
 ## References
 
