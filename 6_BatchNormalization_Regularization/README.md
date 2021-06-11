@@ -24,7 +24,11 @@ Scheduler - OneCycleLR <br>
 |LayerNorm with L2|98.94|99.56|0.0159|0|0.001
 |BatchNorm with L1 and L2|98.07|99.31|0.0233|0.001|0.001
 
+## Aboud Code
+
 The final code can be found [here](https://github.com/gkdivya/EVA/blob/main/6_BatchNormalization_Regularization/MNIST_Normalization_and_Regularization_v1.ipynb) and code for the experiments can be found [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments)
+
+We have used modularized structure for this assignment by creating few utility funtions, the details for this can be found [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/utils)
 
 
 ## Validation Accuracy and Loss  
