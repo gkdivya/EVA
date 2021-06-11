@@ -40,6 +40,10 @@ The code for the experiments can be found [here](https://github.com/gkdivya/EVA/
 
 ## References
 
+- [Group Normalization](https://www.youtube.com/watch?v=l_3zj6HeWUE&t=430s)
+- [Running Google Colab with VSCode](https://eide.ai/vscode/2020/09/14/colab-vscode-gpu.html)
+- [Pytorch Layernorm Implementation](https://discuss.pytorch.org/t/is-there-a-layer-normalization-for-conv2d/7595/3)
+- [Hyperparameter tuning and experimenting](https://deeplizard.com/learn/video/ycxulUVoNbk)
 
 ## Collaborators and the contribution details:
 
