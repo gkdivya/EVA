@@ -16,7 +16,7 @@ Scheduler - OneCycleLR <br>
 
 |Regularization|	Best Train Accuracy	| Best Test Accuracy |	Best Test Loss| L1 Factor | L2 Factor|
 |------------|-----------------|-------------|----------|---|---|
-|LayerNorm|98.94|99.55|0.0163|0|0
+|LayerNorm|98.94|99.56|0.0163|0|0
 |GroupNorm|98.81|99.51|0.0156|0|0
 |BatchNorm|98.59|99.58|0.0151|0|0
 |BatchNorm with L1 |98.02|99.26|0.0217|0.001|0
