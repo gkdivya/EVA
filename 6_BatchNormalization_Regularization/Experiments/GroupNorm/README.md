@@ -17,3 +17,20 @@
 | 64         | 0     | 4             | 98.69          | 99.44         |
 | 64         | 0.01  | 4             | 93.28          | 97.39         |
 | 64         | 0.001 | 4             | 98.05          | 99.26         |
+
+
+## Analysis:
+
+GroupNorm was found better than batch norm when we have smaller batch size especially when we use num_workers as 4 with batch size say 32 each worker works on 8 images at a time.
+So experiments did with 32 and 64 batch size and with modifying lr.
+
+Without LR, best accuracy is found when number of groups used is 2 on 64 batch size:
+![image](https://user-images.githubusercontent.com/17870236/121741396-1b271100-cb1c-11eb-95ca-281d620768a6.png)
+
+With LR, best accuracy is found with below params:
+![image](https://user-images.githubusercontent.com/17870236/121741626-680ae780-cb1c-11eb-9596-33ce1481302f.png)
+
+- While applying groupNorm, main problem is we have an hyperparameter in identifying the correct number of groups for our batch size
+
+## Further Steps:
+We can also vary number of workers or adding L2 to check what works better
