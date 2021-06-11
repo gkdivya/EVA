@@ -10,19 +10,19 @@ Detailed insights captured [here](https://github.com/gkdivya/EVA/tree/main/6_Bat
 
 ## Experiments and Model performance
 
+Batch Size - 64 <br>
 Dropout   - 0.03 <br>
 Scheduler - OneCycleLR <br>
 
-|Regularization|	Best Train Accuracy	| Best Test Accuracy |	Best Test Loss| Batch Size| L1 Factor | L2 Factor|
-|------------|-----------------|-------------|----------|----|---|---|
-|LayerNorm||||||
-|GroupNorm||||||
-|BatchNorm|98.59|99.5|0.0024|64|0|0
-|BatchNorm with L1 |98.35|99.47|0.2068|128|0.001|0
-|GroupNorm with L1||||||
-|BatchNorm with L2 |98.73|99.61|0.0313|64|0|0.001
-|LayerNorm with L2||||||
-|BatchNorm with L1 and L2|98.22|99.43|0.2148|128|0.001|0.002
+|Regularization|	Best Train Accuracy	| Best Test Accuracy |	Best Test Loss| L1 Factor | L2 Factor|
+|------------|-----------------|-------------|----------|---|---|
+|LayerNorm|98.94|99.55|0.0163|0|0
+|GroupNorm|98.81|99.51|0.0156|0|0
+|BatchNorm|98.59|99.58|0.0151|0|0
+|BatchNorm with L1 |98.02|99.26|0.0217|0.001|0
+|GroupNorm with L1|98.14|99.32|0.0283|0.001|0
+|LayerNorm with L2|98.92|99.48|0.0184|0|0.001
+|BatchNorm with L1 and L2|98.07|99.31|0.0233|0.001|0.001
 
 The code for the experiments can be found [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments)
 
@@ -48,17 +48,14 @@ The code for the experiments can be found [here](https://github.com/gkdivya/EVA/
    Integration of all normalizations as experiment details </br>
 
 - Divya G K (gkdivya@gmail.com)</br>
-   Network with Group Normalization </br>
-   Network with Group Normalization + L1 </br>
+   Experiments with Group Normalization </br>
    Excel sheet on Normalization & README for normalization</br>
 
 - Sarang (jaya.sarangan@gmail.com)</br>
-   Network with Layer Normalization </br>
-   Network with Layer Normalization + L2 </br>
+   Experiments with Layer Normalization </br>
 
 - Garvit Garg (garvit.gargs@gmail.com)</br>
-   Network with L1 + BN </br>
-   Network with L1 + L2 + BN - Garvit</br>
+   Experiments with Batch Normalization </br>
    
 - All collaborators</br>
    README file </br>
