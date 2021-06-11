@@ -5,7 +5,7 @@ Logs summary for LN experiment with different combinations.
 |    Regularization   | Batch Size | L1 Factor | L2 Factor | Train Accuracy | Test Accuracy |
 |:-------------------:|:----------:|:---------:|:---------:|:--------------:|:-------------:|
 |      LayerNorm      |     64     |     0     |     0     |      98.80     |     99.48     |
-|      LayerNorm+L2   |     64     |     0     |   0.001   |      98.94     |     <b> 99.56 <b>    |
+|      LayerNorm+L2   |     64     |     0     |   0.001   |     <b> 98.94 <b>    |     <b> 99.56 <b>    |
 |      LayerNorm+L2   |     64     |     0     |   0.002   |      98.86     |     99.42     |
 |      LayerNorm+L1   |     64     |   0.001   |   0.001   |      98.30     |     99.36     |
 | LayerNorm + L1 + L2 |     64     |   0.001   |     0     |      98.25     |     99.14     |
