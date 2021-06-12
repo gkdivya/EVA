@@ -35,7 +35,7 @@ Scheduler - OneCycleLR <br>
 
 ### About Code
 
-The final code can be found [here](https://github.com/gkdivya/EVA/blob/main/6_BatchNormalization_Regularization/MNIST_Normalization_and_Regularization_v1.ipynb) and code for the experiments can be found [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments)
+The final code can be found [here](https://github.com/gkdivya/EVA/blob/main/6_BatchNormalization_Regularization/MNIST_Normalization_and_Regularization_v1.ipynb) and code for individual experiments for each normalization technique can be found [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/Experiments)
 
 We have used modularized structure for this assignment by creating few utility funtions, the details for this can be found [here](https://github.com/gkdivya/EVA/tree/main/6_BatchNormalization_Regularization/utils)
 
