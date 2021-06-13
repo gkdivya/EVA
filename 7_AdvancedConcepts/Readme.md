@@ -23,9 +23,13 @@ Advance Convolutions, Attention and Image Augmentation: Depthwise, Pixel Shuffle
 - Faster than TorchVision inbuilt augmentation
 - Better support for segmentation and object detection dataset with "label preserving transformations"
 
+## Model
+
 
 ## Receptive Field
 
+
+## Training & Testing Log
 
 
 ## Misclassified Image Analysis
