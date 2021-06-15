@@ -9,11 +9,11 @@ Dilated convolution is just a convolution applied to **input with defined gaps**
 - **Number of elements**  of filter remains the same but with the increase in dilation rate, they will cover more coverage.
 - **Dilation architecture**  is based on architecture that supports exponential expansion of the receptive field without loss of resolution or coverage. So overall benefits of dilation include larger receptive field, efficient computation and less memory consumption.
 
-![](RackMultipart20210614-4-1qbwg4z_html_8f7209a1a5b14fb9.jpg)
+![image](https://user-images.githubusercontent.com/42609155/122134555-73cc1600-ce5c-11eb-9121-5638d195731a.png)
 
 **Structure of a dilated CNN model on MINST data: **
 
-![](RackMultipart20210614-4-1qbwg4z_html_e51c5d609b400fcb.png)
+![image](https://user-images.githubusercontent.com/42609155/122134571-7dee1480-ce5c-11eb-8dfe-d873635bce35.png)
 
 **Cons:**
 
@@ -25,6 +25,6 @@ To overcome these drawbacks, we may have to explore the use of hybrid dilated CN
 
 **Structure of a hybrid dilated CNN (HDC) MODEL: **
 
-![](RackMultipart20210614-4-1qbwg4z_html_9399adab269ce09f.png)
+![image](https://user-images.githubusercontent.com/42609155/122134599-8f372100-ce5c-11eb-86a4-cde9f76997c5.png)
 
 Ref: [https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8756165](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8756165)
