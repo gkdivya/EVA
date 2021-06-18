@@ -1,4 +1,4 @@
-**Dilated convolution** :
+## Dilated convolution 
 
 Dilated convolution is just a convolution applied to **input with defined gaps**. With this definition, for given input is an 2D image, dilation rate k=1 is normal convolution and k=2 means skipping one pixel per input and k=4 means skipping 3 pixels.
 
@@ -27,4 +27,25 @@ To overcome these drawbacks, we may have to explore the use of hybrid dilated CN
 
 ![image](https://user-images.githubusercontent.com/42609155/122134599-8f372100-ce5c-11eb-86a4-cde9f76997c5.png)
 
-Ref: [https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8756165](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8756165)
+
+## Depthwise Seperable Convolution
+
+### Depthwise convolution
+If the conv output of H*W*C is divided into C units, each conv filter is applied to create an output, and the results are combined again, the conv filter can produce an output of the same size with much fewer parameters . It is also particularly advantageous when the calculation result for each filter needs to be independent of other filters.
+
+![image](https://user-images.githubusercontent.com/42609155/122624217-c73c9f00-d0bc-11eb-8c25-9161d0f565e2.png)
+
+
+### Pointwise Convolution
+
+This filter is often called 1x1 Conv. It is a trick that can be seen a lot and mainly aims to extract the result of an existing matrix by logically shuffled again. It is also often used for the purpose of reducing or increasing the total number of channels through the above method.
+
+![image](https://user-images.githubusercontent.com/42609155/122624299-35816180-d0bd-11eb-835e-6e3f875c5130.png)
+
+### Depthwise Separable Convolution
+
+Depthwise convolution is performed first, and then pointwise convolution is performed.
+Through this, the conv operation is performed through a 3x3 filter, information of different channels is shared, and the number of parameters can be reduced at the same time .
+
+![image](https://user-images.githubusercontent.com/42609155/122624332-58137a80-d0bd-11eb-9213-5d5af94a5804.png)
+
