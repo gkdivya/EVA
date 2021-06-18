@@ -13,6 +13,15 @@ Advance Convolutions, Attention and Image Augmentation: Depthwise, Pixel Shuffle
 - Faster than TorchVision inbuilt augmentation
 - Better support for segmentation and object detection dataset with "label preserving transformations"
 
+## Final Notebook
+
+Epochs - 90 <br>
+Dropout - 0.01 <br>
+L2 - 0.0001 <br>
+LR Scheduler - OneCycleLR <br>
+
+The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/7_AdvancedConcepts/CIFAR10_Image_Classification.ipynb) and code for individual experiments for each advanced convolutions can be found [here](https://github.com/gkdivya/EVA/tree/main/7_AdvancedConcepts/experiments) 
+
 ## Model 
 
 
@@ -494,8 +503,8 @@ Advance Convolutions, Attention and Image Augmentation: Depthwise, Pixel Shuffle
 As per our initial analysis, we can see that the model is facing difficulty in learning cat and dog images, as there are more similarities between those images. 
 
 
-## About code and folder structure
-The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/7_AdvancedConcepts/CIFAR10_Image_Classification.ipynb) and code for individual experiments for each advanced convolutions can be found [here](https://github.com/gkdivya/EVA/tree/main/7_AdvancedConcepts/experiments), we have used below modularised structure for this assignment
+## Folder structure
+We have used below modularised structure for this assignment
 
     |── config
     |   ├── config.yaml    
