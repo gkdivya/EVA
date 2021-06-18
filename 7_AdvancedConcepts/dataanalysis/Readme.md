@@ -1,5 +1,7 @@
 ## Data Analysis
 
+Link to Exploratory Data Analysis on CIFAR10 dataset is [here](https://github.com/gkdivya/EVA/blob/main/7_AdvancedConcepts/dataanalysis/DataAnalysis_CIFAR10Dataset.ipynb)
+
 - Data set consists of 60000 images
 - There are 50000 training images and 10000 testing images
 - All Images in the dataset are of same size, i.e of size 32 x 32
