@@ -1,0 +1,30 @@
+model: cifar10
+model_params:
+    experiment_name: cifar10_with_advancedconv
+    model_dir: ./model/
+    seed: 1
+    dropout: 0.01
+data_loader:
+    type: CIFAR10DataLoader
+    classes: ['plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+    args:
+        batch_size: 256
+        num_workers: 2
+        pin_memory: true
+data_augmentation:
+    type: albumentation
+    args:
+        horizontalflip_prob: 0.2
+        rotate_limit: 15
+        shiftscalerotate_prob: 0.25
+        num_holes: 1
+        cutout_prob: 0.5
+criterion: CrossEntropyLoss
+optimizer : 
+    type: optim.Adam
+    args:
+        lr: 0.01
+training_params:
+    epochs: 90
+    l1_factor: 0
+    l2_factor: 0.0001
