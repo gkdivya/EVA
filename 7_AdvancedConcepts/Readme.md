@@ -8,19 +8,19 @@ Advance Convolutions, Attention and Image Augmentation: Depthwise, Pixel Shuffle
  
  The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes. There are 50000 training images and 10000 test images. Analysis on the dataset can be found [here](https://github.com/gkdivya/EVA/blob/main/7_AdvancedConcepts/dataanalysis/Readme.md) and data analysis notebook [here](https://github.com/gkdivya/EVA/blob/main/7_AdvancedConcepts/dataanalysis/DataAnalysis_CIFAR10Dataset.ipynb)
 
-## Albumentation Library
-
-- Faster than TorchVision inbuilt augmentation
-- Better support for segmentation and object detection dataset with "label preserving transformations"
 
 ## Final Notebook
+
+The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/7_AdvancedConcepts/CIFAR10_Image_Classification.ipynb) and code for individual experiments for each advanced convolutions can be found [here](https://github.com/gkdivya/EVA/tree/main/7_AdvancedConcepts/experiments) 
 
 Epochs - 90 <br>
 Dropout - 0.01 <br>
 L2 - 0.0001 <br>
 LR Scheduler - OneCycleLR <br>
 
-The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/7_AdvancedConcepts/CIFAR10_Image_Classification.ipynb) and code for individual experiments for each advanced convolutions can be found [here](https://github.com/gkdivya/EVA/tree/main/7_AdvancedConcepts/experiments) 
+**Albumentation Library is being used to apply image augmentation**
+- Faster than TorchVision inbuilt augmentation
+- Better support for segmentation and object detection dataset with "label preserving transformations"
 
 ## Model 
 
