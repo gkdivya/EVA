@@ -587,6 +587,9 @@ We have used below modularised structure for this assignment
 ## References
 - https://www.youtube.com/watch?v=rAdLwKJBvPM </br>
 - https://github.com/Armour/pytorch-nn-practice/blob/master/utils/meanstd.py </br>
+- [Dialated Convolution](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8756165)
+- [Depthwise Seperable Convolution](https://wingnim.tistory.com/104)
+
 
 
 ## Collaborators and the contribution details:
