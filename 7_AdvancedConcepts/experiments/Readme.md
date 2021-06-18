@@ -9,11 +9,11 @@ Dilated convolution is just a convolution applied to **input with defined gaps**
 - **Number of elements**  of filter remains the same but with the increase in dilation rate, they will cover more coverage.
 - **Dilation architecture**  is based on architecture that supports exponential expansion of the receptive field without loss of resolution or coverage. So overall benefits of dilation include larger receptive field, efficient computation and less memory consumption.
 
-![image](https://user-images.githubusercontent.com/42609155/122134555-73cc1600-ce5c-11eb-9121-5638d195731a.png)
+     ![image](https://user-images.githubusercontent.com/42609155/122134555-73cc1600-ce5c-11eb-9121-5638d195731a.png)
 
 **Structure of a dilated CNN model on MINST data: **
 
-![image](https://user-images.githubusercontent.com/42609155/122134571-7dee1480-ce5c-11eb-8dfe-d873635bce35.png)
+   ![image](https://user-images.githubusercontent.com/42609155/122134571-7dee1480-ce5c-11eb-8dfe-d873635bce35.png)
 
 **Cons:**
 
@@ -33,7 +33,7 @@ To overcome these drawbacks, we may have to explore the use of hybrid dilated CN
 ### Depthwise convolution
 If the conv output of H*W*C is divided into C units, each conv filter is applied to create an output, and the results are combined again, the conv filter can produce an output of the same size with much fewer parameters . It is also particularly advantageous when the calculation result for each filter needs to be independent of other filters.
 
-![image](https://user-images.githubusercontent.com/42609155/122624217-c73c9f00-d0bc-11eb-8c25-9161d0f565e2.png)
+<p align="left"><img src="https://user-images.githubusercontent.com/42609155/122624217-c73c9f00-d0bc-11eb-8c25-9161d0f565e2.png" width="400"></p>
 
 
 ### Pointwise Convolution
@@ -47,5 +47,6 @@ This filter is often called 1x1 Conv. It is a trick that can be seen a lot and m
 Depthwise convolution is performed first, and then pointwise convolution is performed.
 Through this, the conv operation is performed through a 3x3 filter, information of different channels is shared, and the number of parameters can be reduced at the same time .
 
-![image](https://user-images.githubusercontent.com/42609155/122624332-58137a80-d0bd-11eb-9213-5d5af94a5804.png)
+<p align="left"><img src="https://user-images.githubusercontent.com/42609155/122624332-58137a80-d0bd-11eb-9213-5d5af94a5804.png" width="500"></p>
+
 
