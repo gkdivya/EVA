@@ -585,27 +585,21 @@ We have used below modularised structure for this assignment
     ├── README.md  
 
 ## References
-- https://www.youtube.com/watch?v=rAdLwKJBvPM </br>
-- https://github.com/Armour/pytorch-nn-practice/blob/master/utils/meanstd.py </br>
+- [Albumentation for Data Augmentation](https://www.youtube.com/watch?v=rAdLwKJBvPM) </br>
+- [Mean and Std Calculation for CIFAR10 dataset](https://github.com/Armour/pytorch-nn-practice/blob/master/utils/meanstd.py) </br>
 - [Dialated Convolution](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8756165)
 - [Depthwise Seperable Convolution](https://wingnim.tistory.com/104)
-
-
 
 ## Collaborators and the contribution details:
 
 - Divya Kamat (divya.r.kamat@gmail.com)</br>
    Modularising the code and creation of skeleton for the complete project </br>
-
 - Divya G K (gkdivya@gmail.com)</br>
    Albumentation </br>
-
 - Sarang (jaya.sarangan@gmail.com)</br>
    Dilated Convolution </br>
-
 - Garvit Garg (garvit.gargs@gmail.com)</br>
-   Depthwise Seperable convolution </br>
-   
+   Depthwise Seperable convolution </br>  
 - All collaborators</br>
    README file </br>
 
