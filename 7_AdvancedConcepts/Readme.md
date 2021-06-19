@@ -85,7 +85,21 @@ LR Scheduler - OneCycleLR <br>
      )
 
 ## Receptive Field
-
+|                  | nin | padding | kernel | stride | nout | jin | jout | rin | rout |
+| ---------------- | --- | ------- | ------ | ------ | ---- | --- | ---- | --- | ---- |
+| Convolution      | 32  | 1       | 3      | 1      | 32   | 1   | 1    | 1   | 3    |
+| Convolution      | 32  | 1       | 3      | 1      | 32   | 1   | 1    | 3   | 5    |
+| Transition-Block | 32  | 0       | 1      | 2      | 16   | 1   | 2    | 5   | 5    |
+| Convolution      | 16  | 1       | 3      | 1      | 16   | 2   | 2    | 5   | 9    |
+| Depthwise        | 16  | 1       | 3      | 1      | 16   | 2   | 2    | 9   | 13   |
+| Depthwise        | 16  | 1       | 1      | 1      | 18   | 2   | 2    | 13  | 13   |
+| Transition-Block | 18  | 0       | 1      | 2      | 9    | 2   | 4    | 13  | 13   |
+| Dilation Block   | 9   | 1       | 5      | 1      | 7    | 4   | 4    | 13  | 29   |
+| Convolution      | 7   | 1       | 3      | 1      | 7    | 4   | 4    | 29  | 37   |
+| Convolution      | 7   | 1       | 1      | 2      | 5    | 4   | 8    | 37  | 37   |
+| Convolution      | 5   | 1       | 3      | 1      | 5    | 8   | 8    | 37  | 53   |
+| Depthwise        | 5   | 1       | 3      | 1      | 5    | 8   | 8    | 53  | 69   |
+| Depthwise        | 5   | 1       | 1      | 1      | 7    | 8   | 8    | 69  | 69   |
 
 ## Training & Testing Log
 
