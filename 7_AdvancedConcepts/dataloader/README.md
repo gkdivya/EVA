@@ -4,5 +4,9 @@ Albumentations is a python library which helps with Image Augmentation. Compared
 
 # Visualization of Image Augmentation on CIFAR-10 samples
 
-![image](https://user-images.githubusercontent.com/17870236/123364340-da0a1480-d591-11eb-89c0-dc5a309dfc20.png)
+![image](https://user-images.githubusercontent.com/17870236/123366395-c1036280-d595-11eb-983d-bdcb68d21cf3.png)
+
+![image](https://user-images.githubusercontent.com/17870236/123366319-a3ce9400-d595-11eb-8372-ed258cfccf47.png)
+
+![image](https://user-images.githubusercontent.com/17870236/123366360-b3e67380-d595-11eb-83e3-e9a0429c432c.png)
 
