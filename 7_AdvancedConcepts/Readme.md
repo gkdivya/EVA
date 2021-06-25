@@ -603,6 +603,9 @@ We have used below modularised structure for this assignment
 - [Mean and Std Calculation for CIFAR10 dataset](https://github.com/Armour/pytorch-nn-practice/blob/master/utils/meanstd.py) </br>
 - [Dialated Convolution](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8756165)
 - [Depthwise Seperable Convolution](https://wingnim.tistory.com/104)
+- [Receptive Field calculation](https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html#torch.nn.Conv2d)
+- [Output Shape with Dilation](https://discuss.pytorch.org/t/how-to-keep-the-shape-of-input-and-output-same-when-dilation-conv/14338/17)
+
 
 ## Collaborators and the contribution details:
 
