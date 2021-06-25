@@ -28,13 +28,13 @@ class Net(nn.Module):
 
         ## Convolution Block2
         self.conv2 =  nn.Sequential(
-            nn.Conv2d(32, 32, 3,  padding=1, bias = False), # Input: 16x16x32 | Output: 16x16x32 | RF: 5x5
+            nn.Conv2d(32, 32, 3,  padding=1, bias = False), # Input: 16x16x32 | Output: 16x16x32 | RF: 9x9
             nn.ReLU(),
             nn.BatchNorm2d(32),
             nn.Dropout2d(dropout),
 
             ## Depthwise Seperable Convolution1
-            nn.Conv2d(32,32, 3,  padding=1,groups=32 ,bias = False),  # Input: 16x16x32 | Output: 16x16x32 | RF: 9x9
+            nn.Conv2d(32,32, 3,  padding=1,groups=32 ,bias = False),  # Input: 16x16x32 | Output: 16x16x32 | RF: 13x13
             nn.Conv2d(32, 64, 1, padding=1, bias = False),   # Input: 16x16x32 | Output: 18x18x64 | RF: 13x13
             nn.ReLU(),
             nn.BatchNorm2d(64),
@@ -44,7 +44,7 @@ class Net(nn.Module):
         #Transition Block2
         self.trans2 = nn.Sequential(
 
-            nn.Conv2d(64, 32, 1, stride=2), # Input: 18x18x32 | Output: 9x9x64 | RF: 17x17
+            nn.Conv2d(64, 32, 1, stride=2), # Input: 18x18x32 | Output: 9x9x64 | RF: 13x13
             nn.ReLU()
         )
 
@@ -52,12 +52,12 @@ class Net(nn.Module):
         self.conv3 = nn.Sequential(
             
             ## Dilation Block
-            nn.Conv2d(32, 64, 3,  padding=1, bias = False,dilation=2), # Input: 9x9x64 | Output: 7x7x64 | RF: 33x33
+            nn.Conv2d(32, 64, 3,  padding=1, bias = False,dilation=2), # Input: 9x9x64 | Output: 7x7x64 | RF: 29x29
             nn.ReLU(),
             nn.BatchNorm2d(64),
             nn.Dropout2d(dropout),
 
-            nn.Conv2d(64, 64, 3,  padding=1, bias = False),  # Input: 7x7x64| Output: 7x7x64 | RF: 41x41
+            nn.Conv2d(64, 64, 3,  padding=1, bias = False),  # Input: 7x7x64| Output: 7x7x64 | RF: 45x45
             nn.ReLU(),
             nn.BatchNorm2d(64),
             nn.Dropout2d(dropout),
@@ -66,20 +66,20 @@ class Net(nn.Module):
         #Transition Block3
         self.trans3 = nn.Sequential(
 
-            nn.Conv2d(64, 16, 1, stride=2), # Input: 7x7x64| Output: 4x4x16 | RF: 49x49
+            nn.Conv2d(64, 16, 1, stride=2), # Input: 7x7x64| Output: 4x4x16 | RF: 61x61
             nn.ReLU()
         )
 
         #Convolution Block4        
         self.conv4 = nn.Sequential(
-            nn.Conv2d(16, 32, 3, padding=1, bias = False), # Input: 4x4x16 | Output: 4x4x32 | RF: 65x65
+            nn.Conv2d(16, 32, 3, padding=1, bias = False), # Input: 4x4x16 | Output: 4x4x32 | RF: 93x93
             nn.ReLU(),
             nn.BatchNorm2d(32),
             nn.Dropout2d(dropout),
 
             ## Depthwise seperable Convolution2
-            nn.Conv2d(32,32, 3,  padding=1,groups=32 ,bias = False),# Input: 4x4x16 | Output: 4x4x32 | RF: 97x97
-            nn.Conv2d(32, 10, 1, padding=1, bias = False),          # Input: 4x4x32| Output: 6x6x10 | RF: 97x97
+            nn.Conv2d(32,32, 3,  padding=1,groups=32 ,bias = False),# Input: 4x4x16 | Output: 4x4x32 | RF: 125x125
+            nn.Conv2d(32, 10, 1, padding=1, bias = False),          # Input: 4x4x32| Output: 6x6x10 | RF: 125x125
             nn.ReLU(),
             nn.BatchNorm2d(10),
             nn.Dropout2d(dropout),
