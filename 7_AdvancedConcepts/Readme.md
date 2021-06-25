@@ -85,21 +85,21 @@ LR Scheduler - OneCycleLR <br>
      )
 
 ## Receptive Field
-|                  | nin | padding | kernel | stride | nout | jin | jout | rin | rout |
-| ---------------- | --- | ------- | ------ | ------ | ---- | --- | ---- | --- | ---- |
-| Convolution      | 32  | 1       | 3      | 1      | 32   | 1   | 1    | 1   | 3    |
-| Convolution      | 32  | 1       | 3      | 1      | 32   | 1   | 1    | 3   | 5    |
-| Transition-Block | 32  | 0       | 1      | 2      | 16   | 1   | 2    | 5   | 5    |
-| Convolution      | 16  | 1       | 3      | 1      | 16   | 2   | 2    | 5   | 9    |
-| Depthwise        | 16  | 1       | 3      | 1      | 16   | 2   | 2    | 9   | 13   |
-| Depthwise        | 16  | 1       | 1      | 1      | 18   | 2   | 2    | 13  | 13   |
-| Transition-Block | 18  | 0       | 1      | 2      | 9    | 2   | 4    | 13  | 13   |
-| Dilation Block   | 9   | 1       | 5      | 1      | 7    | 4   | 4    | 13  | 29   |
-| Convolution      | 7   | 1       | 3      | 1      | 7    | 4   | 4    | 29  | 37   |
-| Convolution      | 7   | 1       | 1      | 2      | 5    | 4   | 8    | 37  | 37   |
-| Convolution      | 5   | 1       | 3      | 1      | 5    | 8   | 8    | 37  | 53   |
-| Depthwise        | 5   | 1       | 3      | 1      | 5    | 8   | 8    | 53  | 69   |
-| Depthwise        | 5   | 1       | 1      | 1      | 7    | 8   | 8    | 69  | 69   |
+| Operation      | nin | Channels | Output\_Channels | padding | kernel | stride | dilation | nout | jin | jout | rin | rout |
+| -------------- | --- | -------- | ---------------- | ------- | ------ | ------ | -------- | ---- | --- | ---- | --- | ---- |
+| Convolution-B1 | 32  | 3        | 32               | 1       | 3      | 1      | 1        | 32   | 1   | 1    | 1   | 3    |
+| Convolution-B1 | 32  | 32       | 64               | 1       | 3      | 1      | 1        | 32   | 1   | 1    | 3   | 5    |
+| Convolution-TB | 32  | 64       | 32               | 1       | 1      | 2      | 1        | 16   | 1   | 2    | 5   | 5    |
+| Convolution-B2 | 16  | 32       | 32               | 1       | 3      | 1      | 1        | 16   | 2   | 2    | 5   | 9    |
+| Convolution-B2 | 16  | 32       | 32               | 1       | 3      | 1      | 1        | 16   | 2   | 2    | 9   | 13   |
+| Convolution-B2 | 16  | 32       | 32               | 1       | 1      | 1      | 1        | 18   | 2   | 2    | 13  | 13   |
+| Convolution-TB | 18  | 32       | 64               | 1       | 1      | 2      | 1        | 9    | 2   | 4    | 13  | 13   |
+| Convolution-B3 | 9   | 64       | 32               | 1       | 3      | 1      | 2        | 7    | 4   | 8    | 13  | 29   |
+| Convolution-B3 | 7   | 32       | 64               | 1       | 3      | 1      | 1        | 7    | 8   | 8    | 29  | 45   |
+| Convolution-TB | 7   | 64       | 64               | 1       | 3      | 2      | 1        | 4    | 8   | 16   | 45  | 61   |
+| Convolution-B4 | 4   | 64       | 16               | 1       | 3      | 1      | 1        | 4    | 16  | 16   | 61  | 93   |
+| Convolution-B4 | 4   | 16       | 32               | 1       | 3      | 1      | 1        | 4    | 16  | 16   | 93  | 125  |
+| Convolution-B4 | 4   | 32       | 32               | 1       | 1      | 1      | 1        | 6    | 16  | 16   | 125 | 125  |
 
 ## Training & Testing Log
 
