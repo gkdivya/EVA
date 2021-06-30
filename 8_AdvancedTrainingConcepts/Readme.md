@@ -18,7 +18,7 @@ Class activation maps, Weight Updates, Optimizers & LR Schedulers
 
 ### Folder structure
 
-The code is fully modularised, we have built a repo named [torch_cv_wrapper](https://github.com/gkdivya/torch_cv_wrapper) for this assignment: 
+The code is fully modularised, we have built a repo named [torch_cv_wrapper](https://github.com/gkdivya/torch_cv_wrapper) for this assignment, and all the libraries are imported from this: 
 
     |── config
     |   ├── config.yaml    
