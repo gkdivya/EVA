@@ -19,9 +19,10 @@ Class activation maps, Weight Updates, Optimizers & LR Schedulers
 
 ### Final Model
 
-Epochs - 40
-Normalization - LayerNorm
+Epochs - 40 <br>
+Normalization - LayerNorm <br>
 LR Scheduler - ReduceLROnPlateau
+
 
 The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/CIFAR10_Image_Classification_Resnet18.ipynb) and code for individual experiments for each advanced convolutions can be found [here](https://github.com/gkdivya/EVA/tree/main/8_AdvancedTrainingConcepts/experiments)
 
@@ -236,6 +237,9 @@ The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/8_Advanced
 
 ### Misclassified Images
 
+20 missclassified images
+
+
 ![image](https://user-images.githubusercontent.com/42609155/124165004-fb519000-dabe-11eb-855b-7c85ece69c0e.png)
 
 
@@ -255,6 +259,8 @@ The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/8_Advanced
 ![image](https://user-images.githubusercontent.com/42609155/124165043-086e7f00-dabf-11eb-8804-345898d1c573.png)
 
 ### Model diagnostic with Grad-CAM
+
+Gradcam output for 20 missclassified images
 
 ![image](https://user-images.githubusercontent.com/42609155/124165243-2c31c500-dabf-11eb-9f0e-cdf08d0e605d.png)
 
