@@ -40,7 +40,7 @@ The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/8_Advanced
 ### Experiments
 | ResNet Model | Normalization       | Scheduler         | Params | Training Accuracy | Test Accuracy | Experiment Files |
 | ------------ | ------------------- | ----------------- | ------ | ----------------- | ------------- | ---------------------- |
-| ResNet18     | Batch Normalization | OneCycleLR       |   11,173,962     |   97.51%       93.79%         |               |  [ResNet18_BatchNormalization_OneCycleLR](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet18_BN_OneCycleLR)   |
+| ResNet18     | Batch Normalization | OneCycleLR       |   11,173,962     |   97.51%               |     93.79%           |  [ResNet18_BatchNormalization_OneCycleLR](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet18_BN_OneCycleLR)   |
 | ResNet18     | Batch Normalization | LRScheduler       |  11,173,962      |    95.44%               |    92.84%           | [ResNet18_BatchNormalization_LRScheduler](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet18_BN_LR)   |
 | ResNet18     | Batch Normalization | ReduceLROnPlateau |        |                   |               | [ResNet18_BatchNormalization_ReduceLROnPlateau](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet18_BN_RedLR)   |
 | ResNet18     | Layer Normalization | OnceCycleLR       |   11,173,962     |   94.88%                 |  92.00%              | [ResNet18_LayerNormalization_OneCycleLR](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet18_LN_OneCycleLR)   |
