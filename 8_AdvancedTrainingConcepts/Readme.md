@@ -1,5 +1,21 @@
-##  ADVANCED TRAINING CONCEPTS
-Class activation maps, Weight Updates, Optimizers & LR Schedulers
+# ADVANCED TRAINING CONCEPTS
+Objective is to learn Class activation maps, Weight Updates, Optimizers & LR Schedulers concepts. And to perform a customized convolution based on ResNet18, Layer Normalization on CIFAR10 dataset. 
+
+## Vision Library
+Fully modularized code - [torch_cv_wrapper](https://github.com/gkdivya/torch_cv_wrapper) is built to perform the object detection models based on PyTorch on CIFAR10 dataset.
+
+### Final Model details
+
+Epochs - 40 <br>
+Normalization - LayerNorm <br>
+LR Scheduler - ReduceLROnPlateau
+
+Following Data Augmentation is applied, refer [this](https://github.com/gkdivya/torch_cv_wrapper/blob/main/dataloader/albumentation.py) 
+- RandomCrop(32, padding=4)
+- CutOut(16x16)
+- Rotate(±5°)
+
+The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/CIFAR10_Image_Classification_Resnet18.ipynb) with a test accuracy of 90% at 39th epoch and code for individual experiments can be found [here](https://github.com/gkdivya/EVA/tree/main/8_AdvancedTrainingConcepts/experiments)
 
 ### Experiments
 | ResNet Model | Normalization       | Scheduler         | Params | Training Accuracy | Test Accuracy | Experiment Files |
@@ -17,18 +33,6 @@ Class activation maps, Weight Updates, Optimizers & LR Schedulers
 | ResNet34     | Layer Normalization | LRScheduler       | 21,282,122         |       87.25%            |  88.54%             | [ResNet34_LayerNormalization_LRScheduler](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_LN_LR)   |
 | ResNet34     | Layer Normalization | ReduceLROnPlateau | 21,282,122        |                   |               | [ResNet34_LayerNormalization_ReduceLROnPlateau](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_LN_RedLR)   |
 
-### Final Model
-
-Epochs - 40 <br>
-Normalization - LayerNorm <br>
-LR Scheduler - ReduceLROnPlateau
-
-Following Data Augmentation is applied, refer [this](https://github.com/gkdivya/torch_cv_wrapper/blob/main/dataloader/albumentation.py) 
-- RandomCrop(32, padding=4)
-- CutOut(16x16)
-- Rotate(±5°)
-
-The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/CIFAR10_Image_Classification_Resnet18.ipynb) with a test accuracy of 90% at 39th epoch and code for individual experiments can be found [here](https://github.com/gkdivya/EVA/tree/main/8_AdvancedTrainingConcepts/experiments)
 
 ### Training and Testing Logs
 
@@ -270,30 +274,6 @@ Gradcam output for 20 missclassified images
 
 ![image](https://user-images.githubusercontent.com/42609155/124165318-3fdd2b80-dabf-11eb-92fc-dab30334e2c6.png)
 
-### Folder structure
-
-The code is fully modularised, we have built a repo named [torch_cv_wrapper](https://github.com/gkdivya/torch_cv_wrapper) for this assignment, and all the libraries are imported from this: 
-
-    |── config
-    |   ├── config.yaml    
-    ├── dataloader  
-    |   ├── albumentation.py 
-    |   ├── load_data.py
-    ├── model  
-    |   ├── model.py 
-    ├── utils  
-    |   ├── __init__.py 
-    |   ├── train.py 
-    |   ├── test.py 
-    |   ├── plot_metrics.py 
-    |   ├── helper.py 
-    |   ├── gradcam.py 
-    ├── main.py     
-    ├── README.md  
-
-### Reference
-
-- [Grad-Cam with PyTorch](https://github.com/kazuto1011/grad-cam-pytorch)
 
 ### Collaborators
 
