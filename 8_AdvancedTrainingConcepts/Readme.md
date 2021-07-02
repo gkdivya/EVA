@@ -51,7 +51,7 @@ The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/8_Advanced
 | ResNet34     | Batch Normalization | ReduceLROnPlateau | 21,282,122        |     94.14%              | 92.39%              | [ResNet34_BatchNormalization_ReduceLROnPlateau](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_BN_RedLR)   |
 | ResNet34     | Layer Normalization | OnceCycleLR       |  21,282,122       |        95%           |     92.02%          | [ResNet34_LayerNormalization_OneCycleLR](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_LN_OneCycleLR)   |
 | ResNet34     | Layer Normalization | LRScheduler       | 21,282,122         |       87.25%            |  88.54%             | [ResNet34_LayerNormalization_LRScheduler](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_LN_LR)   |
-| ResNet34     | Layer Normalization | ReduceLROnPlateau | 21,282,122        |                   |               | [ResNet34_LayerNormalization_ReduceLROnPlateau](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_LN_RedLR)   |
+| ResNet34     | Layer Normalization | ReduceLROnPlateau | 21,282,122        |          81.40%         |      84.47%         | [ResNet34_LayerNormalization_ReduceLROnPlateau](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_LN_RedLR)   |
 
 
 ### Training and Testing Logs
