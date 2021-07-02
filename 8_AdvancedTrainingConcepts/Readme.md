@@ -4,18 +4,18 @@ Class activation maps, Weight Updates, Optimizers & LR Schedulers
 ### Experiments
 | ResNet Model | Normalization       | Scheduler         | Params | Training Accuracy | Test Accuracy | Experiment Config File |
 | ------------ | ------------------- | ----------------- | ------ | ----------------- | ------------- | ---------------------- |
-| ResNet18     | Batch Normalization | OneCycleLR       |        |                   |               |                        |
-| ResNet18     | Batch Normalization | LRScheduler       |        |                   |               |                        |
-| ResNet18     | Batch Normalization | ReduceLROnPlateau |        |                   |               |                        |
-| ResNet18     | Layer Normalization | OnceCycleLR       |        |                   |               |                        |
-| ResNet18     | Layer Normalization | LRScheduler       |        |                   |               |                        |
-| ResNet18     | Layer Normalization | ReduceLROnPlateau |        |                   |               |                        |
-| ResNet34     | Batch Normalization | OnceCycleLR       |        |                   |               |                        |
-| ResNet34     | Batch Normalization | LRScheduler       |        |                   |               |                        |
-| ResNet34     | Batch Normalization | ReduceLROnPlateau |        |                   |               |                        |
-| ResNet34     | Layer Normalization | OnceCycleLR       |        |                   |               |                        |
-| ResNet34     | Layer Normalization | LRScheduler       |        |                   |               |                        |
-| ResNet34     | Layer Normalization | ReduceLROnPlateau |        |                   |               |                        |
+| ResNet18     | Batch Normalization | OneCycleLR       |        |                   |               |  [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet18_BN_OneCycleLR/config.yaml)   |
+| ResNet18     | Batch Normalization | LRScheduler       |        |                   |               | [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet18_BN_LR/config.yaml)   |
+| ResNet18     | Batch Normalization | ReduceLROnPlateau |        |                   |               | [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet18_BN_RedLR/config.yaml)   |
+| ResNet18     | Layer Normalization | OnceCycleLR       |        |                   |               | [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet18_LN_OneCycleLR/config.yaml)   |
+| ResNet18     | Layer Normalization | LRScheduler       |        |                   |               | [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet18_LN_LR/config.yaml)   |
+| ResNet18     | Layer Normalization | ReduceLROnPlateau |        |                   |               | [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet18_LN_RedLR/config.yaml)   |
+| ResNet34     | Batch Normalization | OnceCycleLR       |        |                   |               | [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_BN_OneCycle/config.yaml)   |
+| ResNet34     | Batch Normalization | LRScheduler       |        |                   |               | [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_BN_LR/config.yaml)   |
+| ResNet34     | Batch Normalization | ReduceLROnPlateau |        |                   |               | [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_BN_RedLR/config.yaml)   |
+| ResNet34     | Layer Normalization | OnceCycleLR       |        |                   |               | [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_LN_OneCycleLR/config.yaml)   |
+| ResNet34     | Layer Normalization | LRScheduler       |        |                   |               | [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_LN_LR/config.yaml)   |
+| ResNet34     | Layer Normalization | ReduceLROnPlateau |        |                   |               | [config.yaml](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/experiments/Cifar10_with_resnet34_LN_RedLR/config.yaml)   |
 
 ### Final Model
 
