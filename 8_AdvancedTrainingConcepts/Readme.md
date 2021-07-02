@@ -4,7 +4,7 @@ Class activation maps, Weight Updates, Optimizers & LR Schedulers
 ### Experiments
 | ResNet Model | Normalization       | Scheduler         | Params | Training Accuracy | Test Accuracy | Experiment Config File |
 | ------------ | ------------------- | ----------------- | ------ | ----------------- | ------------- | ---------------------- |
-| ResNet18     | Batch Normalization | OnceCycleLR       |        |                   |               |                        |
+| ResNet18     | Batch Normalization | OneCycleLR       |        |                   |               |                        |
 | ResNet18     | Batch Normalization | LRScheduler       |        |                   |               |                        |
 | ResNet18     | Batch Normalization | ReduceLROnPlateau |        |                   |               |                        |
 | ResNet18     | Layer Normalization | OnceCycleLR       |        |                   |               |                        |
