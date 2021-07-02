@@ -1,6 +1,6 @@
 model: Resnet34
 model_params:
-    experiment_name: Cifar10_with_resnet34_LN_LR
+    experiment_name: cifar10_with_resnet34_LN_LR
     model_dir: ./model/
     seed: 1
     dropout: 0.05
@@ -18,7 +18,7 @@ optimizer :
     type: optim.Adam
     args:
         lr: 0.001
-lr_scheduler: LRScheduler	
+lr_scheduler: LRScheduler
 training_params:
     epochs: 40
     l1_factor: 0
