@@ -2,7 +2,7 @@
 Objective is to learn Class activation maps, Weight Updates, Optimizers & LR Schedulers concepts. And to perform a customized convolution based on ResNet18, Layer Normalization on CIFAR10 dataset. 
 
 ## Vision Library
-Fully modularized code - [torch_cv_wrapper](https://github.com/gkdivya/torch_cv_wrapper) is built to perform the object detection models based on PyTorch on CIFAR10 dataset.
+Fully modularized library - [torch_cv_wrapper](https://github.com/gkdivya/torch_cv_wrapper) is built to perform object detection based on PyTorch on CIFAR10 dataset.
 
 ### Final Model details
 
