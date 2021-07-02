@@ -4,6 +4,26 @@ Objective is to learn Class activation maps, Weight Updates, Optimizers & LR Sch
 ## Vision Library
 Fully modularized library - [torch_cv_wrapper](https://github.com/gkdivya/torch_cv_wrapper) is built to perform object detection based on PyTorch on CIFAR10 dataset.
 
+**Folder Structure**
+
+    |── config
+    |   ├── config.yaml    
+    ├── dataloader  
+    |   ├── albumentation.py 
+    |   ├── load_data.py
+    ├── model  
+    |   ├── custommodel.py 
+    |   ├── resnet.py
+    ├── utils  
+    |   ├── __init__.py 
+    |   ├── train.py 
+    |   ├── test.py 
+    |   ├── plot_metrics.py 
+    |   ├── helper.py 
+    |   ├── gradcam.py 
+    ├── main.py     
+    ├── README.md  
+
 ### Final Model details
 
 Epochs - 40 <br>
@@ -273,6 +293,9 @@ Gradcam output for 20 missclassified images
 ![image](https://user-images.githubusercontent.com/42609155/124165243-2c31c500-dabf-11eb-9f0e-cdf08d0e605d.png)
 
 ![image](https://user-images.githubusercontent.com/42609155/124165318-3fdd2b80-dabf-11eb-92fc-dab30334e2c6.png)
+
+### Tensorboard Logs
+![image](https://user-images.githubusercontent.com/17870236/124290030-93f41880-db70-11eb-9a3a-bfe05b08346c.png)
 
 
 ### Collaborators
