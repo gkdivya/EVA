@@ -17,8 +17,8 @@ criterion: CrossEntropyLoss
 optimizer : 
     type: optim.Adam
     args:
-        lr: 0.01
-lr_scheduler: ReduceLROnPlateau
+        lr: 0.001
+lr_scheduler: LRScheduler
 training_params:
     epochs: 40
     l1_factor: 0
