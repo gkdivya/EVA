@@ -23,8 +23,12 @@ Epochs - 40 <br>
 Normalization - LayerNorm <br>
 LR Scheduler - ReduceLROnPlateau
 
+Following Data Augmentation is applied, refer [this](https://github.com/gkdivya/torch_cv_wrapper/blob/main/dataloader/albumentation.py) 
+- RandomCrop(32, padding=4)
+- CutOut(16x16)
+- Rotate(±5°)
 
-The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/CIFAR10_Image_Classification_Resnet18.ipynb) and code for individual experiments for each advanced convolutions can be found [here](https://github.com/gkdivya/EVA/tree/main/8_AdvancedTrainingConcepts/experiments)
+The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/8_AdvancedTrainingConcepts/CIFAR10_Image_Classification_Resnet18.ipynb) with a test accuracy of 90% at 39th epoch and code for individual experiments can be found [here](https://github.com/gkdivya/EVA/tree/main/8_AdvancedTrainingConcepts/experiments)
 
 ### Training and Testing Logs
 
