@@ -263,14 +263,6 @@ The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/8_Advanced
 ![image](https://user-images.githubusercontent.com/42609155/124164963-ec6add80-dabe-11eb-8b5f-43a9f93e866c.png)
 
 
-### Misclassified Images
-
-20 missclassified images
-
-
-![image](https://user-images.githubusercontent.com/42609155/124165004-fb519000-dabe-11eb-855b-7c85ece69c0e.png)
-
-
 ### Confusion Matrix and Accuracy by class
 
     Accuracy of plane : 90 %
@@ -286,9 +278,16 @@ The final notebook is [here](https://github.com/gkdivya/EVA/blob/main/8_Advanced
 
 ![image](https://user-images.githubusercontent.com/42609155/124165043-086e7f00-dabf-11eb-8804-345898d1c573.png)
 
+### Misclassified Images
+
+20 missclassified images
+
+
+![image](https://user-images.githubusercontent.com/42609155/124165004-fb519000-dabe-11eb-855b-7c85ece69c0e.png)
+
 ### Model diagnostic with Grad-CAM
 
-Gradcam output for 20 missclassified images
+Gradcam output for the above 20 missclassified images
 
 ![image](https://user-images.githubusercontent.com/42609155/124165243-2c31c500-dabf-11eb-9f0e-cdf08d0e605d.png)
 
