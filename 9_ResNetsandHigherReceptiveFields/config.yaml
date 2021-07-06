@@ -1,0 +1,25 @@
+model: CustomResnet
+model_params:
+    experiment_name: cifar10_with_customresnet
+    model_dir: ./model/
+    seed: 1
+    dropout: 0.05
+data_augmentation:
+    type: CIFAR10AlbumentationS9
+data_loader:
+    type: Cifar10DataLoader
+    classes: ['plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+    args:
+        batch_size: 512
+        num_workers: 2
+        pin_memory: true
+criterion: CrossEntropyLoss
+optimizer : 
+    type: optim.SGD
+    args:
+        lr: 0.001
+lr_scheduler: OneCycleLR
+training_params:
+    epochs: 24
+    l1_factor: 0
+    l2_factor: 0.0001
