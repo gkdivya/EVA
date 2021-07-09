@@ -38,7 +38,7 @@ Following Data Augmentation is applied, refer [this](https://github.com/gkdivya/
 - CutOut(8x8)
 - Horizontal Flip
 
-### LR Plot
+### LR Search Plot
 
 ![image](https://user-images.githubusercontent.com/42609155/125091377-f8255800-e0ed-11eb-8ca3-dd72e999ed12.png)
 
