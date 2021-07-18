@@ -1,7 +1,7 @@
 ## Environment
 1. Setup Conda enviornment using environment.yml file
 2. Activate conda environemnt 
-3. Download YOLO V3 weights from this ![path](https://pjreddie.com/media/files/yolov3.weights)
+3. Download YOLO V3 weights from this [path](https://pjreddie.com/media/files/yolov3.weights)
 4. Run yolo file with image name
 5. Output gets stored in output folder
 
