@@ -108,7 +108,9 @@ Coco annotation JSON have mainly four building blocks
 
 ## Anchor box
 Anchor boxes are nothing but template bounding boxes. In the sense, Object detection models utilize the anchor boxes to make beter bounding box predictions.
-First step is to identify good candidate anchor boxes in YOLO.
+First step is to identify good candidate anchor boxes in YOLO. </br>
+
+YOLO V2 and V3 comes with a set of pre-defined anchor boxes which may not work out of box for custom data. Defining anchor boxes for the custom data will tune the model better and increase object detection accuracy 
 
 ## K-means clustering
 
