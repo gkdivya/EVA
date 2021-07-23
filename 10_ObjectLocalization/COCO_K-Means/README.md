@@ -114,14 +114,15 @@ YOLO V2 and V3 comes with a set of pre-defined anchor boxes which may not work o
 
 ## K-means clustering
 
-K -means clustering algorithm is very famous algorithm in data science. This algorithm aims to partition n observation to k clusters. 
+K -means clustering algorithm is very famous algorithm in data science. This algorithm aims to partition n datapoints to k clusters. 
 It mainly includes :
 - Initialization : K means (i.e centroid) are generated at random.
-- Assignment : Clustering formation by associating the each observation with nearest centroid.
+- Assignment : Clustering formation by associating each datapoint with nearest centroid.
 - Updating Cluster : Centroid of a newly created cluster becomes mean.
-Assignment and Update are repitatively done until convergence. The final result is that the sum of squared errors is minimized between points and their respective centroids.
+Assignment and Update are repetitively done until convergence. The final result is that the sum of squared errors minimized between points and their respective centroids.
 
-What it really does in determining anchor box?
+### What it really does in determining anchor box?
+
 In general, bounding boxes for objects are given by tuples of the form (x,y,w,h), we extract width and height from these coordinates, and normalize data with respect to image width and height.
 There are two Metrics for K-means : 
 - Euclidean distance
