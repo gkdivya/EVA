@@ -112,8 +112,22 @@ First step is to identify good candidate anchor boxes in YOLO.
 
 ## K-means clustering
 
-Steps followed to identify anchor boxes:
+K -means clustering algorithm is very famous algorithm in data science. This algorithm aims to partition n observation to k clusters. 
+It mainly includes :
+- Initialization : K means (i.e centroid) are generated at random.
+- Assignment : Clustering formation by associating the each observation with nearest centroid.
+- Updating Cluster : Centroid of a newly created cluster becomes mean.
+Assignment and Update are repitatively done until convergence. The final result is that the sum of squared errors is minimized between points and their respective centroids.
 
+What it really does in determining anchor box?
+In general, bounding boxes for objects are given by tuples of the form (x,y,w,h), we extract width and height from these coordinates, and normalize data with respect to image width and height.
+There are two Metrics for K-means : 
+- Euclidean distance
+- IoU (Jaccard index)
+
+Jaccard index = (Intersection between selected box and cluster head box)/(Union between selected box and cluster head box)
+At initialization we can choose k random boxes as our cluster heads. Assign anchor boxes to respective clusters based on IoU value > threshold and calculate mean IoU of cluster.
+This process would be repeated until convergence.
 
 
 ## Different K-Values and anchor boxes
