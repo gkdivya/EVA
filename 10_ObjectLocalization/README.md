@@ -14,3 +14,10 @@
   - readme data for class distribution (along with the class names) along with a graph 
   - Calculate the Anchor Boxes for k = 3, 4, 5, 6 and draw them.
   - Share the calculations for both via a notebook uploaded on your GitHub Repo
+
+
+## Collaborators
+Divya Kamat (divya.r.kamat@gmail.com)
+Divya G K (gkdivya@gmail.com)
+Sarang (jaya.sarangan@gmail.com)
+Garvit Garg (garvit.gargs@gmail.com)
