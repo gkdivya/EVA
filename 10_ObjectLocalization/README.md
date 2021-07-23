@@ -12,6 +12,7 @@
 - Identify following things for this dataset:
   - Class distribution (along with the class names) along with a graph 
   - Calculate the Anchor Boxes for k = 3, 4, 5, 6 and draw them.
+For coco-dataset optimized k-value is 4. More details can be found [here](https://github.com/gkdivya/EVA/blob/main/10_ObjectLocalization/COCO_K-Means/README.md)
 
 
 ## Collaborators
