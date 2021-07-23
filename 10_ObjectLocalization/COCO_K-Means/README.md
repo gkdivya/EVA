@@ -140,7 +140,7 @@ https://cocodataset.org/ </br>
 https://towardsdatascience.com/getting-started-with-coco-dataset-82def99fa0b8 </br>
 https://github.com/svdesai/eda-coco </br>
 https://towardsdatascience.com/anchor-boxes-the-key-to-quality-object-detection-ddf9d612d4f9 </br>
-https://www.programmersought.com/article/8007145472/
-https://www.kaggle.com/backtracking/anchor-boxes-analysis-using-k-means
-https://github.com/matplotlib/matplotlib/blob/401aa2f7f2c155165b77d8e5f7cb98270f42054a/examples/statistics/errorbars_and_boxes.py
+https://www.programmersought.com/article/8007145472/</br>
+https://www.kaggle.com/backtracking/anchor-boxes-analysis-using-k-means</br>
+https://github.com/matplotlib/matplotlib/blob/401aa2f7f2c155165b77d8e5f7cb98270f42054a/examples/statistics/errorbars_and_boxes.py</br>
 
