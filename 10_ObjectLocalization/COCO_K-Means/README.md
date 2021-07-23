@@ -139,9 +139,9 @@ This process would be repeated until convergence.
 | ![image](https://user-images.githubusercontent.com/17870236/126734611-61520cf8-04a8-4ecd-9d10-b7d043006736.png)     |    ![image](https://user-images.githubusercontent.com/17870236/126734633-6a79cdf2-84e6-486e-92a1-f112478f0f86.png)  |
 
 ## Elbow Method
-Elbow method is used to find the optimal number of clusters which helps choosing the right K-value. In coco dataset, its 3!
+Elbow method is used to find the optimal number of clusters which helps choosing the right K-value. 
 
-![image](https://user-images.githubusercontent.com/17870236/126755307-ae931b13-14c0-49c2-9a4d-b3628e19c819.png)
+![image](https://user-images.githubusercontent.com/17870236/126769319-2f647f0a-4c4d-42e7-8c7a-5dfdfe832028.png)
 
 ## Clusters Based on IOU
 
