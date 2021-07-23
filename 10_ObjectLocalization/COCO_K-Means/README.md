@@ -95,7 +95,20 @@ Coco annotation JSON have mainly four building blocks
      | id           | Unique id of the annotation                                                                                                                         |
 
 
- # Coco Dataset - Class distribution
-![image](https://user-images.githubusercontent.com/17870236/126727272-752c4d9e-d626-4265-93f7-f7d732239ef8.png)
+ # Coco Dataset 
+ 
+ 'Common Objects in Context' dataset is a set of high quality datasets widely used in State of art computer vision tasks. And guess what, all the images in the dataset are annotated using Pascal data format, Nah kidding.. **COCO data format**!
+ 
+ ![image](https://user-images.githubusercontent.com/17870236/126731543-a51c58eb-51be-4026-9d1f-639d1ccc59a5.png)
+
+## Class distribution
+![image](https://user-images.githubusercontent.com/17870236/126731485-1ee00975-131c-4167-a7d3-719a0d7bff17.png)
 
 @ K-Means
+
+
+## Reference
+https://cocodataset.org/ </br>
+https://towardsdatascience.com/getting-started-with-coco-dataset-82def99fa0b8 </br>
+https://github.com/svdesai/eda-coco </br>
+
