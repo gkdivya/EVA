@@ -104,11 +104,27 @@ Coco annotation JSON have mainly four building blocks
 ## Class distribution
 ![image](https://user-images.githubusercontent.com/17870236/126731485-1ee00975-131c-4167-a7d3-719a0d7bff17.png)
 
-@ K-Means
+# K-Means - Clustering - Anchor box 
+
+## Anchor box
+
+## K-means clustering
+
+## Elbow Method
+![image](https://user-images.githubusercontent.com/17870236/126734505-ed81d3cc-90d4-4529-982b-2d9416cc320d.png)
+
+## Different K-Values and anchor boxes
+| K=3 | K=4 |
+| --- | --- |
+|  ![image](https://user-images.githubusercontent.com/17870236/126734558-9daf823f-c1e4-4151-a1a5-28af0b11613f.png)     |  ![image](https://user-images.githubusercontent.com/17870236/126735193-e9670d6b-d05a-4cee-84bd-1f44602f5acd.png)   |
+| K=5 | K=6 |
+| ![image](https://user-images.githubusercontent.com/17870236/126734611-61520cf8-04a8-4ecd-9d10-b7d043006736.png)     |    ![image](https://user-images.githubusercontent.com/17870236/126734633-6a79cdf2-84e6-486e-92a1-f112478f0f86.png)  |
+
 
 
 ## Reference
 https://cocodataset.org/ </br>
 https://towardsdatascience.com/getting-started-with-coco-dataset-82def99fa0b8 </br>
 https://github.com/svdesai/eda-coco </br>
+https://towardsdatascience.com/anchor-boxes-the-key-to-quality-object-detection-ddf9d612d4f9 </br>
 
