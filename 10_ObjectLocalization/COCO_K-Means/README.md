@@ -126,6 +126,7 @@ There are two Metrics for K-means :
 - IoU (Jaccard index)
 
 Jaccard index = (Intersection between selected box and cluster head box)/(Union between selected box and cluster head box)
+
 At initialization we can choose k random boxes as our cluster heads. Assign anchor boxes to respective clusters based on IoU value > threshold and calculate mean IoU of cluster.
 This process would be repeated until convergence.
 
