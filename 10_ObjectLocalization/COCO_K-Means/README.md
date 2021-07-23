@@ -1,8 +1,8 @@
 # Coco dataset format
 
-Andrew Ng proposed on a recent webinar - [data centric approach](https://www.youtube.com/watch?v=06-AZXmwHjo&ab_channel=DeepLearningAI) to solve real problems in AI, stating that in his experience time spent on good dataset creation, data labeling is always worth it. 
+Andrew Ng proposed on a recent webinar - [data centric approach](https://www.youtube.com/watch?v=06-AZXmwHjo&ab_channel=DeepLearningAI) to solve real problems in AI, stating the importance of data annotation.
 
-Coco dataset format is widely used annotation format in Computer vision tasks. And it supports annotation for
+Coco dataset format is one of the widely used annotation format in Computer vision tasks. And it supports annotation for various vision usecases:
 
 - object detection
 - keypoint detection
@@ -104,14 +104,17 @@ Coco annotation JSON have mainly four building blocks
 ## Class distribution
 ![image](https://user-images.githubusercontent.com/17870236/126731485-1ee00975-131c-4167-a7d3-719a0d7bff17.png)
 
-# K-Means - Clustering - Anchor box 
+# YOLO anchor boxes
 
 ## Anchor box
+Anchor boxes are nothing but template bounding boxes. In the sense, Object detection models utilize the anchor boxes to make beter bounding box predictions.
+First step is to identify good candidate anchor boxes in YOLO.
 
 ## K-means clustering
 
-## Elbow Method
-![image](https://user-images.githubusercontent.com/17870236/126734505-ed81d3cc-90d4-4529-982b-2d9416cc320d.png)
+Steps followed to identify anchor boxes:
+
+
 
 ## Different K-Values and anchor boxes
 | K=3 | K=4 |
@@ -120,7 +123,10 @@ Coco annotation JSON have mainly four building blocks
 | K=5 | K=6 |
 | ![image](https://user-images.githubusercontent.com/17870236/126734611-61520cf8-04a8-4ecd-9d10-b7d043006736.png)     |    ![image](https://user-images.githubusercontent.com/17870236/126734633-6a79cdf2-84e6-486e-92a1-f112478f0f86.png)  |
 
+## Elbow Method
+Elbow method is used to find the optimal number of clusters which helps choosing the right K-value. In coco dataset, its 3!
 
+![image](https://user-images.githubusercontent.com/17870236/126755307-ae931b13-14c0-49c2-9a4d-b3628e19c819.png)
 
 ## Reference
 https://cocodataset.org/ </br>
