@@ -43,4 +43,5 @@ The spatial transformations here are very prominent. Our Spatial Transformer Net
 
 ## Reference
 
-https://arxiv.org/pdf/1506.02025v3.pdf
+https://arxiv.org/pdf/1506.02025v3.pdf <br>
+https://brsoff.github.io/tutorials/intermediate/spatial_transformer_tutorial.html
