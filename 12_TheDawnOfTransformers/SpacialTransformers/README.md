@@ -28,8 +28,28 @@ In the above figuare, U is the feature map input to the localization network. It
 ### Differentiable image sampling.
 
 
-## Model
+## Model Architecture
 
+    Net(
+      (conv1): Conv2d(3, 16, kernel_size=(5, 5), stride=(1, 1))
+      (conv2): Conv2d(16, 32, kernel_size=(5, 5), stride=(1, 1))
+      (conv2_drop): Dropout2d(p=0.5, inplace=False)
+      (fc1): Linear(in_features=800, out_features=1024, bias=True)
+      (fc2): Linear(in_features=1024, out_features=10, bias=True)
+      (localization): Sequential(
+        (0): Conv2d(3, 64, kernel_size=(7, 7), stride=(1, 1))
+        (1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+        (2): ReLU(inplace=True)
+        (3): Conv2d(64, 128, kernel_size=(5, 5), stride=(1, 1))
+        (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+        (5): ReLU(inplace=True)
+      )
+      (fc_loc): Sequential(
+        (0): Linear(in_features=2048, out_features=256, bias=True)
+        (1): ReLU(inplace=True)
+        (2): Linear(in_features=256, out_features=6, bias=True)
+      )
+    )
 
 ## Training and Validation Log
 
