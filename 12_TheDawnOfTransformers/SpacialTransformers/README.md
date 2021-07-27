@@ -39,3 +39,8 @@ In the above figuare, U is the feature map input to the localization network. It
 
 
 The spatial transformations here are very prominent. Our Spatial Transformer Network model has cropped and resized most of the images to the center. It has rotated many of the images to an orientation that it feels will be helpful. Although some of the orientations are not centered. Maybe a bit of more training will help.
+
+
+## Reference
+
+https://arxiv.org/pdf/1506.02025v3.pdf
