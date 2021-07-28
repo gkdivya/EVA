@@ -7,7 +7,7 @@
 
 ## Data_Collection
 
-The dataset was download from [here](https://drive.google.com/file/d/1sVSAJgmOhZk6UG7EzmlRjXfkzPxmpmLy/view) and additionally 100 images were collected with Creative common license for the below classes (25 images per class):
+The dataset was downloaded from [here](https://drive.google.com/file/d/1sVSAJgmOhZk6UG7EzmlRjXfkzPxmpmLy/view) and additionally 100 images were collected with Creative common license for the below classes (25 images per class):
 - hardhat
 - vest
 - boots
