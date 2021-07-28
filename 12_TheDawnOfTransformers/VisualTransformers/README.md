@@ -12,7 +12,12 @@ Following classes from [this](https://github.com/jeonsworld/ViT-pytorch/blob/mai
 
 ## Embedding
 
-The first step is to break-down the image into patches, 16x16 patches in this case and flatten them.
+- The first step is to break-down the image into patches, 16x16 patches in this case and flatten them. 
+- These patches are projected using a normal linear layer, a Conv2d layer is used for this for performance gain. This is obtained by using a kernel_size and stride equal to the `patch_size`. Intuitively, the convolution operation is applied to each patch individually. So, we have to first apply the conv layer and then flat the resulting images.
+- Next step is to add the cls token and the position embedding. The cls token is just a number placed in front of each sequence (of projected patches). cls_tokens is a torch Parameter randomly initialized, in the forward the method it is copied B (batch) times and prepended before the projected patches using torch.cat
+- For the model to know the original position of the patches, we need to pass the spatial information. In ViT we let the model learn it. The position embedding is just a tensor of shape 1, n_patches + 1(token), hidden_size that is added to the projected patches. In the forward function below, position_embeddings is summed up with the patches (x) 
+- 
+Then they are embedded using a normal fully connected layer, a special cls token is added in front of them and the positional encoding is summed. The resulting tensor is passed first into a standard Transformer.
 
     class Embeddings(nn.Module):
         """Construct the embeddings from patch, position embeddings.
