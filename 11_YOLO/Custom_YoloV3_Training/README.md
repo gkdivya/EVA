@@ -1,11 +1,11 @@
 # YoloV3 Training on Custom dataset
 
-[Data Collection](# Data Collection)</br>
-[Data Annotation](# Data Annotation)</br>
-[Model Training](# Model Training)</br>
-[Model Inference](# Model Inference)</br>
+[Data Collection](#data_collection)</br>
+[Data Annotation](#data_annotation)</br>
+[Model Training](#model_training)</br>
+[Model Inference](#model_inference)</br>
 
-# Data Collection
+## Data_Collection
 
 The dataset was download from [here](https://drive.google.com/file/d/1sVSAJgmOhZk6UG7EzmlRjXfkzPxmpmLy/view) and additionally 100 images were collected with Creative common license for the below classes (25 images per class):
 - hardhat
@@ -15,7 +15,7 @@ The dataset was download from [here](https://drive.google.com/file/d/1sVSAJgmOhZ
 
 These 100 images where then merged with the above dataset.
 
-## Data Annotation
+## Data_Annotation
 
 Annotation tool from this [repo](https://github.com/miki998/YoloV3_Annotation_Tool) and the installation steps as mentioned in the repo was followed to setup the tool and annotate the images with bounding boxes.
 
@@ -38,7 +38,7 @@ Annotation tool from this [repo](https://github.com/miki998/YoloV3_Annotation_To
         custom.txt #list of name of the images you want your network to be trained on. Currently we are using same file for test/train
 
 
-## Model Training
+## Model_Training
 - Created a folder 'weights' in the root (YoloV3) folder and copied the 'yolov3-spp-ultralytics.pt' file downloaded from [link](https://drive.google.com/open?id=1LezFG5g3BCW6iYaV89B2i64cqEUZD7e0)
 - In 'yolov3-custom.cfg' file, 
     - ( (4+1+80)*3). Changed the filters as ((4 + 1 + 4)*3) 27
@@ -55,6 +55,6 @@ Annotation tool from this [repo](https://github.com/miki998/YoloV3_Annotation_To
 
 ### Logs
 
-## Model Inference
+## Model_Inference
 
 
