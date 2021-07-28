@@ -8,7 +8,7 @@ The dataset was download from [here](https://drive.google.com/file/d/1sVSAJgmOhZ
 - boots
 - mask
 
-These 25 images where then merged with the above dataset.
+These 100 images where then merged with the above dataset.
 
 ## Data Annotation
 
