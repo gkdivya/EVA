@@ -37,4 +37,8 @@ Annotation tool from [this](https://github.com/miki998/YoloV3_Annotation_Tool) r
 - Created a folder 'weights' in the root (YoloV3) folder and copied the 'yolov3-spp-ultralytics.pt' file downloaded from [link](https://drive.google.com/open?id=1LezFG5g3BCW6iYaV89B2i64cqEUZD7e0)
 - Intialized the model with pretrained weights
 
+### Logs
+
+## Model Inference
+
 
