@@ -1,6 +1,11 @@
 # YoloV3 Training on Custom dataset
 
-## Data Collection
+[Data Collection](# Data Collection)</br>
+[Data Annotation](# Data Annotation)</br>
+[Model Training](# Model Training)</br>
+[Model Inference](# Model Inference)</br>
+
+# Data Collection
 
 The dataset was download from [here](https://drive.google.com/file/d/1sVSAJgmOhZk6UG7EzmlRjXfkzPxmpmLy/view) and additionally 100 images were collected with Creative common license for the below classes (25 images per class):
 - hardhat
