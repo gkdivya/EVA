@@ -34,8 +34,8 @@ Annotation tool from this [repo](https://github.com/miki998/YoloV3_Annotation_To
           --img002.txt
           --...
         custom.data #data file
-        custom.names #your class names
-        custom.txt #list of name of the images you want your network to be trained on. Currently we are using same file for test/train
+        custom.names #class names
+        custom.txt #list of name of the images the network to be trained on. Currently we are using same file for test/train
 
 
 ## Model_Training
