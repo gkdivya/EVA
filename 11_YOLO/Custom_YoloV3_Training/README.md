@@ -33,11 +33,8 @@ Annotation tool from [this](https://github.com/miki998/YoloV3_Annotation_Tool) r
         custom.txt #list of name of the images you want your network to be trained on. Currently we are using same file for test/train
 
 
-## Initializing model with Pre-Trained weights
-
-- Create a folder called weights in the root (YoloV3) folder
-- Download from: https://drive.google.com/open?id=1LezFG5g3BCW6iYaV89B2i64cqEUZD7e0
-- Place 'yolov3-spp-ultralytics.pt' file in the weights folder
-
+## Model Training
+- Created a folder 'weights' in the root (YoloV3) folder and copied the 'yolov3-spp-ultralytics.pt' file downloaded from [link](https://drive.google.com/open?id=1LezFG5g3BCW6iYaV89B2i64cqEUZD7e0)
+- Intialized the model with pretrained weights
 
 
