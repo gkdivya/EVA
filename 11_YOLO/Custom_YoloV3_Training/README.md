@@ -12,7 +12,7 @@ These 25 images where then merged with the above dataset.
 
 ## Data Annotation
 
-Annotation tool from [this](https://github.com/miki998/YoloV3_Annotation_Tool) repo is and the installation steps as mentioned in the repo was followed to setup the tool and Annotate the images with bounding boxes.
+Annotation tool from this [repo](https://github.com/miki998/YoloV3_Annotation_Tool) and the installation steps as mentioned in the repo was followed to setup the tool and annotate the images with bounding boxes.
 
 <img src="https://user-images.githubusercontent.com/17870236/127248717-cf045180-5342-443c-aada-205b1bb18d9b.png" width=600 height=400/>
 
