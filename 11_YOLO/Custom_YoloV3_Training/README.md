@@ -35,7 +35,18 @@ Annotation tool from this [repo](https://github.com/miki998/YoloV3_Annotation_To
 
 ## Model Training
 - Created a folder 'weights' in the root (YoloV3) folder and copied the 'yolov3-spp-ultralytics.pt' file downloaded from [link](https://drive.google.com/open?id=1LezFG5g3BCW6iYaV89B2i64cqEUZD7e0)
-- Intialized the model with pretrained weights
+- In 'yolov3-custom.cfg' file, 
+    - ( (4+1+80)*3). Changed the filters as ((4 + 1 + 4)*3) 27
+    - Changed all entries of classes as 4
+    - Changed burn_in to 100
+    - Changed max_batches to 5000
+    - Changed steps to 4000,4500
+- Changed the class names in custom.names</br>
+    hardhat</br>
+    vest</br>
+    mask</br>
+    boots</br>
+
 
 ### Logs
 
