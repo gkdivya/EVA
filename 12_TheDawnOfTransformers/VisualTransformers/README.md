@@ -13,6 +13,11 @@ Following classes from [this](https://github.com/jeonsworld/ViT-pytorch/blob/mai
 - Attention
 - MLP
 
+The sequence of the operations is as follows -
+
+Input -> CreatePatches -> ClassToken, PatchToEmbed , PositionEmbed -> Transformer -> ClassificationHead -> Output
+ 
+
 ## Embedding
 
 - The first step is to break-down the image into patches, 16x16 patches in this case and flatten them. 
@@ -72,7 +77,10 @@ Following classes from [this](https://github.com/jeonsworld/ViT-pytorch/blob/mai
 
 ## Encoder 
 
-The resulting tensor is passeed into a Transformer. In ViT only the Encoder is used, the Transformer encoder module comprises a Multi-Head Self Attention ( MSA ) layer and a Multi-Layer Perceptron (MLP) layer. 
+The resulting tensor is passeed into a Transformer. In ViT only the Encoder is used, the Transformer encoder module comprises a Multi-Head Self Attention ( MSA ) layer and a Multi-Layer Perceptron (MLP) layer. The encoder combines multiple layers of Transformer Blocks in a sequential manner. The sequence of the operations is as follows -
+
+   Input -> TB1 -> TB2 -> .......... -> TBn (n being the number of layers) -> Output
+
 
         class Encoder(nn.Module):
             def __init__(self, config, vis):
@@ -95,7 +103,12 @@ The resulting tensor is passeed into a Transformer. In ViT only the Encoder is u
 
 ## Block
 
-The Multi-Head Self Attention layer split inputs into several heads so that each head can learn different levels of self-attention. The outputs of all the heads are then concatenated and passed through the Multi-Layer Perceptron.
+The Block class combines both the attention module and the MLP module with layer normalization, dropout and residual connections. The sequence of operations is as follows :-
+    
+    Input -> LayerNorm1 -> Attention -> Residual -> LayerNorm2 -> FeedForward -> Output
+      |                                   |  |                                      |
+      |-------------Addition--------------|  |---------------Addition---------------|
+
 
         class Block(nn.Module):
             def __init__(self, config, vis):
@@ -122,16 +135,22 @@ The Multi-Head Self Attention layer split inputs into several heads so that each
 
 ## Attention
 
+Attention Module is used to perform self-attention operation allowing the model to attend information from different representation subspaces on an input sequence of embeddings.
+The sequence of operations is as follows :-
+
+    Input -> Query, Key, Value -> ReshapeHeads and Transpose Key,Query,Value -> Query * Transpose(Key) -> Softmax -> Dropout -> attention_scores * Value -> ReshapeHeadsBack and Concatenate -> Dropout - > Output
+
 - Before passing the tensors to the attension block, we have a normalization layer where Layer Norm is applied
 
 Layer normalization can be thought of similar to batch normalization. Basically, we take each of the neurons activation and subtract the mean from them, we then divide the value with the standard deviation and finally add a small value to the denominator just to make sure that it never lands up being zero. One difference is that the mean and variances for the layer normalization are calculated along the last dimension (axis=-1) instead of the first batch dimension (axis=0). Pytoch provide a inbuilt function nn.LayerNorm for this. Layer normalization prevents the range of values in the layers from changing too much, which allows faster training and better generalization ability.
 
-The attention takes three inputs, the queries, keys, and values, and computes the attention matrix using queries and values and use it to “attend” to the values. In this case, we are using multi-head attention meaning that the computation is split across n heads with smaller input size.
+The attention takes three inputs, the queries, keys, and values, reshapes and computes the attention matrix using queries and values and use it to “attend” to the values. In this case, we are using multi-head attention meaning that the computation is split across n heads with smaller input size.
 
 - We have 4 fully connected layers, one for queries, keys, values, and two dropout. 
 - the product between the queries and the keys is taken to know “how much” each element is the sequence in important with the rest. Then, we use this information to scale the values.
 - attention is finally the softmax of the resulting vector divided by a scaling factor based on the size of the embedding.
 - The resulting vector is then multipled with the values, to get the context
+- Which is then reshaped and concatenated back, to return the attention_output and weight
 
         class Attention(nn.Module):
             def __init__(self, config, vis):
@@ -181,8 +200,11 @@ The attention takes three inputs, the queries, keys, and values, and computes th
                 
 
 ## MLP
-The attension output is passed to MLP, which is a fully connected layer composed of two layers with a GELU non-linearity. Before passing the attention output to MLP, residual connections are added.
 
+The attension output is passed to MLP,  which is two sequential linear layers with GELU activation function applied to the output of self attention operation. The sequence of operations is as follows :-
+    
+    Input -> FC1 -> GELU -> Dropout -> FC2 -> Output
+    
 GELU  is GAUSSIAN ERROR LINEAR UNIT
 
 zℓ ` = MSA(LN(zℓ−1)) + zℓ−1,                ℓ   = 1 . . . L
