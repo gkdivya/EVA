@@ -57,4 +57,5 @@ Annotation tool from this [repo](https://github.com/miki998/YoloV3_Annotation_To
 
 ## Model_Inference
 
-
+youtube video
+https://youtu.be/fqAH1Wqo0-M
