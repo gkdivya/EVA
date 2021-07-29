@@ -25,8 +25,11 @@ In the above figuare, U is the feature map input to the localization network. It
 
 ###  Parameterized Sampling Grid
 
+Parameterized Sampling Grid mainly generates a sampling grid that is consistent with the picture pixels, and multiplies it with theta matrix to gradually learn to fully correspond to the tilt recognition object
+
 ### Differentiable image sampling.
 
+Differentable Image Sampling is mainly used to obtain the original image pixels corresponding to the sampling points to form a V feature map to complete the output of the V feature map
 
 ## Links to Code
 
@@ -321,3 +324,6 @@ The spatial transformations here are very prominent. Our Spatial Transformer Net
 
 https://arxiv.org/pdf/1506.02025v3.pdf <br>
 https://brsoff.github.io/tutorials/intermediate/spatial_transformer_tutorial.html
+https://kevinzakka.github.io/2017/01/10/stn-part1/
+https://kevinzakka.github.io/2017/01/18/stn-part2/
+https://medium.com/@kushagrabh13/spatial-transformer-networks-ebc3cc1da52d
