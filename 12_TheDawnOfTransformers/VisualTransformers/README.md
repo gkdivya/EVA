@@ -63,8 +63,8 @@ Following classes from [this](https://github.com/jeonsworld/ViT-pytorch/blob/mai
                 embeddings = x + self.position_embeddings
                 embeddings = self.dropout(embeddings)
                 return embeddings
+![Presentation1](https://user-images.githubusercontent.com/17870236/127422947-f168db56-95ad-4473-8d41-488252cd645b.gif)
 
-<img src="https://user-images.githubusercontent.com/17870236/127421929-c85d9140-d39a-4641-b016-0d17aebf9bbd.png" width=600 height=400 />
 
 
 ## Encoder 
