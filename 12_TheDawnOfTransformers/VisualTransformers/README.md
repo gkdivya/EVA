@@ -64,6 +64,7 @@ Following classes from [this](https://github.com/jeonsworld/ViT-pytorch/blob/mai
                 embeddings = self.dropout(embeddings)
                 return embeddings
 
+<img src="https://user-images.githubusercontent.com/17870236/127421929-c85d9140-d39a-4641-b016-0d17aebf9bbd.png" width=600 height=400 />
 
 
 ## Encoder 
