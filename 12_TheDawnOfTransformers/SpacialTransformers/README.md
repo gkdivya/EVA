@@ -317,7 +317,7 @@ Colab Link - https://colab.research.google.com/github/gkdivya/EVA/blob/main/12_T
 ![image](https://user-images.githubusercontent.com/42609155/127077962-9743cb5b-eebd-4f10-8276-3cec0caa75d9.png)
 
 
-The spatial transformations here are very prominent. Our Spatial Transformer Network model has cropped and resized most of the images to the center. It has rotated many of the images to an orientation that it feels will be helpful. Although some of the orientations are not centered. Maybe a bit of more training will help.
+Spatial Transformer Network model has cropped and resized most of the images to the center. It has rotated many of the images to an orientation that it feels will be helpful. Although some of the orientations are not centered. Maybe a bit of more training will help.
 
 
 ## Reference
