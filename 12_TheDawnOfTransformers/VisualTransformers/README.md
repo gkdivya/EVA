@@ -20,7 +20,7 @@ Input -> CreatePatches -> ClassToken, PatchToEmbed , PositionEmbed -> Transforme
 
 ## Embedding
 
-![Presentation1](https://user-images.githubusercontent.com/17870236/127422947-f168db56-95ad-4473-8d41-488252cd645b.gif)
+   ![Presentation1](https://user-images.githubusercontent.com/17870236/127422947-f168db56-95ad-4473-8d41-488252cd645b.gif)
 
 - The first step is to break-down the image into patches, 16x16 patches in this case and flatten them. 
 - These patches are projected using a normal linear layer, a Conv2d layer is used for this for performance gain. This is obtained by using a kernel_size and stride equal to the `patch_size`. Intuitively, the convolution operation is applied to each patch individually. So, we have to first apply the conv layer and then flat the resulting images.
