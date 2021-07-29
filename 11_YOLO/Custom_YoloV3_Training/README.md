@@ -51,11 +51,17 @@ Annotation tool from this [repo](https://github.com/miki998/YoloV3_Annotation_To
     vest</br>
     mask</br>
     boots</br>
+- Visualization of Batch images - Image Augmentation with YOLO - Bag of Freebies
+![image](https://user-images.githubusercontent.com/17870236/127417094-e8dbd311-4cab-4bdd-a773-76a5f1f49ca6.png)
 
 
 ### Logs
+![image](https://user-images.githubusercontent.com/17870236/127417190-3671a673-3676-4d1b-8781-8077b508e56c.png)
 
 ## Model_Inference
 
-youtube video
+Image:
+![image](https://user-images.githubusercontent.com/17870236/127417258-7dc9a49e-e349-4334-871c-815d69b4e709.png)
+
+Youtube video
 https://youtu.be/fqAH1Wqo0-M
