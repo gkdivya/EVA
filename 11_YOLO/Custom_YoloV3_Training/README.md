@@ -68,5 +68,7 @@ Inference on 16 Images: </br>
 ![image](https://user-images.githubusercontent.com/42609155/127582330-8d018586-be3b-4e0e-9461-7a8f006d3cda.png)
 
 
-Youtube video </br>
-https://youtu.be/fqAH1Wqo0-M
+Inference on Youtube video listing the 4 classes </br>
+
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/RaxeV2HvKfo/0.jpg)](http://www.youtube.com/watch?v=RaxeV2HvKfo "Custom YoloV3 Training")
+
