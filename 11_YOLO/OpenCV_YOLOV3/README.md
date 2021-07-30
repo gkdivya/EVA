@@ -14,3 +14,10 @@
 ## Reference
 
 https://pysource.com/2019/06/27/yolo-object-detection-using-opencv-with-python/ </br>
+
+
+## Collaborators
+- Divya Kamat (divya.r.kamat@gmail.com)
+- Divya G K (gkdivya@gmail.com)
+- Sarang (jaya.sarangan@gmail.com)
+- Garvit Garg (garvit.gargs@gmail.com)
