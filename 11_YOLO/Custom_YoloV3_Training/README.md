@@ -60,7 +60,7 @@ Annotation tool from this [repo](https://github.com/miki998/YoloV3_Annotation_To
 
 ## Model_Inference
 
-Inference on 16 Images: </br>
+### Inference on 16 Images: 
 
 
 ![image](https://user-images.githubusercontent.com/42609155/127581798-02667c0f-0e9c-4247-aefd-25c9dab9cf44.png)
@@ -68,7 +68,7 @@ Inference on 16 Images: </br>
 ![image](https://user-images.githubusercontent.com/42609155/127582330-8d018586-be3b-4e0e-9461-7a8f006d3cda.png)
 
 
-Inference on Youtube video listing the 4 classes </br>
+### Inference on Youtube video listing the 4 classes 
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/RaxeV2HvKfo/0.jpg)](http://www.youtube.com/watch?v=RaxeV2HvKfo "Custom YoloV3 Training")
 
