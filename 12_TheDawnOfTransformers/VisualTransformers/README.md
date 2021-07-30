@@ -139,7 +139,10 @@ The Block class combines both the attention module and the MLP module with layer
 Attention Module is used to perform self-attention operation allowing the model to attend information from different representation subspaces on an input sequence of embeddings.
 The sequence of operations is as follows :-
 
-    Input -> Query, Key, Value -> ReshapeHeads and Transpose Key,Query,Value -> Query * Transpose(Key) -> Softmax -> Dropout -> attention_scores * Value -> ReshapeHeadsBack and Concatenate -> Dropout - > Output
+  Input -> Query, Key, Value -> ReshapeHeads and Transpose Key,Query,Value -> Query * Transpose(Key) -> Softmax -> Dropout -> attention_scores * Value -> ReshapeHeadsBack and Concatenate -> Dropout - > Output
+  
+![image](https://user-images.githubusercontent.com/42609155/127721934-fc443c50-87f7-4fb2-9606-33573146fcc8.png)
+
 
 - Before passing the tensors to the attension block, we have a normalization layer where Layer Norm is applied
 
