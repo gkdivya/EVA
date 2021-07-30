@@ -205,15 +205,18 @@ The attension output is passed to MLP,  which is two sequential linear layers wi
     
     Input -> FC1 -> GELU -> Dropout -> FC2 -> Output
     
-GELU  is GAUSSIAN ERROR LINEAR UNIT
+Gaussian Error Linear Unit (GELu), an activation function used in the most recent Transformers – Google's BERT and OpenAI's GPT-2. The paper is from 2016, but is only catching attention up until recently. Seems to be state-of-the-art in NLP, specifically Transformer models – i.e. it performs best and avoids vanishing gradients problem.
 
-zℓ ` = MSA(LN(zℓ−1)) + zℓ−1,                ℓ   = 1 . . . L
-
-zℓ = MLP(LN(zℓ `)) + zℓ `                           ℓ    = 1 . . . L
-
-y = LN(z0L)        ==> Transformer encoder (z0L) serves as the image representation y
+This activation function takes the form of this equation:
 
 ![image](https://user-images.githubusercontent.com/42609155/127414816-b02ea6ff-a3bb-41f5-9547-1ea9152257a5.png)
+
+So it's just a combination of some functions (e.g. hyperbolic tangent tanh) and approximated numbers below is the graph for the gaussian error linear unit:
+
+![image](https://user-images.githubusercontent.com/42609155/127629433-a4df3bac-98ef-4e51-9816-5c3efb3d20b6.png)
+
+It has a negative coefficient, which shifts to a positive coefficient. So when x is greater than zero, the output will be x, except from when 
+x = 0 to x = 1, where it slightly leans to a smaller y-value.
 
 
         class Mlp(nn.Module):
