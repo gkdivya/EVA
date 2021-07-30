@@ -72,3 +72,8 @@ Annotation tool from this [repo](https://github.com/miki998/YoloV3_Annotation_To
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/RaxeV2HvKfo/0.jpg)](http://www.youtube.com/watch?v=RaxeV2HvKfo "Custom YoloV3 Training")
 
+## Collaborators
+- Divya Kamat (divya.r.kamat@gmail.com)
+- Divya G K (gkdivya@gmail.com)
+- Sarang (jaya.sarangan@gmail.com)
+- Garvit Garg (garvit.gargs@gmail.com)
