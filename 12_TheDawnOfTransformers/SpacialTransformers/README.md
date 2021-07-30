@@ -327,3 +327,9 @@ https://brsoff.github.io/tutorials/intermediate/spatial_transformer_tutorial.htm
 https://kevinzakka.github.io/2017/01/10/stn-part1/
 https://kevinzakka.github.io/2017/01/18/stn-part2/
 https://medium.com/@kushagrabh13/spatial-transformer-networks-ebc3cc1da52d
+
+## Collaborators
+- Divya Kamat (divya.r.kamat@gmail.com)
+- Divya G K (gkdivya@gmail.com)
+- Sarang (jaya.sarangan@gmail.com)
+- Garvit Garg (garvit.gargs@gmail.com)
