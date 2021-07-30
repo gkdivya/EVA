@@ -60,8 +60,13 @@ Annotation tool from this [repo](https://github.com/miki998/YoloV3_Annotation_To
 
 ## Model_Inference
 
-Image: </br>
-<img src="https://user-images.githubusercontent.com/17870236/127417258-7dc9a49e-e349-4334-871c-815d69b4e709.png" height=400 width=400/>
+Inference on 16 Images: </br>
+
+
+![image](https://user-images.githubusercontent.com/42609155/127581798-02667c0f-0e9c-4247-aefd-25c9dab9cf44.png)
+
+![image](https://user-images.githubusercontent.com/42609155/127582330-8d018586-be3b-4e0e-9461-7a8f006d3cda.png)
+
 
 Youtube video </br>
 https://youtu.be/fqAH1Wqo0-M
