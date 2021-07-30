@@ -80,6 +80,7 @@ Input -> CreatePatches -> ClassToken, PatchToEmbed , PositionEmbed -> Transforme
 The resulting tensor is passeed into a Transformer. In ViT only the Encoder is used, the Transformer encoder module comprises a Multi-Head Self Attention ( MSA ) layer and a Multi-Layer Perceptron (MLP) layer. The encoder combines multiple layers of Transformer Blocks in a sequential manner. The sequence of the operations is as follows -
 
    Input -> TB1 -> TB2 -> .......... -> TBn (n being the number of layers) -> Output
+   ![ViT_Encoder](https://user-images.githubusercontent.com/17870236/127693069-e9b6b645-fdd1-4576-8118-2ff42688da00.gif)
 
 
         class Encoder(nn.Module):
