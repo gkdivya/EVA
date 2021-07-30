@@ -243,3 +243,12 @@ x = 0 to x = 1, where it slightly leans to a smaller y-value.
                 x = self.fc2(x)
                 x = self.dropout(x)
                 return x
+
+## References
+https://arxiv.org/abs/2010.11929
+
+## Collaborators
+- Divya Kamat (divya.r.kamat@gmail.com)
+- Divya G K (gkdivya@gmail.com)
+- Sarang (jaya.sarangan@gmail.com)
+- Garvit Garg (garvit.gargs@gmail.com)
