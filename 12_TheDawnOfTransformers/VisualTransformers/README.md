@@ -209,6 +209,9 @@ The attension output is passed to MLP,  which is two sequential linear layers wi
     
     Input -> FC1 -> GELU -> Dropout -> FC2 -> Output
     
+![image](https://user-images.githubusercontent.com/42609155/127722405-e1f7b3f1-d5b5-45da-b260-544f4f63e295.png)
+
+
 Gaussian Error Linear Unit (GELu), an activation function used in the most recent Transformers – Google's BERT and OpenAI's GPT-2. The paper is from 2016, but is only catching attention up until recently. Seems to be state-of-the-art in NLP, specifically Transformer models – i.e. it performs best and avoids vanishing gradients problem.
 
 This activation function takes the form of this equation:
