@@ -8,9 +8,10 @@
 6. Output gets stored in output folder
 
 ## Sample Output Files
-![image](https://user-images.githubusercontent.com/17870236/126061006-44a42112-b64b-4c96-ae48-5b3a7f13da9f.png)
 
-![image](https://user-images.githubusercontent.com/17870236/126061011-a05a7603-e89e-4378-9873-2be0a6a57d7e.png)
+<img src="https://user-images.githubusercontent.com/42609155/127754845-45a92c34-5906-4c19-b45f-3e209266d733.jpg" width=500 height=400/>
+
+<img src="https://user-images.githubusercontent.com/42609155/127754832-1bbcdffa-c416-404c-9501-ab8eaf6338f3.png" width=500 height=400/>
 
 
 ## Reference
