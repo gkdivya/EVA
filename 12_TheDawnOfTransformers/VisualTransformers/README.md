@@ -20,7 +20,9 @@ Input -> CreatePatches -> ClassToken, PatchToEmbed , PositionEmbed -> Transforme
 
 ## Embedding
 
-![image](https://user-images.githubusercontent.com/17870236/127724101-3620e330-7c38-41a7-8a07-d20105ce5560.png)
+![image](https://user-images.githubusercontent.com/42609155/127728643-2062260d-6f6f-4253-a696-cadf8527de9c.png)
+
+<!-- ![image](https://user-images.githubusercontent.com/17870236/127724101-3620e330-7c38-41a7-8a07-d20105ce5560.png) -->
 
 
 - The first step is to break-down the image into patches, 16x16 patches in this case and flatten them. 
