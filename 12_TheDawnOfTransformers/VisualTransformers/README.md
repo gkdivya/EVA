@@ -20,7 +20,8 @@ Input -> CreatePatches -> ClassToken, PatchToEmbed , PositionEmbed -> Transforme
 
 ## Embedding
 
-   ![Presentation1](https://user-images.githubusercontent.com/17870236/127422947-f168db56-95ad-4473-8d41-488252cd645b.gif)
+![image](https://user-images.githubusercontent.com/17870236/127724101-3620e330-7c38-41a7-8a07-d20105ce5560.png)
+
 
 - The first step is to break-down the image into patches, 16x16 patches in this case and flatten them. 
 - These patches are projected using a normal linear layer, a Conv2d layer is used for this for performance gain. This is obtained by using a kernel_size and stride equal to the `patch_size`. Intuitively, the convolution operation is applied to each patch individually. So, we have to first apply the conv layer and then flat the resulting images.
@@ -80,7 +81,8 @@ Input -> CreatePatches -> ClassToken, PatchToEmbed , PositionEmbed -> Transforme
 The resulting tensor is passeed into a Transformer. In ViT only the Encoder is used, the Transformer encoder module comprises a Multi-Head Self Attention ( MSA ) layer and a Multi-Layer Perceptron (MLP) layer. The encoder combines multiple layers of Transformer Blocks in a sequential manner. The sequence of the operations is as follows -
 
    Input -> TB1 -> TB2 -> .......... -> TBn (n being the number of layers) -> Output
-   ![ViT_Encoder](https://user-images.githubusercontent.com/17870236/127693069-e9b6b645-fdd1-4576-8118-2ff42688da00.gif)
+![image](https://user-images.githubusercontent.com/17870236/127724130-5adddb30-637c-43ba-b87f-1434c4a62644.png)
+
 
 
         class Encoder(nn.Module):
