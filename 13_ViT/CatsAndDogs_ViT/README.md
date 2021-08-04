@@ -295,6 +295,47 @@ The train folder contains 25000 images of dogs and cats. Each image in this fold
 
 ## Training Log
 
+        Epoch : 1 - loss : 0.6955 - acc: 0.5061 - val_loss : 0.6910 - val_acc: 0.5303
+
+        Epoch : 2 - loss : 0.6914 - acc: 0.5242 - val_loss : 0.6870 - val_acc: 0.5492
+
+        Epoch : 3 - loss : 0.6843 - acc: 0.5520 - val_loss : 0.6774 - val_acc: 0.5722
+
+        Epoch : 4 - loss : 0.6779 - acc: 0.5726 - val_loss : 0.6693 - val_acc: 0.5890
+
+        Epoch : 5 - loss : 0.6710 - acc: 0.5811 - val_loss : 0.6818 - val_acc: 0.5680
+
+        Epoch : 6 - loss : 0.6611 - acc: 0.5938 - val_loss : 0.6538 - val_acc: 0.6106
+
+        Epoch : 7 - loss : 0.6539 - acc: 0.6010 - val_loss : 0.6544 - val_acc: 0.6082
+
+        Epoch : 8 - loss : 0.6485 - acc: 0.6092 - val_loss : 0.6447 - val_acc: 0.6210
+
+        Epoch : 9 - loss : 0.6423 - acc: 0.6218 - val_loss : 0.6424 - val_acc: 0.6238
+
+        Epoch : 10 - loss : 0.6367 - acc: 0.6266 - val_loss : 0.6338 - val_acc: 0.6329
+
+        Epoch : 11 - loss : 0.6337 - acc: 0.6266 - val_loss : 0.6354 - val_acc: 0.6341
+
+        Epoch : 12 - loss : 0.6284 - acc: 0.6400 - val_loss : 0.6252 - val_acc: 0.6537
+
+        Epoch : 13 - loss : 0.6198 - acc: 0.6461 - val_loss : 0.6176 - val_acc: 0.6509
+
+        Epoch : 14 - loss : 0.6157 - acc: 0.6469 - val_loss : 0.6153 - val_acc: 0.6655
+
+        Epoch : 15 - loss : 0.6086 - acc: 0.6601 - val_loss : 0.6102 - val_acc: 0.6602
+
+        Epoch : 16 - loss : 0.6091 - acc: 0.6602 - val_loss : 0.6043 - val_acc: 0.6697
+
+        Epoch : 17 - loss : 0.6030 - acc: 0.6634 - val_loss : 0.6195 - val_acc: 0.6513
+
+        Epoch : 18 - loss : 0.6010 - acc: 0.6653 - val_loss : 0.5974 - val_acc: 0.6770
+
+        Epoch : 19 - loss : 0.5989 - acc: 0.6699 - val_loss : 0.5992 - val_acc: 0.6727
+
+        Epoch : 20 - loss : 0.5967 - acc: 0.6711 - val_loss : 0.6024 - val_acc: 0.6707
+
+
 
 ## Reference
 - https://www.analyticsvidhya.com/blog/2021/06/how-to-load-kaggle-datasets-directly-into-google-colab/
