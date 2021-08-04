@@ -1,7 +1,9 @@
 
 # Vision Transformers with PyTorch
 
-With the blog reference: [Cats&Dogs viT hands on blog](https://analyticsindiamag.com/hands-on-vision-transformers-with-pytorch/), exploring the ViT code in PyTorch to train dogs and cats classification. We will be implementing the code for Vision Transformers with PyTorch using [vit_pytorch package](https://github.com/lucidrains/vit-pytorch) and Linformer
+The objective is to train to train dogs and cats classification dataset using Vision Transformers. We have used two approaches:
+- With the blog reference: [Cats&Dogs viT hands on blog](https://analyticsindiamag.com/hands-on-vision-transformers-with-pytorch/), implemented the code for Vision Transformers with PyTorch using [vit_pytorch package](https://github.com/lucidrains/vit-pytorch) and Linformer
+- Used transfer learning approach, here we used open-source library Timm ( it is a library of SOTA architectures with pre-trained weights), we picked vit_base_patch16_224 for our training 
 
 ## Dataset.
 
@@ -9,7 +11,12 @@ Dataset is downloaded from Kaggle [here](https://www.kaggle.com/c/dogs-vs-cats-r
 
 The train folder contains 25000 images of dogs and cats. Each image in this folder has the label as part of the filename. The test folder contains 12500 images, named according to a numeric id. For each image in the test set, you should predict a probability that the image is a dog (1 = dog, 0 = cat)
 
-## Model Parameters
+
+## Model using vit-pytorch and Linformer
+
+Notebook Link - https://github.com/gkdivya/EVA/blob/main/13_ViT/CatsAndDogs_ViT/Cats_Dogs_ViT.ipynb
+
+### Model Parameters
 
     dim=128  
     seq_len=49+1,  # 7x7 patches + 1 cls-token
@@ -20,7 +27,7 @@ The train folder contains 25000 images of dogs and cats. Each image in this fold
     num_classes=2
     channels=3
     
-## Model
+### Model
 
     ViT(
       (to_patch_embedding): Sequential(
@@ -293,37 +300,9 @@ The train folder contains 25000 images of dogs and cats. Each image in this fold
     )
 
 
-## Training Log
+### Training Log (last 5 epochs)
 
-        Epoch : 1 - loss : 0.6955 - acc: 0.5061 - val_loss : 0.6910 - val_acc: 0.5303
-
-        Epoch : 2 - loss : 0.6914 - acc: 0.5242 - val_loss : 0.6870 - val_acc: 0.5492
-
-        Epoch : 3 - loss : 0.6843 - acc: 0.5520 - val_loss : 0.6774 - val_acc: 0.5722
-
-        Epoch : 4 - loss : 0.6779 - acc: 0.5726 - val_loss : 0.6693 - val_acc: 0.5890
-
-        Epoch : 5 - loss : 0.6710 - acc: 0.5811 - val_loss : 0.6818 - val_acc: 0.5680
-
-        Epoch : 6 - loss : 0.6611 - acc: 0.5938 - val_loss : 0.6538 - val_acc: 0.6106
-
-        Epoch : 7 - loss : 0.6539 - acc: 0.6010 - val_loss : 0.6544 - val_acc: 0.6082
-
-        Epoch : 8 - loss : 0.6485 - acc: 0.6092 - val_loss : 0.6447 - val_acc: 0.6210
-
-        Epoch : 9 - loss : 0.6423 - acc: 0.6218 - val_loss : 0.6424 - val_acc: 0.6238
-
-        Epoch : 10 - loss : 0.6367 - acc: 0.6266 - val_loss : 0.6338 - val_acc: 0.6329
-
-        Epoch : 11 - loss : 0.6337 - acc: 0.6266 - val_loss : 0.6354 - val_acc: 0.6341
-
-        Epoch : 12 - loss : 0.6284 - acc: 0.6400 - val_loss : 0.6252 - val_acc: 0.6537
-
-        Epoch : 13 - loss : 0.6198 - acc: 0.6461 - val_loss : 0.6176 - val_acc: 0.6509
-
-        Epoch : 14 - loss : 0.6157 - acc: 0.6469 - val_loss : 0.6153 - val_acc: 0.6655
-
-        Epoch : 15 - loss : 0.6086 - acc: 0.6601 - val_loss : 0.6102 - val_acc: 0.6602
+ Model was trained for 20 epochs with a batch size of 64, with a training accuracy of 67.11% and val_acc of 67.07%   with embedding dim of size 128     
 
         Epoch : 16 - loss : 0.6091 - acc: 0.6602 - val_loss : 0.6043 - val_acc: 0.6697
 
@@ -335,7 +314,251 @@ The train folder contains 25000 images of dogs and cats. Each image in this fold
 
         Epoch : 20 - loss : 0.5967 - acc: 0.6711 - val_loss : 0.6024 - val_acc: 0.6707
 
+## Model using Transfer Learning
 
+### Model Parameters
+
+    dim=768  
+    seq_len=196+1,  # 14x14 patches + 1 cls-token
+    depth=12
+    heads=8
+    image_size=224
+    patch_size=16
+    num_classes=2
+    channels=3
+
+### Model
+
+        VisionTransformer(
+          (patch_embed): PatchEmbed(
+            (proj): Conv2d(3, 768, kernel_size=(16, 16), stride=(16, 16))
+            (norm): Identity()
+          )
+          (pos_drop): Dropout(p=0.0, inplace=False)
+          (blocks): Sequential(
+            (0): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (1): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (2): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (3): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (4): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (5): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (6): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (7): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (8): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (9): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (10): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+            (11): Block(
+              (norm1): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (attn): Attention(
+                (qkv): Linear(in_features=768, out_features=2304, bias=True)
+                (attn_drop): Dropout(p=0.0, inplace=False)
+                (proj): Linear(in_features=768, out_features=768, bias=True)
+                (proj_drop): Dropout(p=0.0, inplace=False)
+              )
+              (drop_path): Identity()
+              (norm2): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+              (mlp): Mlp(
+                (fc1): Linear(in_features=768, out_features=3072, bias=True)
+                (act): GELU()
+                (fc2): Linear(in_features=3072, out_features=768, bias=True)
+                (drop): Dropout(p=0.0, inplace=False)
+              )
+            )
+          )
+          (norm): LayerNorm((768,), eps=1e-06, elementwise_affine=True)
+          (pre_logits): Identity()
+          (head): Linear(in_features=768, out_features=2, bias=True)
+
+### Training Log (last 5 epochs)
+
+ Model was trained for 20 epochs with a batch size of 64, with a training accuracy of 98.82% and val_acc of 97.39% with embedding dim of size 768    
+
+        
+        Epoch : 16 - loss : 0.0281 - acc: 0.9881 - val_loss : 0.0606 - val_acc: 0.9771
+
+        Epoch : 17 - loss : 0.0302 - acc: 0.9881 - val_loss : 0.0499 - val_acc: 0.9824
+
+        Epoch : 18 - loss : 0.0331 - acc: 0.9867 - val_loss : 0.0552 - val_acc: 0.9773
+
+        Epoch : 19 - loss : 0.0335 - acc: 0.9863 - val_loss : 0.0422 - val_acc: 0.9836
+
+        Epoch : 20 - loss : 0.0286 - acc: 0.9882 - val_loss : 0.0665 - val_acc: 0.9739
 
 ## Reference
 - https://www.analyticsvidhya.com/blog/2021/06/how-to-load-kaggle-datasets-directly-into-google-colab/
