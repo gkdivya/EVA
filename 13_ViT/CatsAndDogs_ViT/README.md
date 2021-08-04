@@ -316,6 +316,8 @@ Notebook Link - https://github.com/gkdivya/EVA/blob/main/13_ViT/CatsAndDogs_ViT/
 
 ## Model using Transfer Learning
 
+Notebook Link - https://github.com/gkdivya/EVA/blob/main/13_ViT/CatsAndDogs_ViT/VisionTransformer_Cats%26Dogs(TransferLearning).ipynb
+
 ### Model Parameters
 
     dim=768  
