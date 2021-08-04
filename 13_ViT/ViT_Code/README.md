@@ -68,7 +68,14 @@ Now if you look at the picture above, there are  two additional Learnable Embedd
 - first is the positional embedding (0,1,2,...). To make patches position-aware, learnable 'position embedding' vectors are added and
 - second is the learnable class token.
 
-Just looking at the code, we first concatenate (prepend) the class tokens to the patch embedding vectors as the 0th vector and then 197 (1 + 14 x 14) learnable position embedding vectors are added to the patch embedding vectors, this is then fed to the transformer encoder.  The position embedding vectors learn distance within the image thus neighboring ones have high similarity.
+Just looking at the code, we first concatenate (prepend) the class tokens to the patch embedding vectors as the 0th vector and then 197 (1 + 14 x 14) learnable position embedding vectors are added to the patch embedding vectors, this combined embedding is then fed to the transformer encoder.
+
+                    PatchEmbedding (768x196) + CLS_TOKEN (768X1) → Intermediate_Value (768x197)
+                    Positional Embedding (768x197) + Intermediate_Value (768x197) → Combined Embedding (768x197)
+
+
+
+[CLS] token is a vector of size 1x768, and nn.Parameter makes it a learnable parameter. The position embedding vectors learn distance within the image thus neighboring ones have high similarity.
 
     class ViTEmbeddings(nn.Module):
         """
@@ -104,6 +111,126 @@ Just looking at the code, we first concatenate (prepend) the class tokens to the
 
 ## Transformer Encoder
 
-The embedding vectors are encoded by the transformer encoder. The dimension of input and output vectors are the same. Details of the encoder are depicted in Fig. 2.
+The next part of the figure we're going to focus on is the Transformer Encoder. 
 
+<img src='https://github.com/hirotomusiker/schwert_colab_data_storage/blob/master/images/vit_demo/transformer_encoder.png?raw=true'>
+
+### Configuration Values
+
+The configuration values for the ViT model is specified in the sources code under ViTConfig class as shown below:
+
+    class ViTConfig():
+      def __init__(
+            self,
+            hidden_size=768,
+            num_hidden_layers=12,
+            num_attention_heads=12,
+            intermediate_size=3072,
+            hidden_act="gelu",
+            hidden_dropout_prob=0.0,
+            attention_probs_dropout_prob=0.0,
+            initializer_range=0.02,
+            layer_norm_eps=1e-12,
+            is_encoder_decoder=False,
+            image_size=224,
+            patch_size=16,
+            num_channels=3,
+            **kwargs
+        ):
+
+        
+### Encoder
+
+- The Combined Embedding (768x197) is sent as the input to the first transformer
+- The first layer of the Transformer encoder accepts Combined Embedding of shape 197x768 as input. For all subsequence layers, the inputs are the output matrix of shape 197x768.
+- There are 12 such encoder layers in the ViT-Base architecture. 
+
+In the code we can see the encoder layer (ViTEncoder class) is stacked num_hidden_layers times, which is 12 in this case and the values are taken from the config values.
+
+    self.layer = nn.ModuleList([ViTLayer(config) for _ in range(config.num_hidden_layers)])
+
+Series of Transformer Encoders
+
+        Input tensor to Transformer (z0):  torch.Size([1, 197, 768])
+        Entering the Transformer Encoder 0
+        Entering the Transformer Encoder 1
+        Entering the Transformer Encoder 2
+        Entering the Transformer Encoder 3
+        Entering the Transformer Encoder 4
+        Entering the Transformer Encoder 5
+        Entering the Transformer Encoder 6
+        Entering the Transformer Encoder 7
+        Entering the Transformer Encoder 8
+        Entering the Transformer Encoder 9
+        Entering the Transformer Encoder 10
+        Entering the Transformer Encoder 11
+        Output vector from Transformer (z12-0): torch.Size([1, 768])
+
+
+- Inside the Layer, inputs are first passed through a Layer Norm, and then fed to a multi-head attention block.
+- Next we have a fc layer to expand the dimension to:  torch.Size([197, 2304])
+- The vectors are divided into query, key and value after expanded by an fc layer. 
+- query, key and values are further divided into H (=12) and fed to the parallel attention heads. 
+
+    split qkv :  torch.Size([197, 3, 12, 64])
+    transposed ks:  torch.Size([12, 64, 197])
+    
+- query and key are multiplied and softmaxed (to normalize the attention scores to probabilities) to give attention_scores
+- attention_scores is multplied by values and summed to form the attention matrix (context layer) : torch.Size([12, 197, 197])
+- Outputs from attention heads are concatenated to form the vectors whose shape is the same as the encoder input.
+- The vectors go through an fc layer
+- first residual connection is applied, the vectors then pass through a layer norm and an MLP block that has two fc layers and finally the second residual connection is applied.
+
+![image](https://user-images.githubusercontent.com/42609155/128170142-0b1f0f5b-685c-48cf-bf6b-b9abefb2a021.png)
+
+
+
+
+    class ViTLayer(nn.Module):
+    """This corresponds to the Block class in the timm implementation."""
+
+    def __init__(self, config):
+        super().__init__()
+        self.seq_len_dim = 1
+        self.attention = ViTAttention(config)
+        self.intermediate = ViTIntermediate(config)
+        self.output = ViTOutput(config)
+        self.layernorm_before = nn.LayerNorm(config.hidden_size, eps=config.layer_norm_eps)
+        self.layernorm_after = nn.LayerNorm(config.hidden_size, eps=config.layer_norm_eps)
+
+    def forward(self, hidden_states, head_mask=None, output_attentions=False):
+        self_attention_outputs = self.attention(
+            self.layernorm_before(hidden_states),  # in ViT, layernorm is applied before self-attention
+            head_mask,
+            output_attentions=output_attentions,
+        )
+        attention_output = self_attention_outputs[0]
+        outputs = self_attention_outputs[1:]  # add self attentions if we output attention weights
+
+        # first residual connection
+        hidden_states = attention_output + hidden_states
+
+        # in ViT, layernorm is also applied after self-attention
+        layer_output = self.layernorm_after(hidden_states)
+
+        layer_output = self.intermediate(layer_output)
+
+        # second residual connection is done here
+        layer_output = self.output(layer_output, hidden_states)
+
+        outputs = (layer_output,) + outputs
+
+        return outputs
+
+    def feed_forward_chunk(self, attention_output):
+        intermediate_output = self.intermediate(attention_output)
+        layer_output = self.output(intermediate_output)
+        return layer_output
+
+
+The embedding vectors are encoded by the transformer encoder. The dimension of input and output vectors are the same.
+
+## MLP (Classification) Head
+
+The 0-th output vector from the transformer output vectors (corresponding to the class token input) is fed to the MLP head. The MLP block consists of two linear Layers and a GELU non-linearity. 
 
