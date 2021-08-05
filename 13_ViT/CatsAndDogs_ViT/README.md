@@ -182,3 +182,10 @@ Notebook Link - https://github.com/gkdivya/EVA/blob/main/13_ViT/CatsAndDogs_ViT/
 ## Reference
 - https://www.analyticsvidhya.com/blog/2021/06/how-to-load-kaggle-datasets-directly-into-google-colab/
 - https://analyticsindiamag.com/hands-on-vision-transformers-with-pytorch/
+
+
+## Collaborators
+- Divya Kamat (divya.r.kamat@gmail.com)
+- Divya G K (gkdivya@gmail.com)
+- Sarang (jaya.sarangan@gmail.com)
+- Garvit Garg (garvit.gargs@gmail.com)
