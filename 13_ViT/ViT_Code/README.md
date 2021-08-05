@@ -247,6 +247,28 @@ The embedding vectors are encoded by the transformer encoder. The dimension of i
 
 ## MLP (Classification) Head
 
-The 0-th output vector from the transformer output vectors (corresponding to the class token input) is fed to the MLP head. 
+The 0-th output vector from the transformer output vectors (corresponding to the class token input) is fed to the MLP head to perform the finally classification. This is implemented in the ViTModel() class in the source code.
+
+    sequence_output = encoder_output[0]
+    layernorm = nn.LayerNorm(config.hidden_size, eps=0.00001)
+    sequence_output = layernorm(sequence_output)
+    # VitPooler
+    dense = nn.Linear(config.hidden_size, config.hidden_size)
+    activation = nn.Tanh()
+    first_token_tensor = sequence_output[:, 0]
+    pooled_output = dense(first_token_tensor)
+    pooled_output = activation(pooled_output)
+    
+    classifier = nn.Linear(config.hidden_size, 100)
+    logits = classifier(pooled_output)
 
 
+- we take the output from the final transformer encoder, get the 0th vector, which is the prediction vector
+- pass it through a layer norm and then optionally via a pooler basically to add in more capacity if required. 
+- add activation as Tanh for the final classification token
+- we take first token out of that, send to the classicier to get the final output
+
+
+## References
+
+- 
