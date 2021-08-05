@@ -264,9 +264,9 @@ The 0-th output vector from the transformer output vectors (corresponding to the
 
 
 - we take the output from the final transformer encoder, get the 0th vector, which is the prediction vector
-- pass it through a layer norm and then optionally via a pooler basically to add in more capacity if required. 
-- add activation as Tanh for the final classification token
-- we take first token out of that, send to the classicier to get the final output
+- pass it through a layer norm and we take first token out of the vector
+- then optionally pass it through a pooler (which is nothing but a dense layer) and add activation as Tanh, pooler layer is used basically to add in more capacity if required  
+- this pooled output is then sent to the classifier (which is again a linear layer) to get the final output/prediction
 
 
 ## References
