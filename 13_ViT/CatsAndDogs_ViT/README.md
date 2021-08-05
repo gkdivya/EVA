@@ -18,12 +18,12 @@ Notebook Link - https://github.com/gkdivya/EVA/blob/main/13_ViT/CatsAndDogs_ViT/
 
 ### Model Parameters
 
-    dim=128  
-    seq_len=49+1,  # 7x7 patches + 1 cls-token
+    dim=768  
+    seq_len=196+1,  # 7x7 patches + 1 cls-token
     depth=12
-    heads=8
+    heads=12
     image_size=224
-    patch_size=32
+    patch_size=16
     num_classes=2
     channels=3
     
@@ -34,52 +34,42 @@ Notebook Link - https://github.com/gkdivya/EVA/blob/main/13_ViT/CatsAndDogs_ViT/
         (0): Rearrange('b c (h p1) (w p2) -> b (h w) (p1 p2 c)', p1=32, p2=32)
         (1): Linear(in_features=3072, out_features=128, bias=True)
       )
-      (transformer): Linformer(
+     (transformer): Linformer(
         (net): SequentialSequence(
           (layers): ModuleList(
             (0): ModuleList(
               (0): PreNorm(
                 (fn): LinformerSelfAttention(
-                  (to_q): Linear(in_features=128, out_features=128, bias=False)
-                  (to_k): Linear(in_features=128, out_features=128, bias=False)
-                  (to_v): Linear(in_features=128, out_features=128, bias=False)
+                  (to_q): Linear(in_features=768, out_features=768, bias=False)
+                  (to_k): Linear(in_features=768, out_features=768, bias=False)
+                  (to_v): Linear(in_features=768, out_features=768, bias=False)
                   (dropout): Dropout(p=0.0, inplace=False)
-                  (to_out): Linear(in_features=128, out_features=128, bias=True)
+                  (to_out): Linear(in_features=768, out_features=768, bias=True)
                 )
-                (norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+                (norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
               )
-              (1): PreNorm(
-                (fn): FeedForward(
-                  (w1): Linear(in_features=128, out_features=512, bias=True)
-                  (act): GELU()
-                  (dropout): Dropout(p=0.0, inplace=False)
-                  (w2): Linear(in_features=512, out_features=128, bias=True)
-                )
-                (norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
-              )
-            )
            
            ...** (the above block is repeated 11 times)**
             
             (11): ModuleList(
               (0): PreNorm(
                 (fn): LinformerSelfAttention(
-                  (to_q): Linear(in_features=128, out_features=128, bias=False)
-                  (to_k): Linear(in_features=128, out_features=128, bias=False)
-                  (to_v): Linear(in_features=128, out_features=128, bias=False)
+                  (to_q): Linear(in_features=768, out_features=768, bias=False)
+                  (to_k): Linear(in_features=768, out_features=768, bias=False)
+                  (to_v): Linear(in_features=768, out_features=768, bias=False)
                   (dropout): Dropout(p=0.0, inplace=False)
-                  (to_out): Linear(in_features=128, out_features=128, bias=True)
+                  (to_out): Linear(in_features=768, out_features=768, bias=True)
                 )
-                (norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+                (norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
               )
               (1): PreNorm(
                 (fn): FeedForward(
-                  (w1): Linear(in_features=128, out_features=512, bias=True)
+                  (w1): Linear(in_features=768, out_features=3072, bias=True)
                   (act): GELU()
                   (dropout): Dropout(p=0.0, inplace=False)
-                  (w2): Linear(in_features=512, out_features=128, bias=True)
+                  (w2): Linear(in_features=3072, out_features=768, bias=True)
                 )
-                (norm): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+                (norm): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
               )
             )
           )
@@ -87,25 +77,26 @@ Notebook Link - https://github.com/gkdivya/EVA/blob/main/13_ViT/CatsAndDogs_ViT/
       )
       (to_latent): Identity()
       (mlp_head): Sequential(
-        (0): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
-        (1): Linear(in_features=128, out_features=2, bias=True)
-      )
-    )
+            (0): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+            (1): Linear(in_features=768, out_features=2, bias=True)
+          )
+        )
 
 
 ### Training Log (last 5 epochs)
 
- Model was trained for 20 epochs with a batch size of 64, with a training accuracy of 67.11% and val_acc of 67.07%   with embedding dim of size 128     
+ Model was trained for 20 epochs with a batch size of 64, with a training accuracy of 70.27% and val_acc of 69.05% with embedding dim of size 768
 
-        Epoch : 16 - loss : 0.6091 - acc: 0.6602 - val_loss : 0.6043 - val_acc: 0.6697
+        
+        Epoch : 16 - loss : 0.5768 - acc: 0.6899 - val_loss : 0.5858 - val_acc: 0.6790
 
-        Epoch : 17 - loss : 0.6030 - acc: 0.6634 - val_loss : 0.6195 - val_acc: 0.6513
+        Epoch : 17 - loss : 0.5722 - acc: 0.6932 - val_loss : 0.5808 - val_acc: 0.6869
 
-        Epoch : 18 - loss : 0.6010 - acc: 0.6653 - val_loss : 0.5974 - val_acc: 0.6770
+        Epoch : 18 - loss : 0.5723 - acc: 0.6945 - val_loss : 0.5723 - val_acc: 0.6968
 
-        Epoch : 19 - loss : 0.5989 - acc: 0.6699 - val_loss : 0.5992 - val_acc: 0.6727
+        Epoch : 19 - loss : 0.5695 - acc: 0.6999 - val_loss : 0.5942 - val_acc: 0.6899
 
-        Epoch : 20 - loss : 0.5967 - acc: 0.6711 - val_loss : 0.6024 - val_acc: 0.6707
+        Epoch : 20 - loss : 0.5688 - acc: 0.7027 - val_loss : 0.5718 - val_acc: 0.6905
 
 ## Model using Transfer Learning
 
