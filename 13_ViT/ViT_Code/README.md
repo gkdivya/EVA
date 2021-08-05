@@ -169,17 +169,32 @@ Series of Transformer Encoders
 
 - Inside the Layer, inputs are first passed through a Layer Norm, and then fed to a multi-head attention block.
 - Next we have a fc layer to expand the dimension to:  torch.Size([197, 2304])
-- The vectors are divided into query, key and value after expanded by an fc layer. 
+- The vectors are divided into query, key and value after expanded by an fc layer.
+- Next step is self attention
+
+       ViTSelfAttention(
+          (query): Linear(in_features=768, out_features=768, bias=True)
+          (key): Linear(in_features=768, out_features=768, bias=True)
+          (value): Linear(in_features=768, out_features=768, bias=True)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+        
 - query, key and values are further divided into H (=12) and fed to the parallel attention heads. 
 
-    split qkv :  torch.Size([197, 3, 12, 64])
-    transposed ks:  torch.Size([12, 64, 197])
+        split qkv :  torch.Size([197, 3, 12, 64])
+        transposed ks:  torch.Size([12, 64, 197])
     
 - query and key are multiplied and softmaxed (to normalize the attention scores to probabilities) to give attention_scores
 - attention_scores is multplied by values and summed to form the attention matrix (context layer) : torch.Size([12, 197, 197])
 - Outputs from attention heads are concatenated to form the vectors whose shape is the same as the encoder input.
 - The vectors go through an fc layer
-- first residual connection is applied, the vectors then pass through a layer norm and an MLP block that has two fc layers and finally the second residual connection is applied.
+- first residual connection is applied, the vectors then pass through a layer norm
+- then to a an MLP block that consists of two linear Layers and a GELU non-linearity, defined by two seperate classes, ViTIntermediate and ViTOutput class in the source code
+    - we start with 768 and expand the dimension (i.e 768 x 4)
+    - add geLu, which is sent to the next linear layer
+    - the linear layer takes in 768x4 (i.e 3072) and converts that into 768
+
+- and finally the second residual connection is applied.
 
 ![image](https://user-images.githubusercontent.com/42609155/128170142-0b1f0f5b-685c-48cf-bf6b-b9abefb2a021.png)
 
@@ -232,5 +247,6 @@ The embedding vectors are encoded by the transformer encoder. The dimension of i
 
 ## MLP (Classification) Head
 
-The 0-th output vector from the transformer output vectors (corresponding to the class token input) is fed to the MLP head. The MLP block consists of two linear Layers and a GELU non-linearity. 
+The 0-th output vector from the transformer output vectors (corresponding to the class token input) is fed to the MLP head. 
+
 
