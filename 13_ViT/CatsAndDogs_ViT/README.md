@@ -1,7 +1,7 @@
 
 # Vision Transformers with PyTorch
 
-The objective is to train to train dogs and cats classification dataset using Vision Transformers. We have used two approaches:
+The objective is to train dogs and cats classification dataset using Vision Transformers. We have used two approaches:
 - With the blog reference: [Cats&Dogs viT hands on blog](https://analyticsindiamag.com/hands-on-vision-transformers-with-pytorch/), implemented the code for Vision Transformers with PyTorch using [vit_pytorch package](https://github.com/lucidrains/vit-pytorch) and Linformer
 - Used transfer learning approach, here we used open-source library Timm ( it is a library of SOTA architectures with pre-trained weights), we picked vit_base_patch16_224 for our training 
 
