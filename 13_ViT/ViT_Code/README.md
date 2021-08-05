@@ -1,6 +1,6 @@
 # Vision Transformers (ViT) Code 
 
-Here we'll explore and look at the visual transformer source code within the Timm to get a better intuition for what is going on.
+Here we'll explore and look at the visual transformer source code within the [Timm](https://github.com/rwightman/pytorch-image-models) open source library to get a better intuition of what is going on.
 
 <!-- Some of the steps listed here is created based on the excellent [notebook](https://colab.research.google.com/github/hirotomusiker/schwert_colab_data_storage/blob/master/notebook/Vision_Transformer_Tutorial.ipynb) created by [Hiroto Honda](https://hirotomusiker.github.io/) -->
 
