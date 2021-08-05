@@ -196,7 +196,7 @@ Series of Transformer Encoders
 
 - and finally the second residual connection is applied.
 
-<p align="center"><img src="https://user-images.githubusercontent.com/42609155/128170142-0b1f0f5b-685c-48cf-bf6b-b9abefb2a021.png" width="600"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/42609155/128170142-0b1f0f5b-685c-48cf-bf6b-b9abefb2a021.png" width="800"></p>
 <!-- ![image](https://user-images.githubusercontent.com/42609155/128170142-0b1f0f5b-685c-48cf-bf6b-b9abefb2a021.png) -->
 
 
@@ -271,6 +271,8 @@ The 0-th output vector from the transformer output vectors (corresponding to the
 
 
 ## References
+- https://arxiv.org/abs/2010.11929
+- https://theaisummer.com/vision-transformer/
 - https://hirotomusiker.github.io/
 
 
