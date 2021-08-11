@@ -58,7 +58,15 @@ An intuitive way of understanding the object queries is by imagining that each o
 Finally, the output of the decoder is then fed into a fixed number of Prediction Heads which consist of a predefined number of feed forward networks.  The feed-forward neural networks predict the normalized center coordinates, height, and width of the bounding boxes and the linear layer predicts the class label using a softmax function.
 
 
+Besides the transformer part in architecture, DETR also adopt two major components from previous research.
+- Bipartite Matching Loss
+- Parallel Decoding
+
 ## Bipartite Matching Loss 
+
+Bipartite matching loss is designed based on Hungarian algorithm. Unlike other object detection models label bounding boxes (or point, like methods in object as points) by matching multiple bounding boxes to one ground truth box, DETR is using bipartite matching, which is one-vs-one matching.
+By performing one-vs-one matching, its able to significantly reduce low-quality predictions, and achieve eliminations of output reductions like NMS.
+
 
 
 
