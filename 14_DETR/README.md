@@ -64,10 +64,22 @@ Besides the transformer part in architecture, DETR also adopt two major componen
 
 ## Bipartite Matching Loss 
 
-Bipartite matching loss is designed based on Hungarian algorithm. Unlike other object detection models label bounding boxes (or point, like methods in object as points) by matching multiple bounding boxes to one ground truth box, DETR is using bipartite matching, which is one-vs-one matching.
-By performing one-vs-one matching, its able to significantly reduce low-quality predictions, and achieve eliminations of output reductions like NMS.
+Bipartite matching loss is designed based on Hungarian algorithm. Unlike other object detection models where multiple bounding boxes are matched to one ground truth box, DETR uses bipartite matching, which is one-vs-one matching. By performing one-vs-one matching, its able to significantly reduce low-quality predictions, and achieve eliminations of output reductions like NMS.
+
+DETR frameworks uses a set based global loss that enforces unique prediction through bipartite matching. DETR always infers a fixed set of ‘N’ predictions where ‘N’ is significantly larger than the number of classes. Let y denote the ground truth set of objects and y-hat the set of N predictions. The bipartite matching between the ground truth and predicted is achieved by Hungarian algorithm which determines the optimal assignment between ground truth and prediction. 
+
+The bipartite matching is denoted as the sum of matching loss Lmatch with optimal assignment denoted by
+
+![image](https://user-images.githubusercontent.com/42609155/129122096-1dec3330-501c-4c1a-980d-3e992a2f8941.png)
+
+
+Lmatch the matching loss is the sum of class prediction loss and bounding box difference loss.
+
+![image](https://user-images.githubusercontent.com/42609155/129122121-f580f038-d047-4a70-8f67-835583a85478.png)
 
 
 
+## Reference
 
+- https://www.cellstrat.com/2020/08/07/end-to-end-object-detection-with-transformers/
 
