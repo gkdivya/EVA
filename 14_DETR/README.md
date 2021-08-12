@@ -1,10 +1,5 @@
 # DETR : End-to-End Object Detection with Transformers
 
-- Take a look at this [post](https://opensourcelibs.com/lib/finetune-detr), which explains how to fine-tune DETR on a custom dataset. 
-- Replicate the process and train the model yourself. The objectives are:
-  - to understand how fine-tuning works
-  - to understand architectural related concepts
-
 ## What is object detection? 
 
 Object detection is a task where we want our model to distinguish the foreground objects from the background and predict the locations and the categories for the objects present in the image. Given a image if you need to determine if the image has a single particular object (say cat or dog) , we can use classification. However, if we have to get the location of that object its called classification and localization. But if there are multiple objects in an image and we want the pixel location of each and every object, then that is object detection. Object Detection is a problem which is not only a bit complex but also computationally expensive, due to the number of components to it.
@@ -77,9 +72,28 @@ Lmatch the matching loss is the sum of class prediction loss and bounding box di
 
 ![image](https://user-images.githubusercontent.com/42609155/129122121-f580f038-d047-4a70-8f67-835583a85478.png)
 
+# FineTune DETR
+
+- Take a look at this [post](https://opensourcelibs.com/lib/finetune-detr), which explains how to fine-tune DETR on a custom dataset. 
+- The goal is to the process and train the model yourself. The objectives are:
+  - to understand how fine-tuning works
+  - to understand architectural related concepts
+
 ## Dataset
 
-Ballon dataset
+DETR will be fine-tuned on a tiny dataset: the balloon dataset. We refer to it as the custom dataset.
+
+There are 61 images in the training set, and 13 images in the validation set.
+
+The directory structure would be as following:
+
+    path/to/coco/
+    ├ annotations/  # JSON annotations
+    │  ├ annotations/custom_train.json
+    │  └ annotations/custom_val.json
+    ├ train2017/    # training images
+    └ val2017/      # validation images
+
 
 ## Training
 
