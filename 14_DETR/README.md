@@ -77,6 +77,32 @@ Lmatch the matching loss is the sum of class prediction loss and bounding box di
 
 ![image](https://user-images.githubusercontent.com/42609155/129122121-f580f038-d047-4a70-8f67-835583a85478.png)
 
+## Dataset
+
+Ballon dataset
+
+## Training
+
+Model was trained for 200 epochs
+
+## Metrics
+
+Metrics to monitor the training include:
+
+- the Average Precision (AP), which is the primary challenge metric for the COCO dataset,
+- losses (total loss, classification loss, l1 bbox distance loss, GIoU loss),
+- errors (cardinality error, class error).
+
+![image](https://user-images.githubusercontent.com/42609155/129123415-6692802e-e57d-44af-9688-9ca2c4699f6a.png)
+
+![image](https://user-images.githubusercontent.com/42609155/129123439-c1891710-424f-4c07-a5a4-e3d7754aa072.png)
+
+![image](https://user-images.githubusercontent.com/42609155/129123465-aa486470-e6d4-4deb-84e1-4f240b0b937e.png)
+
+
+## Predictions on Validation image
+
+![image](https://user-images.githubusercontent.com/42609155/129123338-7707d418-3e72-44db-8180-b4baf0878296.png)
 
 
 ## Reference
