@@ -132,3 +132,9 @@ Metrics to monitor the training include:
 - https://www.cellstrat.com/2020/08/07/end-to-end-object-detection-with-transformers/
 - https://github.com/woctezuma/finetune-detr
 
+## Collaborators
+
+- Divya Kamat (divya.r.kamat@gmail.com)
+- Divya G K (gkdivya@gmail.com)
+- Sarang (jaya.sarangan@gmail.com)
+- Garvit Garg (garvit.gargs@gmail.com)
