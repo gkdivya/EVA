@@ -1,5 +1,13 @@
 # DETR : End-to-End Object Detection with Transformers
 
+
+- Take a look at this [post](https://opensourcelibs.com/lib/finetune-detr), which explains how to fine-tune DETR on a custom dataset. 
+- The goal is to the process and train the model yourself. The objectives are:
+  - to understand how fine-tuning works
+  - to understand architectural related concepts
+
+Let's first understand Object detection and architectural related concepts for DETR.
+
 ## What is object detection? 
 
 Object detection is a task where we want our model to distinguish the foreground objects from the background and predict the locations and the categories for the objects present in the image. Given a image if you need to determine if the image has a single particular object (say cat or dog) , we can use classification. However, if we have to get the location of that object its called classification and localization. But if there are multiple objects in an image and we want the pixel location of each and every object, then that is object detection. Object Detection is a problem which is not only a bit complex but also computationally expensive, due to the number of components to it.
@@ -74,14 +82,13 @@ Lmatch the matching loss is the sum of class prediction loss and bounding box di
 
 # FineTune DETR
 
-- Take a look at this [post](https://opensourcelibs.com/lib/finetune-detr), which explains how to fine-tune DETR on a custom dataset. 
-- The goal is to the process and train the model yourself. The objectives are:
-  - to understand how fine-tuning works
-  - to understand architectural related concepts
+Now, lets understand how fine-tuning works, here we are going to fine-tune Facebook's DETR (DEtection TRansformer) on balloon dataset (custom object detection dataset) The goal for the model is to recognize balloons in pictures.
 
 ## Dataset
 
-DETR will be fine-tuned on a tiny dataset: the balloon dataset. We refer to it as the custom dataset.
+DETR will be fine-tuned on a custom dataset: the balloon dataset. The dataset is taken from [here](https://github.com/matterport/Mask_RCNN/tree/master/samples/balloon). The balloon dataset comes in the VIA annotation format. However, to prepare the annotations for the model, DETR expects them to be in COCO format. 
+
+The following [Github repo](https://github.com/woctezuma/VIA2COCO) is used to convert annotations from VIA format to COCO format
 
 There are 61 images in the training set, and 13 images in the validation set.
 
@@ -97,7 +104,7 @@ The directory structure would be as following:
 
 ## Training
 
-Model was trained for 200 epochs
+Model was trained for 150 epochs and the link to the notebook can be found [here](https://github.com/gkdivya/EVA/blob/main/14_DETR/FineTuning_DETR(DEtection_TRansformer).ipynb)
 
 ## Metrics
 
@@ -107,11 +114,11 @@ Metrics to monitor the training include:
 - losses (total loss, classification loss, l1 bbox distance loss, GIoU loss),
 - errors (cardinality error, class error).
 
-![image](https://user-images.githubusercontent.com/42609155/129123415-6692802e-e57d-44af-9688-9ca2c4699f6a.png)
+![image](https://user-images.githubusercontent.com/42609155/129305315-53470ec2-8a9f-4c7f-9ebf-53cc9667c120.png)
 
-![image](https://user-images.githubusercontent.com/42609155/129123439-c1891710-424f-4c07-a5a4-e3d7754aa072.png)
+![image](https://user-images.githubusercontent.com/42609155/129305341-b9c9129e-271f-4841-a8ab-c104975325f5.png)
 
-![image](https://user-images.githubusercontent.com/42609155/129123465-aa486470-e6d4-4deb-84e1-4f240b0b937e.png)
+![image](https://user-images.githubusercontent.com/42609155/129305376-951fa8a9-909e-4b2e-9904-f49a66f7db2e.png)
 
 
 ## Predictions on Validation image
