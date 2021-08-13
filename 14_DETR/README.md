@@ -123,7 +123,8 @@ Metrics to monitor the training include:
 
 ## Predictions on Validation image
 
-![image](https://user-images.githubusercontent.com/42609155/129123338-7707d418-3e72-44db-8180-b4baf0878296.png)
+![image](https://user-images.githubusercontent.com/42609155/129305729-0d601f4a-8b39-4198-b5f1-10716d521d6f.png)
+
 
 
 ## Reference
