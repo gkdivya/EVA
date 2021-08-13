@@ -122,4 +122,5 @@ Metrics to monitor the training include:
 ## Reference
 
 - https://www.cellstrat.com/2020/08/07/end-to-end-object-detection-with-transformers/
+- https://github.com/woctezuma/finetune-detr
 
